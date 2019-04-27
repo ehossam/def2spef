@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+
+import sys
+import datetime
+
+#refuse the used python version from the beginning
+if (sys.version_info > (3, 0)):
+    print('The Program doesnt support Python 3')
+    exit(1)
+
+
+#get the argumnents from CLI
+if len(sys.argv) <5 and len(sys.argv)>=1:
+    if(len(sys.argv) ==1):
+        print('usage is python def2spef [deffile] [libraryfile] [leffile] [speffile]\ndef2spef -help for additional options')
+        exit(1)
+    elif(sys.argv[1]=='-help'):
+        print('usage is python def2spef [deffile] [libraryfile] [leffile] [speffile]')
+        exit(0)
+    else:
+        print('usage is python def2spef [deffile] [libraryfile] [leffile] [speffile]\ndef2spef -help for additional options')
+        exit(1)
+
+deffile=sys.argv[1]
+libfile=sys.argv[2]
+leffile=sys.argv[3]
+speffile=sys.argv[4]
+
+#start reading from the def file and get what we need
+with open(deffile, 'r') as lf:
+    for line in lf:
+        try:
+            first_word= line.split()[0]
+            if(first_word=='DESIGN'):
+                try:
+                    design_name=line.split()[1]
+                except:
+                    pass
+        except:
+            pass
+
+#write to the SPEF file
+#we first prepare a list with all the lines we want to inset then we open the file and insert all at once
+all_words=[]
+
+#Header Section : header_def
+currenttime= datetime.datetime.now()
+string_to_write='*SPEF "IEEE 1481-2009"\n*DESIGN "'+design_name+'"\n*DATE "'+str(currenttime)+'"\n*VENDOR "AUC_STUDENTS"'+\
+    '\n*PROGRAM "Def2Spef_Converter"\n*VERSION "0.0"\n*DESIGN_FLOW "PROJECT2_FLOW"\n*DIVIDER /\n*DELIMITER :\n*BUS_DELIMITER'+\
+                ' [ ]\n*T_UNIT 1 PS\n*C_UNIT 1 FF\n*R_UNIT 1 KOHM\n*L_UNIT 1 UH\n'
+all_words.append(string_to_write)
+
+
+#Name map definition : [name_map]
+string_to_write="*NAME_MAP"
+all_words.append(string_to_write)
+
+
+#Power & Ground Nets definition : [power_def]
+
+#External definition : [external_def]
+
+#Hierarchical SPEF (entities) definition : [define_def]
+
+#Process and temperature variation definition : [variation_def]
+
+#Internal definition : internal_def
+
+
+#write everything here
+with open(speffile, 'w') as f:
+    for i in all_words:
+        f.write(i+'\n')
