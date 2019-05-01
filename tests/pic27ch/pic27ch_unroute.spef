@@ -1,6 +1,6 @@
 *SPEF "IEEE 1481-2009"
 *DESIGN "pic27ch"
-*DATE "2019-04-27 06:06:07.930061"
+*DATE "2019-05-01 03:09:22.628718"
 *VENDOR "AUC_STUDENTS"
 *PROGRAM "Def2Spef_Converter"
 *VERSION "0.0"
@@ -14,3 +14,1582 @@
 *L_UNIT 1 UH
 
 *NAME_MAP
+*D_NET NETS 0
+*CONN
+*D_NET _0_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out223 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _1_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out329 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _2_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out370 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _3_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out421 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _4_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out430 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _5_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out431 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _6_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET out432 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in76 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _7_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in108 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _8_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in95 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _9_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in102 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in89 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _10_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in82 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _11_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in37 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _12_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in24 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _13_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in43 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in30 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _14_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in63 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _15_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in50 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _16_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in69 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in56 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _17_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _18_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in1 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _19_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in11 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _20_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in4 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in17 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _21_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _22_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _23_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _24_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _25_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _26_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _27_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _28_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<0> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<1> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<2> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _29_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<3> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _30_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<4> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _31_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<5> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _32_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<6> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _33_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<7> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _34_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X1<8> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in112 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _35_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _36_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in99 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _37_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _38_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _39_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _40_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in86 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _41_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _42_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in34 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _43_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in47 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _44_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _45_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _46_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _47_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in60 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _48_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in73 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _49_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _50_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _51_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _52_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _53_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in8 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _54_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in21 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _55_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _56_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _57_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _58_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _59_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _60_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _61_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<0> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<1> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<2> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _62_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<3> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _63_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<4> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _64_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<5> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _65_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<6> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _66_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<7> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _67_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.X2<8> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _68_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in115 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _69_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _70_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _71_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in92 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _72_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _73_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _74_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in105 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _75_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _76_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in40 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _77_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _78_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _79_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in53 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _80_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _81_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _82_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _83_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _84_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in66 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _85_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _86_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _87_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in79 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _88_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _89_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _90_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in14 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _91_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _92_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _93_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET in27 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _94_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _95_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _96_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _97_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _98_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<0> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _99_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _100_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<1> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _101_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _102_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<2> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _103_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _104_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<3> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _105_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _106_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<4> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _107_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _108_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<5> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _109_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _110_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<6> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _111_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _112_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<7> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _113_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _114_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET Ckt432.I<8> 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _115_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _116_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _117_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _118_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _119_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _120_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _121_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _122_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _123_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _124_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _125_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _126_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _127_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _128_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _129_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _130_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET _131_ 0
+*CONN
+*D_NET ( 0
+*CONN
+*D_NET ( 0
+*CONN
+
