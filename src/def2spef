@@ -121,18 +121,14 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             cell_name=line.split()[line.split().index('(')+1]
                             pin_name= line.split()[line.split().index('(')+2]
                             nets_section_string+="*I "+cell_name+":"+pin_name+" "
-                            for k in cell_pins.keys():
-                                if k in cell_name:
-                                    cell_name=str(k)
-                                    break
-                            direction=cell_pins[cell_name][pin_name][0]
+                            direction=cell_pins[cell_name.split('_')[0]][pin_name][0]
                             if direction== 'I':
                                 #then get capacitance of input pin
-                                capacitance=cell_pins[cell_name][pin_name][1]
+                                capacitance=cell_pins[cell_name.split('_')[0]][pin_name][1]
                                 nets_section_string+=direction+" *L "+capacitance+"\n"
                             else:
                                 #get the name only
-                                nets_section_string+=direction+" *D "+cell_name+"\n"
+                                nets_section_string+=direction+" *D "+cell_name.split('_')[0]+"\n"
                         if ';' in line.split():
                             #we are done with this net
                             flag_inside_connection_net=0

@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20100457-20d2-45a5-84b4-9d1ef3af030f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/def2spef" beforeDir="false" afterPath="$PROJECT_DIR$/src/def2spef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/pic27ch/pic27ch_unroute.spef" beforeDir="false" afterPath="$PROJECT_DIR$/tests/pic27ch/pic27ch_unroute.spef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/mux4x1/mux4x1_rows.spef" beforeDir="false" afterPath="$PROJECT_DIR$/tests/mux4x1/mux4x1_rows.spef" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +16,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/def2spef">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="149" column="52" selection-start-line="149" selection-start-column="52" selection-end-line="149" selection-end-column="52" />
+            <state relative-caret-position="-870">
+              <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding>
-                <element signature="e#23#33#0" expanded="true" />
                 <element signature="e#1778#2466#0" />
               </folding>
             </state>
@@ -102,6 +99,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -126,10 +124,9 @@
     <entry file="file://$PROJECT_DIR$/def2spef" />
     <entry file="file://$PROJECT_DIR$/src/def2spef">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="149" column="52" selection-start-line="149" selection-start-column="52" selection-end-line="149" selection-end-column="52" />
+        <state relative-caret-position="-870">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
           <folding>
-            <element signature="e#23#33#0" expanded="true" />
             <element signature="e#1778#2466#0" />
           </folding>
         </state>
