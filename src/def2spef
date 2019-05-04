@@ -14,7 +14,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
     checkversion()
     cell_pins={}   #dictionary to containg cell name with its associated pins properties (i.e. capacitance or direction)
     flag_inside_pin=0
-
+    #----
+    ports_direction={} #dictionary containing the port directions
+    flag = False
+    #---
     #read cell_names and save ports names with their direction from lib file
     with open(libfile,'r') as libf:
         for line in libf:
@@ -74,6 +77,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
     ports_direction={'a<0>':'I','y<1>':'O', 'b<0>':'I','sel<0>':'I','c<1>':'I','c<0>':'I', 'y<0>':'O',
                      'a<1>':'I','b<1>':'I','sel<1>':'I','d<0>':'I','d<1>':'I'}
 
+
     #start reading from the def file and get what we need
     with open(deffile, 'r') as df:
         for line in df:
@@ -107,6 +111,13 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             flag_inside_connection_net=0
                     except:
                         pass
+                #-------------
+                second_word=line.split()[1]
+                if (first_word=="PINS"):
+                     flag = True
+                elif (first_word == "END" and second_word == "PINS"): # the pins section ended
+                     flag = False
+                #---------------
                 if(flag_in_nets_section and flag_inside_connection_net):
                     #we get here to get conenctions for current net
                     try:
@@ -153,6 +164,22 @@ def generateSpef(deffile, leffile, libfile,speffile):
                     flag_in_nets_section=1
                     flag_inside_connection_net=0
 
+                #---------------------
+                if flag: # while we are in the pins section
+                    if "DIRECTION" in line.split():
+                        for word in line.split():
+                            if "<0>" in word or "<1>" in word :
+                                try:
+                                    portword=word # to save the whole port name
+                                except:
+                                    pass
+                            if word  =="INPUT" or word =="OUTPUT" :
+                                try:
+                                    savchar2=word[0] # SAVE DIRECTION
+                                    ports_direction[portword]=savchar2
+                                except:
+                                    pass
+                #-----------------------------------------
             except:
                 pass
 
