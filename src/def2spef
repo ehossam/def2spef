@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import sys
 import datetime
 
@@ -73,11 +72,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
     flag_inside_connection_net=0  #used to determine wthether we are inside a specific net
     nets_section_string=""  #we shall add this to string_to_write when writing to our beloved file
 
-    #(TODO Mariam): I assume I have sth like that for now
-    ports_direction={'a<0>':'I','y<1>':'O', 'b<0>':'I','sel<0>':'I','c<1>':'I','c<0>':'I', 'y<0>':'O',
-                     'a<1>':'I','b<1>':'I','sel<1>':'I','d<0>':'I','d<1>':'I'}
-
-
     #start reading from the def file and get what we need
     with open(deffile, 'r') as df:
         for line in df:
@@ -111,7 +105,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             flag_inside_connection_net=0
                     except:
                         pass
-                #-------------
+                #(TODO: some def files dont have direction in pins section)
                 second_word=line.split()[1]
                 if (first_word=="PINS"):
                      flag = True
@@ -168,9 +162,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
                 if flag: # while we are in the pins section
                     if "DIRECTION" in line.split():
                         for word in line.split():
-                            if "<0>" in word or "<1>" in word :
+                            if "-" in word:
                                 try:
-                                    portword=word # to save the whole port name
+                                    dash_index = line.split().index('-')
+                                    portword=line.split()[dash_index+1]  #to save the whole port name
                                 except:
                                     pass
                             if word  =="INPUT" or word =="OUTPUT" :
@@ -203,7 +198,12 @@ def generateSpef(deffile, leffile, libfile,speffile):
     #Power & Ground Nets definition : [power_def]
 
     #External definition : [external_def]
-
+    string_to_write="*PORTS"
+    all_words.append(string_to_write)
+    for portnames in ports_direction.keys():
+        string_to_write="*"+str(portnames)+" "+ports_direction[portnames]
+        all_words.append(string_to_write)
+    all_words.append('')    #just to add newline
     #Hierarchical SPEF (entities) definition : [define_def]
 
     #Process and temperature variation definition : [variation_def]

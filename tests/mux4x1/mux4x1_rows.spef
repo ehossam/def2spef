@@ -1,6 +1,6 @@
 *SPEF "IEEE 1481-2009"
 *DESIGN "mux4x1"
-*DATE "2019-05-01 20:42:35.814463"
+*DATE "2019-05-05 02:05:22.375857"
 *VENDOR "AUC_STUDENTS"
 *PROGRAM "Def2Spef_Converter"
 *VERSION "0.0"
@@ -14,6 +14,20 @@
 *L_UNIT 1 UH
 
 *NAME_MAP
+
+*PORTS
+*b<0> I
+*y<0> I
+*y<1> I
+*b<1> I
+*c<1> I
+*c<0> I
+*d<1> I
+*d<0> I
+*sel<0> I
+*a<0> I
+*a<1> I
+*sel<1> I
 
 *D_NET _8_ 
 *CONN
@@ -33,7 +47,7 @@
 
 *D_NET y<1> 
 *CONN
-*P y<1> O
+*P y<1> I
 *I BUFX2_2:Y O *D BUFX2
 *CAP
 *RES
@@ -57,7 +71,7 @@
 
 *D_NET y<0> 
 *CONN
-*P y<0> O
+*P y<0> I
 *I BUFX2_1:Y O *D BUFX2
 *CAP
 *RES
