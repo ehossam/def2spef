@@ -158,7 +158,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                     flag_in_nets_section=1
                     flag_inside_connection_net=0
 
-                #---------------------
+                #(TODO: the ones written in the ports section in spef is the top level ports only so metal4 only?)
                 if flag: # while we are in the pins section
                     if "NET" in line.split():
                         for word in line.split():
