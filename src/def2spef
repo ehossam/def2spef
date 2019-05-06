@@ -160,7 +160,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
 
                 #---------------------
                 if flag: # while we are in the pins section
-                    if "DIRECTION" in line.split():
+                    if "NET" in line.split():
                         for word in line.split():
                             if "-" in word:
                                 try:
@@ -168,9 +168,16 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                     portword=line.split()[dash_index+1]  #to save the whole port name
                                 except:
                                     pass
-                            if word  =="INPUT" or word =="OUTPUT" :
+                            word = word.upper()
+                            if "IN" in word or "OUT" in word: #common direction indicator
                                 try:
                                     savchar2=word[0] # SAVE DIRECTION
+                                    ports_direction[portword]=savchar2
+                                except:
+                                    pass
+                            if "GND" in word or "VDD" in word: #special ports that don't specify direction (external)
+                                try:
+                                    savchar2= 'I' # SAVE DIRECTION
                                     ports_direction[portword]=savchar2
                                 except:
                                     pass
