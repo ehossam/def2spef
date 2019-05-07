@@ -164,6 +164,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
                     #we get here to get conenctions for current net
                     try:
                         #know is it a port or internal connection
+                        if ';' in line.split():
+                            #we are done with this net
+                            flag_inside_connection_net=0
+                            nets_section_string+="*CAP\n*RES\n*END\n\n"
                         if 'PIN' in line.split():
                             cell_name_index=line.split().index('PIN')
                             pin_name=line.split()[cell_name_index+1]
@@ -182,10 +186,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             else:
                                 #get the name only
                                 nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
-                        if ';' in line.split():
-                            #we are done with this net
-                            flag_inside_connection_net=0
-                            nets_section_string+="*CAP\n*RES\n*END\n\n"
                     except:
                         pass
                 elif(flag_in_nets_section and not flag_inside_connection_net):
@@ -272,7 +272,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
 
     #Internal definition : internal_def
     string_to_write=nets_section_string
-    print(string_to_write)
     all_words.append(string_to_write)
 
     #write everything here
