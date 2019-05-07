@@ -16,6 +16,11 @@ def generateSpef(deffile, leffile, libfile,speffile):
     #----
     ports_direction={} #dictionary containing the port directions
     flag = False
+    components = {}
+    nets  = {}
+    case = 0
+    name_maps_dict = {}
+    cnt = 1
     #---
     #read cell_names and save ports names with their direction from lib file
     with open(libfile,'r') as libf:
@@ -76,6 +81,40 @@ def generateSpef(deffile, leffile, libfile,speffile):
     with open(deffile, 'r') as df:
         for line in df:
             try:
+                #-----------------------
+                if( case == 0 ):
+                    try:
+                        first = line.split()[0];
+                        second = line.split()[1];
+                        if( first == "COMPONENTS" ):
+                            case = 1 ;
+                        if ( first == "NETS" ) :
+                            case = 2 ;
+                    except:
+                        pass
+                # inside a case
+                else:
+                    try:
+                        first = line.split()[0];
+                        second = line.split()[1];
+                        if( first == "END"):
+                            case = 0 ;
+                            if("COMPONENTS" in second):
+                                for key , value in components.items() :
+                                    name_maps_dict[key] = '*' +str(cnt);
+                                    cnt+=1
+                            if("NETS" in second):
+                                for key , value in nets.items() :
+                                    name_maps_dict[key] = '*'+str(cnt);
+                                    cnt+=1;
+                        else:
+                            if( case == 1 ):
+                                components[second] = "+" ;
+                            if( case == 2 and first == '-' ) :
+                                nets[second] = "+" ;
+                    except:
+                        pass
+                #-------------------
                 first_word= line.split()[0]
                 #get design name
                 if(first_word=='DESIGN'):
@@ -149,7 +188,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                         # (TODO Areeg & Samanoudy): also we want to add the total capacitance field at the end of the line
                         #i.e. currentNet_name_map= name_maps_dict[currentNet]
                         total_capacitance_for_net=""
-                        nets_section_string+="*D_NET "+currentNet+" "+str(total_capacitance_for_net)+\
+                        nets_section_string+="*D_NET "+name_maps_dict[currentNet]+" "+str(total_capacitance_for_net)+\
                             "\n*CONN\n"
                         flag_inside_connection_net=1
                     except:
@@ -200,6 +239,9 @@ def generateSpef(deffile, leffile, libfile,speffile):
     #Name map definition : [name_map]
     string_to_write="*NAME_MAP\n"
     all_words.append(string_to_write)
+    for key, value in name_maps_dict.items():
+        string_to_write = value + " "+ key + "\n"
+        all_words.append(string_to_write)
 
 
     #Power & Ground Nets definition : [power_def]
