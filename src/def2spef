@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import sys
 import datetime
+import operator
+from collections import OrderedDict
 
 def checkversion():
     #refuse the used python version from the beginning
@@ -84,37 +86,44 @@ def generateSpef(deffile, leffile, libfile,speffile):
                 #-----------------------
                 if( case == 0 ):
                     try:
-                        first = line.split()[0];
-                        second = line.split()[1];
+                        first = line.split()[0]
+                        second = line.split()[1]
                         if( first == "COMPONENTS" ):
-                            case = 1 ;
+                            case = 1 
                         if ( first == "NETS" ) :
-                            case = 2 ;
+                            case = 2 
                     except:
                         pass
                 # inside a case
                 else:
                     try:
-                        first = line.split()[0];
-                        second = line.split()[1];
+                        first = line.split()[0]
+                        second = line.split()[1]
                         if( first == "END"):
-                            case = 0 ;
+                            case = 0 
                             if("COMPONENTS" in second):
                                 for key , value in components.items() :
-                                    name_maps_dict[key] = '*' +str(cnt);
+                                    name_maps_dict[key] = cnt
                                     cnt+=1
                             if("NETS" in second):
                                 for key , value in nets.items() :
-                                    name_maps_dict[key] = '*'+str(cnt);
-                                    cnt+=1;
+                                    name_maps_dict[key] = cnt
+                                    cnt+=1
                         else:
                             if( case == 1 ):
-                                components[second] = "+" ;
+                                components[second] = "+" 
                             if( case == 2 and first == '-' ) :
-                                nets[second] = "+" ;
+                                nets[second] = "+" 
                     except:
                         pass
                 #-------------------
+
+            except:
+                pass
+
+    with open(deffile, 'r') as df:
+        for line in df:
+            try:
                 first_word= line.split()[0]
                 #get design name
                 if(first_word=='DESIGN'):
@@ -139,7 +148,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                     #done with nets section
                     try:
                         second_word=line.split()[1]
-                        if(second_word=='NETS'):
+                        if(second_word =='NETS'):
                             flag_in_nets_section=0
                             flag_inside_connection_net=0
                     except:
@@ -164,7 +173,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             #get the location of '(' if it exists
                             cell_name=line.split()[line.split().index('(')+1]
                             pin_name= line.split()[line.split().index('(')+2]
-                            nets_section_string+="*I "+cell_name+":"+pin_name+" "
+                            nets_section_string+="*I *"+str(name_maps_dict[cell_name])+":"+pin_name+" "
                             direction=cell_pins[cell_name.split('_')[0]][pin_name][0]
                             if direction== 'I':
                                 #then get capacitance of input pin
@@ -172,7 +181,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 nets_section_string+=direction+" *L "+capacitance+"\n"
                             else:
                                 #get the name only
-                                nets_section_string+=direction+" *D "+cell_name.split('_')[0]+"\n"
+                                nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
                         if ';' in line.split():
                             #we are done with this net
                             flag_inside_connection_net=0
@@ -183,14 +192,15 @@ def generateSpef(deffile, leffile, libfile,speffile):
                     #we get here only to get the current net name
                     try:
                         second_word=line.split()[1]
-                        currentNet=second_word if first_word =='-' else first_word #netname
-                        # (TODO Adbo): here we should add the name map instead of the actal net name
-                        # (TODO Areeg & Samanoudy): also we want to add the total capacitance field at the end of the line
-                        #i.e. currentNet_name_map= name_maps_dict[currentNet]
-                        total_capacitance_for_net=""
-                        nets_section_string+="*D_NET "+name_maps_dict[currentNet]+" "+str(total_capacitance_for_net)+\
-                            "\n*CONN\n"
-                        flag_inside_connection_net=1
+                        if(first_word == "-"):
+                            currentNet = second_word #netname
+                            # (TODO Adbo): here we should add the name map instead of the actal net name
+                            # (TODO Areeg & Samanoudy): also we want to add the total capacitance field at the end of the line
+                            #i.e. currentNet_name_map= name_maps_dict[currentNet]
+                            total_capacitance_for_net=""
+                            nets_section_string+="*D_NET *"+str(name_maps_dict[currentNet])+" "+str(total_capacitance_for_net)+\
+                                "\n*CONN\n"
+                            flag_inside_connection_net=1
                     except:
                         pass
                 if(first_word=='NETS'):
@@ -239,19 +249,22 @@ def generateSpef(deffile, leffile, libfile,speffile):
     #Name map definition : [name_map]
     string_to_write="*NAME_MAP\n"
     all_words.append(string_to_write)
-    for key, value in name_maps_dict.items():
-        string_to_write = value + " "+ key + "\n"
+    sorted_names = OrderedDict(sorted(name_maps_dict.items(), key=lambda x: x[1]))
+    for key, value in sorted_names.items():
+        string_to_write = "*"+str(value) + " "+ key
         all_words.append(string_to_write)
-
 
     #Power & Ground Nets definition : [power_def]
 
     #External definition : [external_def]
-    string_to_write="*PORTS"
+    string_to_write="\n*PORTS"
     all_words.append(string_to_write)
+    count = 1
     for portnames in ports_direction.keys():
-        string_to_write="*"+str(portnames)+" "+ports_direction[portnames]
+        #string_to_write="*"+str(portnames)+" "+ports_direction[portnames]
+        string_to_write="*"+str(count)+" "+ports_direction[portnames]
         all_words.append(string_to_write)
+        count+=1
     all_words.append('')    #just to add newline
     #Hierarchical SPEF (entities) definition : [define_def]
 
@@ -259,6 +272,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
 
     #Internal definition : internal_def
     string_to_write=nets_section_string
+    print(string_to_write)
     all_words.append(string_to_write)
 
     #write everything here
