@@ -10,6 +10,15 @@ def checkversion():
         print('The Program doesnt support Python 3')
         exit(1)
 
+def resistanceCalculation(RPERSQ, L, W):
+    print("Calculating the Resistance")
+    return RPERSQ*L/W
+
+def capacitanceCalculation(CPERSQDIST, L, W, EDGECAPACITANCE):
+    print("Calculating the Capacitance")
+    return CPERSQDIST*L*W+EDGECAPACITANCE*L
+
+
 #function responsible for the actual parsing and generation of spef
 def generateSpef(deffile, leffile, libfile,speffile):
     checkversion()
@@ -23,7 +32,44 @@ def generateSpef(deffile, leffile, libfile,speffile):
     case = 0
     name_maps_dict = {}
     cnt = 1
+    metal_layers = {} #0: width, 1: resistance per square, 2: capacitance per square, 3: edge capacitance
+    flag_inside_layer = 0
+    layer_name = ""  
+    params = []
     #---
+    with open(leffile,'r') as lef:
+        for line in lef:
+            try:
+                # if key doesnt exist print(metal_layers.get("hi") == None)
+                #metal_layers["hi"] = [1, 2, 3, 4]
+                #print(metal_layers["hi"][3])
+                line_split = line.split()
+                first_word=line_split[0]
+                first_word_uppercase = first_word.upper()
+                second_word=line_split[1]
+                if(first_word_uppercase == 'LAYER'):
+                    flag_inside_layer = 1
+                    layer_name = second_word
+                elif(first_word_uppercase == 'END' and second_word == layer_name):
+                    flag_inside_layer = 0
+                    params = []
+                if(flag_inside_layer):
+                    if(first_word_uppercase == 'WIDTH'):
+                        if(metal_layers.get(layer_name) == None):
+                            withe = second_word+"e-6"
+                            params.insert(0, float(withe))
+                    if(first_word_uppercase == 'RESISTANCE'):
+                        params.insert(1, float(line.split()[2]))
+                    if(first_word_uppercase == 'CAPACITANCE'):
+                        params.insert(2, float(line.split()[2]))
+                    if(first_word_uppercase == 'EDGECAPACITANCE'):
+                        withe = float(second_word) 
+                        withe = withe * 1e-6
+                        params.insert(3, withe)
+                        metal_layers[layer_name] = params                           
+            except:
+                pass
+
     #read cell_names and save ports names with their direction from lib file
     with open(libfile,'r') as libf:
         for line in libf:
@@ -171,7 +217,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                         if 'PIN' in line.split():
                             cell_name_index=line.split().index('PIN')
                             pin_name=line.split()[cell_name_index+1]
-                            nets_section_string+="*P "+pin_name+" "+\
+                            nets_section_string+="*P *"+str(name_maps_dict[pin_name])+" "+\
                                 ports_direction[pin_name]+"\n"
                         elif '(' in line.split():
                             #get the location of '(' if it exists
@@ -185,7 +231,8 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 nets_section_string+=direction+" *L "+capacitance+"\n"
                             else:
                                 #get the name only
-                                nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
+                                #nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
+                                nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name])+"\n"
                     except:
                         pass
                 elif(flag_in_nets_section and not flag_inside_connection_net):
@@ -297,7 +344,8 @@ def main():
     libfile=sys.argv[2]
     leffile=sys.argv[3]
     speffile=sys.argv[4]
-
+    print("res "+ str(resistanceCalculation(0.1399, 12e-3, 0.1e-6)))
+    print("cap "+ str(capacitanceCalculation(0.000232, 12e-3, 0.1e-6, 0.0000778e-6)))
     generateSpef(deffile,leffile,libfile,speffile)
 
 
