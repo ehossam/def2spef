@@ -1,4 +1,11 @@
 Technical Aspects:
+ - SPEF: Stands for Standard Parasitic Extraction Format
+ - its the IEEE standard for representing data of wires of a chip in ASCII format
+ - Useful for :
+ 	- Delay calculation
+	- Speed of operation (meeting timing requirements)
+	- signal integrity (quality of the signal) 
+ - Language: Python
 
 Refrences: (under the refrences folder)
  - 05-Capacitance-Driving-a-Load-2012-13-B
@@ -18,6 +25,6 @@ What is done:
  - D_Nets without calculations
 
 What is missing:
- - Special nets in name mapping and D_nets
- - parsing the routes
- - calculations
+ - Vias Consideration
+ - Resistance Calculations
+ - Wire Segments
