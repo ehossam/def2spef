@@ -25,6 +25,6 @@ What is done:
  - D_Nets without calculations
 
 What is missing:
- - Special nets in name mapping and D_nets
- - parsing the routes
- - calculations
+ - Vias Consideration
+ - Resistance Calculations
+ - Wire Segments
