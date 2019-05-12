@@ -1,0 +1,201 @@
+# /Users/auc/Desktop/DskTp/v/sp19-examples/mux4x1_rows.def
+# Created by Glade release version 4.7.3 compiled on Apr 14 2019 07:57:34
+# Run by auc on host aucs-mbp at Mon Apr 15 00:43:11 2019
+
+VERSION 5.7 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "<>" ;
+DESIGN mux4x1 ;
+UNITS DISTANCE MICRONS 100 ;
+DIEAREA ( 0 0 ) ( 4968 4968 ) ;
+
+ROW ROW_1 core 0 2000 FS DO 3 BY 1 STEP 160 0 ;
+ROW ROW_0 core 0 0 N DO 3 BY 1 STEP 160 0 ;
+
+TRACKS Y -400 DO 25 STEP 200 LAYER metal1 ;
+TRACKS X -480 DO 35 STEP 160 LAYER metal2 ;
+TRACKS Y -400 DO 25 STEP 200 LAYER metal3 ;
+TRACKS X -480 DO 18 STEP 320 LAYER metal4 ;
+
+VIAS 3 ;
+  - M2_M1
+  + RECT metal2 ( -40 -40 ) ( 40 40 )
+  + RECT via1 ( -20 -20 ) ( 20 20 )
+  + RECT metal1 ( -40 -40 ) ( 40 40 ) ;
+  - M3_M2
+  + RECT metal3 ( -40 -40 ) ( 40 40 )
+  + RECT via2 ( -20 -20 ) ( 20 20 )
+  + RECT metal2 ( -40 -40 ) ( 40 40 ) ;
+  - M4_M3
+  + RECT metal4 ( -60 -60 ) ( 60 60 )
+  + RECT via3 ( -20 -20 ) ( 20 20 )
+  + RECT metal3 ( -40 -40 ) ( 40 40 ) ;
+END VIAS
+
+
+COMPONENTS 15 ;
+  - NAND3X1_1 NAND3X1 + UNPLACED ( 5465 0 ) N ;
+  - NAND3X1_4 NAND3X1 + UNPLACED ( 6185 0 ) N ;
+  - NAND3X1_3 NAND3X1 + UNPLACED ( 6905 0 ) N ;
+  - AND2X2_1 AND2X2 + UNPLACED ( 7625 0 ) N ;
+  - NOR2X1_1 NOR2X1 + UNPLACED ( 8345 0 ) N ;
+  - BUFX2_1 BUFX2 + UNPLACED ( 8905 0 ) N ;
+  - BUFX2_2 BUFX2 + UNPLACED ( 9465 0 ) N ;
+  - AND2X2_2 AND2X2 + UNPLACED ( 10025 0 ) N ;
+  - NOR2X1_2 NOR2X1 + UNPLACED ( 5465 2120 ) N ;
+  - NAND3X1_2 NAND3X1 + UNPLACED ( 6025 2120 ) N ;
+  - AOI22X1_2 AOI22X1 + UNPLACED ( 6745 2120 ) N ;
+  - NAND2X1_2 NAND2X1 + UNPLACED ( 7625 2120 ) N ;
+  - INVX1_1 INVX1 + UNPLACED ( 8185 2120 ) N ;
+  - AOI22X1_1 AOI22X1 + UNPLACED ( 8585 2120 ) N ;
+  - NAND2X1_1 NAND2X1 + UNPLACED ( 9465 2120 ) N ;
+END COMPONENTS
+
+PINS 12 ;
+  - a<0> + NET a<0> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal2 ( -30 -30 ) ( 30 30 ) + FIXED ( 1272 30 ) N ;
+  - y<1> + NET y<1> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal2 ( -30 -30 ) ( 30 30 ) + FIXED ( 2514 30 ) N ;
+  - b<0> + NET b<0> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal2 ( -30 -30 ) ( 30 30 ) + FIXED ( 3756 30 ) N ;
+  - sel<0> + NET sel<0> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal1 ( -30 -30 ) ( 30 30 ) + FIXED ( 4938 1272 ) N ;
+  - c<1> + NET c<1> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal1 ( -30 -30 ) ( 30 30 ) + FIXED ( 4938 2514 ) N ;
+  - c<0> + NET c<0> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal1 ( -30 -30 ) ( 30 30 ) + FIXED ( 4938 3756 ) N ;
+  - y<0> + NET y<0> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal2 ( -30 -30 ) ( 30 30 ) + FIXED ( 1272 4938 ) N ;
+  - a<1> + NET a<1> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal2 ( -30 -30 ) ( 30 30 ) + FIXED ( 2514 4938 ) N ;
+  - b<1> + NET b<1> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal2 ( -30 -30 ) ( 30 30 ) + FIXED ( 3756 4938 ) N ;
+  - sel<1> + NET sel<1> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal1 ( -30 -30 ) ( 30 30 ) + FIXED ( 30 1272 ) N ;
+  - d<0> + NET d<0> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal1 ( -30 -30 ) ( 30 30 ) + FIXED ( 30 2514 ) N ;
+  - d<1> + NET d<1> + DIRECTION INPUT + USE SIGNAL
+    + LAYER metal1 ( -30 -30 ) ( 30 30 ) + FIXED ( 30 3756 ) N ;
+END PINS
+
+
+SPECIALNETS 0 ;
+END SPECIALNETS
+
+NETS 25 ;
+- _8_
+  ( NAND3X1_4 Y )
+  ( AND2X2_2 A )
+  + USE SIGNAL ;
+- _2_
+  ( NAND3X1_2 Y )
+  ( AND2X2_1 A )
+  + USE SIGNAL ;
+- y<1>
+  ( PIN y<1> )
+  ( BUFX2_2 Y )
+  + USE SIGNAL ;
+- _3_
+  ( AND2X2_1 Y )
+  ( NAND2X1_1 A )
+  + USE SIGNAL ;
+- c<0>
+  ( PIN c<0> )
+  ( NAND3X1_4 B )
+  + USE SIGNAL ;
+- y<0>
+  ( PIN y<0> )
+  ( BUFX2_1 Y )
+  + USE SIGNAL ;
+- _0_
+  ( NAND3X1_1 Y )
+  ( AND2X2_1 B )
+  + USE SIGNAL ;
+- d<1>
+  ( PIN d<1> )
+  ( NAND3X1_1 C )
+  + USE SIGNAL ;
+- sel<0>
+  ( PIN sel<0> )
+  ( NAND3X1_1 A )
+  ( INVX1_1 A )
+  ( NOR2X1_1 A )
+  ( NAND3X1_3 A )
+  + USE SIGNAL ;
+- b<1>
+  ( PIN b<1> )
+  ( AOI22X1_1 C )
+  + USE SIGNAL ;
+- sel<1>
+  ( PIN sel<1> )
+  ( NAND3X1_1 B )
+  ( NAND3X1_2 A )
+  ( NOR2X1_1 B )
+  ( NOR2X1_2 A )
+  ( NAND3X1_3 B )
+  ( NAND3X1_4 A )
+  + USE SIGNAL ;
+- _11_<0>
+  ( NAND2X1_2 Y )
+  ( BUFX2_1 A )
+  + USE SIGNAL ;
+- _11_<1>
+  ( NAND2X1_1 Y )
+  ( BUFX2_2 A )
+  + USE SIGNAL ;
+- _5_
+  ( NOR2X1_2 Y )
+  ( AOI22X1_1 D )
+  ( AOI22X1_2 D )
+  + USE SIGNAL ;
+- _4_
+  ( NOR2X1_1 Y )
+  ( AOI22X1_1 B )
+  ( AOI22X1_2 B )
+  + USE SIGNAL ;
+- _9_
+  ( AND2X2_2 Y )
+  ( NAND2X1_2 A )
+  + USE SIGNAL ;
+- a<0>
+  ( PIN a<0> )
+  ( AOI22X1_2 A )
+  + USE SIGNAL ;
+- a<1>
+  ( PIN a<1> )
+  ( AOI22X1_1 A )
+  + USE SIGNAL ;
+- _10_
+  ( AOI22X1_2 Y )
+  ( NAND2X1_2 B )
+  + USE SIGNAL ;
+- c<1>
+  ( PIN c<1> )
+  ( NAND3X1_2 B )
+  + USE SIGNAL ;
+- b<0>
+  ( PIN b<0> )
+  ( AOI22X1_2 C )
+  + USE SIGNAL ;
+- _1_
+  ( INVX1_1 Y )
+  ( NAND3X1_2 C )
+  ( NOR2X1_2 B )
+  ( NAND3X1_4 C )
+  + USE SIGNAL ;
+- _6_
+  ( AOI22X1_1 Y )
+  ( NAND2X1_1 B )
+  + USE SIGNAL ;
+- _7_
+  ( NAND3X1_3 Y )
+  ( AND2X2_2 B )
+  + USE SIGNAL ;
+- d<0>
+  ( PIN d<0> )
+  ( NAND3X1_3 C )
+  + USE SIGNAL ;
+END NETS
+
+END DESIGN
