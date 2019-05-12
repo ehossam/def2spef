@@ -15,7 +15,6 @@ def resistanceCalculation(RPERSQ, L, W):
     return RPERSQ*L/W
 
 def capacitanceCalculation(CPERSQDIST, L, W, EDGECAPACITANCE):
-    print("Calculating the Capacitance")
     return CPERSQDIST*L*W+EDGECAPACITANCE*L
 
 
@@ -36,6 +35,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
     flag_inside_layer = 0
     layer_name = ""  
     params = []
+    temp_string = ""
     #---
     with open(leffile,'r') as lef:
         for line in lef:
@@ -118,7 +118,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
             except:
                 pass
 
-
     flag_in_nets_section=0  #used to determine whether the current section is nets section
     flag_inside_connection_net=0  #used to determine wthether we are inside a specific net
     nets_section_string=""  #we shall add this to string_to_write when writing to our beloved file
@@ -127,7 +126,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
     current_route_line=""
     current_route = {}
     nets_routes = {}
+    capacitance_per_net = {}
     current_net = ""
+    total_cap = 0
+    temp_index = 1
     #start reading from the def file and get what we need
     with open(deffile, 'r') as df:
         for line in df:
@@ -170,9 +172,12 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 if(first == "+"):
                                     current_metal_layer = current_route_line[2]
                                     flag_routed_section = 1
-
+                                elif(first == "("):
+                                    if(second != "PIN"):
+                                        total_cap = total_cap + float(cell_pins[second.split('_')[0]][line.split()[2]][1])*1e-12
+                               
                             if(case == 2 and flag_routed_section):
-                                if(current_route_line[current_route_line.__len__()-1] == ";"): 
+                                if(current_route_line[current_route_line.__len__()-1] == ";" or second == "USE"): 
                                     nets_routes[current_net] = current_route
                                     flag_routed_section = 0
 
@@ -183,6 +188,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 y_1 = ""
                                 x_2 = ""
                                 y_2 = ""
+                                cur_cap = 0
                                 for i, word in enumerate(current_route_line):
                                     if(word == "("):
                                         if(current_route_line[i-1] == current_metal_layer):
@@ -194,12 +200,19 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                             dist_x = abs(int(x_1)-int(x_2))*1e-6
                                             dist_y = abs(int(y_1)-int(y_2))*1e-6
                                             wire_len = dist_y if(dist_x==0) else dist_x
+                                            temp = metal_layers[current_metal_layer]
+                                            cur_cap = capacitanceCalculation(temp[2], wire_len, temp[0], temp[3])
+                                            total_cap = total_cap + cur_cap
                                             if(current_route.get(current_metal_layer) == None):
                                                 current_route[current_metal_layer] = [wire_len]
                                             else:
                                                 current_route[current_metal_layer].append(wire_len)
                                 if(flag_routed_section == 0):
+                                    total_cap = total_cap * (1e+12) #capacitance in p, so p or f??
+                                    capacitance_per_net[current_net] = total_cap
+                                    total_cap = 0
                                     nets_routes[current_net] = current_route
+                                    current_route = {}
                     except:
                         pass
                 #-------------------
@@ -251,26 +264,51 @@ def generateSpef(deffile, leffile, libfile,speffile):
                         #know is it a port or internal connection
                         if ';' in line.split():
                             #we are done with this net
+                            for k in nets_routes[currentNet]:
+                                for v in (nets_routes[currentNet][k]):
+                                    nets_section_string+= "*N *" + str(name_maps_dict[currentNet]) + ":"+str(temp_index)+" *C\n"
+                                    temp_index = temp_index+1
+                            temp_index = 1
+
                             flag_inside_connection_net=0
-                            nets_section_string+="*CAP\n*RES\n*END\n\n"
+                            nets_section_string+="\n*CAP\n"
+                            index = 1
+                            while(temp_string.__len__() > 0):
+                                toadd = str(index) + " " + temp_string[0:temp_string.index('\n')+1]
+                                nets_section_string+=toadd
+                                index = index + 1
+                                temp_string = temp_string[temp_string.index('\n')+1:]
+                            
+                            for k in nets_routes[currentNet]:
+                                for v in (nets_routes[currentNet][k]):
+                                    temp = capacitanceCalculation(metal_layers[k][2], v, metal_layers[k][0], metal_layers[k][3]) *(1e+12)
+                                    nets_section_string+= str(index) + " *" + str(name_maps_dict[currentNet]) + ":"+str(index)+" "+str(temp)+"\n"
+                                    index = index+1
+
+                            nets_section_string+="\n*RES\n\n*END\n\n"
                         if 'PIN' in line.split():
                             cell_name_index=line.split().index('PIN')
                             pin_name=line.split()[cell_name_index+1]
+                            temp_index = temp_index+1
                             nets_section_string+="*P *"+str(name_maps_dict[pin_name])+" "+\
                                 ports_direction[pin_name]+"\n"
+                            temp_string+="*"+str(name_maps_dict[pin_name])+ " " + str(capacitance_per_net[pin_name])+"\n"
                         elif '(' in line.split():
                             #get the location of '(' if it exists
                             cell_name=line.split()[line.split().index('(')+1]
                             pin_name= line.split()[line.split().index('(')+2]
                             nets_section_string+="*I *"+str(name_maps_dict[cell_name])+":"+pin_name+" "
+                            temp_string+= "*"+str(name_maps_dict[cell_name])+":"+pin_name + " " + str(float(cell_pins[cell_name.split('_')[0]][pin_name][1]))+"\n"
                             direction=cell_pins[cell_name.split('_')[0]][pin_name][0]
                             if direction== 'I':
                                 #then get capacitance of input pin
+                                temp_index = temp_index+1
                                 capacitance=cell_pins[cell_name.split('_')[0]][pin_name][1]
                                 nets_section_string+=direction+" *L "+capacitance+"\n"
                             else:
                                 #get the name only
                                 #nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
+                                temp_index = temp_index+1
                                 nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name])+"\n"
                     except:
                         pass
@@ -280,12 +318,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
                         second_word=line.split()[1]
                         if(first_word == "-"):
                             currentNet = second_word #netname
-                            # (TODO Adbo): here we should add the name map instead of the actal net name
                             # (TODO Areeg & Samanoudy): also we want to add the total capacitance field at the end of the line
                             #i.e. currentNet_name_map= name_maps_dict[currentNet]
-                            total_capacitance_for_net=""
-                            nets_section_string+="*D_NET *"+str(name_maps_dict[currentNet])+" "+str(total_capacitance_for_net)+\
-                                "\n*CONN\n"
+                            nets_section_string+="*D_NET *"+str(name_maps_dict[currentNet])+" "+str(capacitance_per_net[currentNet])+\
+                                "\n\n*CONN\n"
                             flag_inside_connection_net=1
                     except:
                         pass                                
@@ -384,8 +420,6 @@ def main():
     libfile=sys.argv[2]
     leffile=sys.argv[3]
     speffile=sys.argv[4]
-    print("res "+ str(resistanceCalculation(0.1399, 12e-3, 0.1e-6)))
-    print("cap "+ str(capacitanceCalculation(0.000232, 12e-3, 0.1e-6, 0.0000778e-6)))
     generateSpef(deffile,leffile,libfile,speffile)
 
 
