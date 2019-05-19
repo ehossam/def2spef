@@ -11,7 +11,6 @@ def checkversion():
         exit(1)
 
 def resistanceCalculation(RPERSQ, L, W):
-    print("Calculating the Resistance")
     return RPERSQ*L/W
 
 def capacitanceCalculation(CPERSQDIST, L, W, EDGECAPACITANCE):
@@ -31,9 +30,12 @@ def generateSpef(deffile, leffile, libfile,speffile):
     case = 0
     name_maps_dict = {}
     cnt = 1
-    metal_layers = {} #0: width, 1: resistance per square, 2: capacitance per square, 3: edge capacitance
+    metal_layers = {} # 0: resistance per square, 1: width, 2: capacitance per square, 3: edge capacitance
     flag_inside_layer = 0
+    flag_inside_via = 0
     layer_name = ""  
+    temp_via_name = ""
+    via_resistance = {}
     params = []
     temp_string = ""
     pins_layer = {} #pin: cap
@@ -49,23 +51,36 @@ def generateSpef(deffile, leffile, libfile,speffile):
                 if(first_word_uppercase == 'LAYER'):
                     flag_inside_layer = 1
                     layer_name = second_word
+                elif(first_word_uppercase == 'VIA'):
+                    flag_inside_via = 1
+                    temp_via_name = second_word
                 elif(first_word_uppercase == 'END' and second_word == layer_name):
                     flag_inside_layer = 0
+                    flag_inside_via = 0
                     params = []
-                if(flag_inside_layer):
+                if(flag_inside_via):
+                    if(first_word_uppercase == 'LAYER' and 'VIA' in second_word.upper()):
+                        #print(second_word)
+                        if(metal_layers.get(second_word) != None):
+                            via_resistance[temp_via_name] = metal_layers[second_word][0]
+                elif(flag_inside_layer):
+                    #print(layer_name)
                     if(first_word_uppercase == 'WIDTH'):
                         if(metal_layers.get(layer_name) == None):
                             withe = second_word+"e-6"
-                            params.insert(0, float(withe))
-                    if(first_word_uppercase == 'RESISTANCE'):
-                        params.insert(1, float(line.split()[2]))
-                    if(first_word_uppercase == 'CAPACITANCE'):
-                        params.insert(2, float(line.split()[2]))
+                            params.insert(1, float(withe))
                     if(first_word_uppercase == 'EDGECAPACITANCE'):
                         withe = float(second_word) 
                         withe = withe * 1e-6
                         params.insert(3, withe)
-                        metal_layers[layer_name] = params                           
+                    if(first_word_uppercase == 'CAPACITANCE'):
+                        params.insert(2, float(line.split()[2]))
+                    if(first_word_uppercase == 'RESISTANCE'):
+                        if(second_word == "RPERSQ"):
+                            params.insert(0, float(line.split()[2]))
+                        else:
+                            params.insert(0, float(line.split()[1]))
+                        metal_layers[layer_name] = params
             except:
                 pass
 
@@ -204,20 +219,29 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                         if(current_route_line[i-1] == current_metal_layer):
                                             x_1 = current_route_line[i+1]
                                             y_1 = current_route_line[i+2]
+                                            #if these coordinates match any cell == pin1
                                         elif (current_route_line[i-1] == ")"):
                                             x_2 = x_1 if(current_route_line[i+1] == "*") else current_route_line[i+1]
                                             y_2 = y_1 if(current_route_line[i+2] == "*") else current_route_line[i+2]
+                                            #check the pin coordiates for pin 2
                                             dist_x = abs(int(x_1)-int(x_2))*1e-6
                                             dist_y = abs(int(y_1)-int(y_2))*1e-6
                                             wire_len = dist_y if(dist_x==0) else dist_x
-                                            wire_len = wire_len + (metal_layers[current_metal_layer][0]/2)
+                                            wire_len = wire_len + (metal_layers[current_metal_layer][1]/2)
                                             temp = metal_layers[current_metal_layer]
-                                            cur_cap = capacitanceCalculation(temp[2], wire_len, temp[0], temp[3])
+                                            #------------------------- CAPACITANCE ----------------------------------
+                                            cur_cap = capacitanceCalculation(temp[2], wire_len, temp[1], temp[3])
                                             total_cap = total_cap + cur_cap
                                             if(current_route.get(current_metal_layer) == None):
                                                 current_route[current_metal_layer] = [wire_len]
                                             else:
                                                 current_route[current_metal_layer].append(wire_len)
+                                            #------------------------- RESISTANCE -----------------------------------
+                                            cur_resistance = cur_resistance + resistanceCalculation(temp[0], wire_len, temp[1])
+                                    if(via_resistance.get(word)!=None):
+                                        print(word)
+                                        #add the via resistance
+                                    #if pin2 is found append calculations and end the pins and everything
                                 if(flag_routed_section == 0):
                                     total_cap = total_cap * (1e+15) #capacitance in p, so p or f??
                                     capacitance_per_net[current_net] = total_cap
@@ -300,7 +324,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             
                             for k in nets_routes[currentNet]:
                                 for v in (nets_routes[currentNet][k]):
-                                    temp = capacitanceCalculation(metal_layers[k][2], v, metal_layers[k][0], metal_layers[k][3]) *(1e+15)
+                                    temp = capacitanceCalculation(metal_layers[k][2], v, metal_layers[k][1], metal_layers[k][3]) *(1e+15)
                                     nets_section_string+= str(index) + " *" + str(name_maps_dict[currentNet]) + ":"+str(index)+" "+str(temp)+"\n"
                                     index = index+1
 

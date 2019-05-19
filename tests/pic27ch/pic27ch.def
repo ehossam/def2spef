@@ -376,7 +376,7 @@ NETS 202 ;
   ( NAND3X1_1 Y ) 
   ( BUFX2_1 A ) 
 + ROUTED metal1 ( 5760 11000 ) M2_M1 
-  NEW metal2 ( 5760 11000 ) M3_M2 
+  NEW metresistanceal2 ( 5760 11000 ) M3_M2 
   NEW metal3 ( 5760 11000 ) ( 6560 * ) M3_M2 
   NEW metal1 ( 6560 11000 ) M2_M1 
   NEW metal1 ( 2400 11000 ) M2_M1 
