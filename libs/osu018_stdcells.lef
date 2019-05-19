@@ -56,6 +56,7 @@ END metal1
 LAYER via
   TYPE	CUT ;
   SPACING	0.3 ;
+  RESISTANCE 0.1 ;
 END via
 
 LAYER metal2
@@ -73,6 +74,7 @@ END metal2
 LAYER via2
   TYPE	CUT ;
   SPACING	0.3 ;
+  RESISTANCE 0.08 ;
 END via2
 
 LAYER metal3
@@ -90,6 +92,7 @@ END metal3
 LAYER via3
   TYPE	CUT ;
   SPACING	0.4 ;
+  RESISTANCE 0.06 ;
 END via3
 
 LAYER metal4
@@ -107,6 +110,7 @@ END metal4
 LAYER via4
   TYPE	CUT ;
   SPACING	0.3 ;
+  RESISTANCE 0.04 ;
 END via4
 
 LAYER metal5
@@ -123,6 +127,7 @@ END metal5
 
 LAYER via5
   TYPE	CUT ;
+  RESISTANCE 0.02 ;
   SPACING	0.4 ;
 END via5
 

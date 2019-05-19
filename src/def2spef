@@ -36,6 +36,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
     layer_name = ""  
     params = []
     temp_string = ""
+    pins_layer = {} #pin: cap
     #---
     with open(leffile,'r') as lef:
         for line in lef:
@@ -129,7 +130,13 @@ def generateSpef(deffile, leffile, libfile,speffile):
     capacitance_per_net = {}
     current_net = ""
     total_cap = 0
+    resistance_per_net = {} #net:{{pin1, pin2, resistance}, {pin1, pin2, resistance}, ......}
+    #keep adding to the resistance till pin2 is found
+    cur_pin1 = ""
+    cur_pin2 = ""
+    cur_resistance = 0.0
     temp_index = 1
+    tempPinName=""
     #start reading from the def file and get what we need
     with open(deffile, 'r') as df:
         for line in df:
@@ -140,10 +147,12 @@ def generateSpef(deffile, leffile, libfile,speffile):
                     try:
                         first = line.split()[0]
                         second = line.split()[1]
-                        if( first == "COMPONENTS" ):
+                        if( first == "COMPONENTS" ) :
                             case = 1 
                         if ( first == "NETS" ) :
                             case = 2 
+                        if ( first == "PINS" ) :
+                            case = 3
                     except:
                         pass
                 # inside a case
@@ -175,7 +184,8 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 elif(first == "("):
                                     if(second != "PIN"):
                                         total_cap = total_cap + float(cell_pins[second.split('_')[0]][line.split()[2]][1])*1e-12
-                               
+                                    else : 
+                                        total_cap = total_cap + capacitanceCalculation(metal_layers[pins_layer[line.split()[2]]][2], 1e-6, 1e-6, metal_layers[pins_layer[line.split()[2]]][3]) 
                             if(case == 2 and flag_routed_section):
                                 if(current_route_line[current_route_line.__len__()-1] == ";" or second == "USE"): 
                                     nets_routes[current_net] = current_route
@@ -200,6 +210,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                             dist_x = abs(int(x_1)-int(x_2))*1e-6
                                             dist_y = abs(int(y_1)-int(y_2))*1e-6
                                             wire_len = dist_y if(dist_x==0) else dist_x
+                                            wire_len = wire_len + (metal_layers[current_metal_layer][0]/2)
                                             temp = metal_layers[current_metal_layer]
                                             cur_cap = capacitanceCalculation(temp[2], wire_len, temp[0], temp[3])
                                             total_cap = total_cap + cur_cap
@@ -208,11 +219,19 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                             else:
                                                 current_route[current_metal_layer].append(wire_len)
                                 if(flag_routed_section == 0):
-                                    total_cap = total_cap * (1e+12) #capacitance in p, so p or f??
+                                    total_cap = total_cap * (1e+15) #capacitance in p, so p or f??
                                     capacitance_per_net[current_net] = total_cap
                                     total_cap = 0
                                     nets_routes[current_net] = current_route
                                     current_route = {}
+                            
+                            if( case == 3 ):
+                                if(first == "-"):
+                                    tempPinName = second
+                                if(first == "+" and second == "LAYER"):
+                                    pins_layer[tempPinName] = line.split()[2]
+
+
                     except:
                         pass
                 #-------------------
@@ -281,7 +300,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             
                             for k in nets_routes[currentNet]:
                                 for v in (nets_routes[currentNet][k]):
-                                    temp = capacitanceCalculation(metal_layers[k][2], v, metal_layers[k][0], metal_layers[k][3]) *(1e+12)
+                                    temp = capacitanceCalculation(metal_layers[k][2], v, metal_layers[k][0], metal_layers[k][3]) *(1e+15)
                                     nets_section_string+= str(index) + " *" + str(name_maps_dict[currentNet]) + ":"+str(index)+" "+str(temp)+"\n"
                                     index = index+1
 
@@ -292,19 +311,20 @@ def generateSpef(deffile, leffile, libfile,speffile):
                             temp_index = temp_index+1
                             nets_section_string+="*P *"+str(name_maps_dict[pin_name])+" "+\
                                 ports_direction[pin_name]+"\n"
-                            temp_string+="*"+str(name_maps_dict[pin_name])+ " " + str(capacitance_per_net[pin_name])+"\n"
+                            temp_string+="*"+str(name_maps_dict[pin_name])+ " "+\
+                                        str(capacitanceCalculation(metal_layers[pins_layer[pin_name]][2], 1e-6, 1e-6, metal_layers[pins_layer[pin_name]][3])*1e+15)+"\n"
                         elif '(' in line.split():
                             #get the location of '(' if it exists
                             cell_name=line.split()[line.split().index('(')+1]
                             pin_name= line.split()[line.split().index('(')+2]
                             nets_section_string+="*I *"+str(name_maps_dict[cell_name])+":"+pin_name+" "
-                            temp_string+= "*"+str(name_maps_dict[cell_name])+":"+pin_name + " " + str(float(cell_pins[cell_name.split('_')[0]][pin_name][1]))+"\n"
+                            temp_string+= "*"+str(name_maps_dict[cell_name])+":"+pin_name + " " + str(float(cell_pins[cell_name.split('_')[0]][pin_name][1])*1e+3)+"\n"
                             direction=cell_pins[cell_name.split('_')[0]][pin_name][0]
                             if direction== 'I':
                                 #then get capacitance of input pin
                                 temp_index = temp_index+1
-                                capacitance=cell_pins[cell_name.split('_')[0]][pin_name][1]
-                                nets_section_string+=direction+" *L "+capacitance+"\n"
+                                capacitance=float(cell_pins[cell_name.split('_')[0]][pin_name][1])*1e+3
+                                nets_section_string+=direction+" *L "+str(capacitance)+"\n"
                             else:
                                 #get the name only
                                 #nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
