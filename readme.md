@@ -21,7 +21,7 @@
 		python [src file] [path to def file] [path to lib file] [path to lef file] [path to spef file to write to]
 
 ## example usage:
-		python def2spef "/home/areeg/Desktop/Digital 2/project 2/def2spef/tests/pic27ch/pic27ch.def" "/home/areeg/Deskt
+		python def2spef "/home/areeg/Desktop/Digital 2/project 2/def2spef/tests/pic27ch/pic27ch.def" "/home/areeg/Desktop
 		/Digital 2/project 2/def2spef/libs/osu018_stdcells.lib" "/home/areeg/Desktop/Digital 2/project 2/def2spe
 		/libs/osu018_stdcells.lef" "/home/areeg/Desktop/Digital 2/project 2/def2spef/tests/pic27ch/pic27ch.spef"
 	
