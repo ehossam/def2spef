@@ -39,6 +39,11 @@ def generateSpef(deffile, leffile, libfile,speffile):
     params = []
     temp_string = ""
     pins_layer = {} #pin: cap
+    comp_coordinates={}
+    route_cordinates={}
+    cell_pin_per_net={}
+    net_overwritten_cord={}
+    pin_coordinates={}
     #---
     with open(leffile,'r') as lef:
         for line in lef:
@@ -102,8 +107,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 cell_pins[cell_name][pin_name].append('O')
                         except:
                             pass
-                    #(TODO Areeg & Samanoudy): some pins in cells in NangateOpenCellLibrary only have max_cap
-                    #(TODO Areeg & Samanoudy): without cap should it be included?
                     if first_word=='capacitance':
                         try:
                             capacitance=line.split()[2]   #third word usually
@@ -152,6 +155,9 @@ def generateSpef(deffile, leffile, libfile,speffile):
     cur_resistance = 0.0
     temp_index = 1
     tempPinName=""
+    couns=0
+    temp_coun=0
+    metals_coordinates={}
     #start reading from the def file and get what we need
     with open(deffile, 'r') as df:
         for line in df:
@@ -187,20 +193,40 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                     cnt+=1
                         else:
                             if( case == 1 ):
-                                components[second] = "+" 
+                                couns=couns+1
+                                components[second] = "+"
+                                current_comp=second
+                                x_cord=line.split()[6]
+                                y_cord=line.split()[7]
+                                comp_coordinates[current_comp]=[]
+                                comp_coordinates[current_comp].append(x_cord)
+                                comp_coordinates[current_comp].append(y_cord)
+
                             if( case == 2 and first == '-' ) :
                                 nets[second] = "+"
                                 current_net = second
-
                             if(case == 2 and not flag_routed_section):
                                 if(first == "+"):
                                     current_metal_layer = current_route_line[2]
+                                    #print current_metal_layer
+                                    temp_coun=temp_index
                                     flag_routed_section = 1
                                 elif(first == "("):
                                     if(second != "PIN"):
+                                        #print line.split()[1]
+                                        try:
+                                            dummy=cell_pin_per_net[current_net][0]
+                                        except:
+                                            cell_pin_per_net[current_net]=[]
+                                        cell_pin_per_net[current_net].append(line.split()[1])
                                         total_cap = total_cap + float(cell_pins[second.split('_')[0]][line.split()[2]][1])*1e-12
-                                    else : 
-                                        total_cap = total_cap + capacitanceCalculation(metal_layers[pins_layer[line.split()[2]]][2], 1e-6, 1e-6, metal_layers[pins_layer[line.split()[2]]][3]) 
+                                    else:
+                                        try:
+                                            dummy=cell_pin_per_net[current_net][0]
+                                        except:
+                                            cell_pin_per_net[current_net]=[]
+                                        cell_pin_per_net[current_net].append(line.split()[2])
+                                        total_cap = total_cap + capacitanceCalculation(metal_layers[pins_layer[line.split()[2]]][2], 1e-6, 1e-6, metal_layers[pins_layer[line.split()[2]]][3])
                             if(case == 2 and flag_routed_section):
                                 if(current_route_line[current_route_line.__len__()-1] == ";" or second == "USE"): 
                                     nets_routes[current_net] = current_route
@@ -214,6 +240,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 x_2 = ""
                                 y_2 = ""
                                 cur_cap = 0
+
                                 for i, word in enumerate(current_route_line):
                                     if(word == "("):
                                         if(current_route_line[i-1] == current_metal_layer):
@@ -223,6 +250,15 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                         elif (current_route_line[i-1] == ")"):
                                             x_2 = x_1 if(current_route_line[i+1] == "*") else current_route_line[i+1]
                                             y_2 = y_1 if(current_route_line[i+2] == "*") else current_route_line[i+2]
+                                            try:
+                                                dummy=route_cordinates[current_net][0]
+                                            except:
+                                                route_cordinates[current_net]=[]
+                                            route_cordinates[current_net].append(x_1)
+                                            route_cordinates[current_net].append(y_1)
+                                            route_cordinates[current_net].append(x_2)
+                                            route_cordinates[current_net].append(y_2)
+
                                             #check the pin coordiates for pin 2
                                             dist_x = abs(int(x_1)-int(x_2))*1e-6
                                             dist_y = abs(int(y_1)-int(y_2))*1e-6
@@ -236,10 +272,12 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                                 current_route[current_metal_layer] = [wire_len]
                                             else:
                                                 current_route[current_metal_layer].append(wire_len)
+
                                             #------------------------- RESISTANCE -----------------------------------
                                             cur_resistance = cur_resistance + resistanceCalculation(temp[0], wire_len, temp[1])
                                     if(via_resistance.get(word)!=None):
-                                        print(word)
+                                        #print(word)
+                                        pass
                                         #add the via resistance
                                     #if pin2 is found append calculations and end the pins and everything
                                 if(flag_routed_section == 0):
@@ -254,6 +292,8 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                     tempPinName = second
                                 if(first == "+" and second == "LAYER"):
                                     pins_layer[tempPinName] = line.split()[2]
+                                if(first == "+" and second == "PLACED"):
+                                    pin_coordinates[tempPinName] = line.split()[3], line.split()[4]
 
 
                     except:
@@ -262,6 +302,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
 
             except:
                 pass
+    #print cell_pin_per_net['out223']
     with open(deffile, 'r') as df:
         for line in df:
             try:
@@ -327,6 +368,49 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                     temp = capacitanceCalculation(metal_layers[k][2], v, metal_layers[k][1], metal_layers[k][3]) *(1e+15)
                                     nets_section_string+= str(index) + " *" + str(name_maps_dict[currentNet]) + ":"+str(index)+" "+str(temp)+"\n"
                                     index = index+1
+                            #create a difference list for each net
+                            #print cell_pin_per_net['in50']
+                            for componentindex in cell_pin_per_net[currentNet]:
+                                diff=[]
+                                iter=0
+                                num_of_cordinates=len(route_cordinates[currentNet])
+                                if(componentindex in comp_coordinates):
+                                    for iter in range(0,num_of_cordinates,2):
+                                        diff.append(abs(float(comp_coordinates[componentindex][0])-\
+                                            float(route_cordinates[currentNet][iter])+\
+                                            float(comp_coordinates[componentindex][1])-\
+                                            float(route_cordinates[currentNet][iter])))
+                                    mini=min(diff)
+                                    for i, x in enumerate(diff):
+                                        if x == mini:
+                                            try:
+                                                dummy= net_overwritten_cord[currentNet][0]
+                                            except:
+                                                net_overwritten_cord[currentNet]=[]
+                                            if(i not in net_overwritten_cord[currentNet]):
+                                                net_overwritten_cord[currentNet].append(int(i))
+                                                route_cordinates[currentNet][2*int(i)]=str(comp_coordinates[componentindex][0])
+                                                route_cordinates[currentNet][2*int(i)+1]=str(comp_coordinates[componentindex][1])
+                                else:
+                                    for iter in range(0,num_of_cordinates,2):
+                                        diff.append(abs(float(pin_coordinates[componentindex][0])-\
+                                            float(route_cordinates[currentNet][iter])+\
+                                            float(pin_coordinates[componentindex][1])-\
+                                            float(route_cordinates[currentNet][iter])))
+                                    mini=min(diff)
+                                    for i, x in enumerate(diff):
+                                        if x == mini:
+                                            try:
+                                                dummy= net_overwritten_cord[currentNet][0]
+                                            except:
+                                                net_overwritten_cord[currentNet]=[]
+                                            if(i not in net_overwritten_cord[currentNet]):
+                                                net_overwritten_cord[currentNet].append(int(i))
+                                                route_cordinates[currentNet][2*int(i)]=str(pin_coordinates[componentindex][0])
+                                                route_cordinates[currentNet][2*int(i)+1]=str(pin_coordinates[componentindex][1])
+                                #print componentindex
+
+                                #print route_cordinates[currentNet]
 
                             nets_section_string+="\n*RES\n\n*END\n\n"
                         if 'PIN' in line.split():
@@ -348,12 +432,14 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 #then get capacitance of input pin
                                 temp_index = temp_index+1
                                 capacitance=float(cell_pins[cell_name.split('_')[0]][pin_name][1])*1e+3
+                                #capacitance=cell_pins[cell_name.split('_')[0]][pin_name][1]
                                 nets_section_string+=direction+" *L "+str(capacitance)+"\n"
                             else:
                                 #get the name only
-                                #nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name.split('_')[0]])+"\n"
+                                #we add the TYPE not the actual name mapping after *D
+                                nets_section_string+=direction+" *D "+ str(cell_name.split('_')[0])+"\n"
                                 temp_index = temp_index+1
-                                nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name])+"\n"
+                                #nets_section_string+=direction+" *D *"+ str(name_maps_dict[cell_name])+"\n"
                     except:
                         pass
                 elif(flag_in_nets_section and not flag_inside_connection_net):
@@ -362,8 +448,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
                         second_word=line.split()[1]
                         if(first_word == "-"):
                             currentNet = second_word #netname
-                            # (TODO Areeg & Samanoudy): also we want to add the total capacitance field at the end of the line
-                            #i.e. currentNet_name_map= name_maps_dict[currentNet]
                             nets_section_string+="*D_NET *"+str(name_maps_dict[currentNet])+" "+str(capacitance_per_net[currentNet])+\
                                 "\n\n*CONN\n"
                             flag_inside_connection_net=1
@@ -401,10 +485,15 @@ def generateSpef(deffile, leffile, libfile,speffile):
             except:
                 pass
 
+    #print cell_pins
     #write to the SPEF file
     #we first prepare a list with all the lines we want to inset then we open the file and insert all at once
     all_words=[]
+    #print route_cordinates['in17']
+    #print cell_pin_per_net['in17']
 
+    #print nets_routes['_0_']
+    #print metal_layers
     #Header Section : header_def
     currenttime= datetime.datetime.now()
     string_to_write='*SPEF "IEEE 1481-2009"\n*DESIGN "'+design_name+'"\n*DATE "'+str(currenttime)+'"\n*VENDOR "AUC_STUDENTS"'+\
@@ -433,9 +522,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
         all_words.append(string_to_write)
         count+=1
     all_words.append('')    #just to add newline
-    #Hierarchical SPEF (entities) definition : [define_def]
 
-    #Process and temperature variation definition : [variation_def]
 
     #Internal definition : internal_def
     string_to_write=nets_section_string
