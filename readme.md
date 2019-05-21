@@ -31,7 +31,4 @@
  - D_Nets without calculations
  - Wire Segments
  - Capacitance Calculations
-
-## What is missing:
- - Vias Consideration
  - Resistance Calculations
