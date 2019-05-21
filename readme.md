@@ -10,10 +10,11 @@
  - Language: Python
 
 ## Refrences: (under the refrences folder)
- - 05-Capacitance-Driving-a-Load-2012-13-B
- - 2012_Bookmatter_ProcessVariationsAndProbabilis
- - ISPD_2013_Contest_Details
- - post2spefformat-150920142958-lva1-app6891
+ - Lecture 06 - Capacitance, Driving a Load-2011-12-B
+ - Process Variations And Probabilis, Standard Formats for Circuit Characterization
+ - ISPD 2013 Contest Details
+ - SPEF Format
+ - LEF/DEF Language Reference
 
 ## How to build and install:
  - enter the command:

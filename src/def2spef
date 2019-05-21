@@ -2,6 +2,7 @@
 import sys
 import datetime
 import operator
+import math 
 from collections import OrderedDict
 
 def checkversion():
@@ -42,7 +43,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
     comp_coordinates={}
     route_cordinates={}
     cell_pin_per_net={}
-    net_overwritten_cord={}
     pin_coordinates={}
     #---
     with open(leffile,'r') as lef:
@@ -148,21 +148,12 @@ def generateSpef(deffile, leffile, libfile,speffile):
     capacitance_per_net = {}
     current_net = ""
     total_cap = 0
-    resistance_per_net = {} #net:{{pin1, pin2, resistance}, {pin1, pin2, resistance}, ......}
-    #keep adding to the resistance till pin2 is found
-    cur_pin1 = ""
-    cur_pin2 = ""
-    cur_resistance = 0.0
     temp_index = 1
     tempPinName=""
     cell_with_pin_per_net={}
     couns=0
-    temp_coun=0
-    metals_coordinates={}
     temp_coordinates = {}
-    temp_res_string=""
     metal_layers_res = []
-    cells_for_net= {}
     #start reading from the def file and get what we need
     with open(deffile, 'r') as df:
         for line in df:
@@ -216,7 +207,6 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 if(first == "+"):
                                     current_metal_layer = current_route_line[2]
                                     #print current_metal_layer
-                                    temp_coun=temp_index
                                     flag_routed_section = 1
                                 elif(first == "("):
                                     if(second != "PIN"):
@@ -301,7 +291,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 if(first == "+" and second == "LAYER"):
                                     pins_layer[tempPinName] = line.split()[2]
                                 if(first == "+" and second == "PLACED"):
-                                    pin_coordinates[tempPinName] = line.split()[3], line.split()[4]
+                                    pin_coordinates[tempPinName] = [line.split()[3], line.split()[4]]
 
 
                     except:
@@ -311,6 +301,7 @@ def generateSpef(deffile, leffile, libfile,speffile):
             except:
                 pass
     #print cell_pin_per_net['out223']
+    currentNet = ""
     with open(deffile, 'r') as df:
         for line in df:
             try:
@@ -386,10 +377,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 num_of_cordinates=len(route_cordinates[currentNet])
                                 if(componentindex in comp_coordinates):
                                     for iter in range(0,num_of_cordinates,2):
-                                        diff.append(abs(float(comp_coordinates[componentindex][0])-\
-                                            float(temp_coordinates[currentNet][iter])+\
-                                            float(comp_coordinates[componentindex][1])-\
-                                            float(temp_coordinates[currentNet][iter+1])))
+                                        diff.append(math.sqrt((float(comp_coordinates[componentindex][0])-\
+                                            float(temp_coordinates[currentNet][iter]))**2+\
+                                            (float(comp_coordinates[componentindex][1])-\
+                                            float(temp_coordinates[currentNet][iter+1]))**2))
                                     mini=min(diff)
                                     for i, x in enumerate(diff):
                                         if x == mini:
@@ -399,10 +390,10 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                             route_cordinates[currentNet][2*int(i)+1]=str(comp_coordinates[componentindex][1])
                                 else:
                                     for iter in range(0,num_of_cordinates,2):
-                                        diff.append(abs(float(pin_coordinates[componentindex][0])-\
-                                            float(temp_coordinates[currentNet][iter])+\
-                                            float(pin_coordinates[componentindex][1])-\
-                                            float(temp_coordinates[currentNet][iter+1])))
+                                        diff.append(math.sqrt((float(pin_coordinates[componentindex][0])-\
+                                            float(temp_coordinates[currentNet][iter]))**2+\
+                                            (float(pin_coordinates[componentindex][1])-\
+                                            float(temp_coordinates[currentNet][iter+1]))**2))
                                     mini=min(diff)
                                     #print diff
                                     for i, x in enumerate(diff):
@@ -411,25 +402,45 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                             temp_coordinates[currentNet][2*int(i)+1] = '9e9'
                                             route_cordinates[currentNet][2*int(i)]=str(pin_coordinates[componentindex][0])
                                             route_cordinates[currentNet][2*int(i)+1]=str(pin_coordinates[componentindex][1])
-                        
+
+                            wire_coordinates = {}
+                            #print(wire_coordinates)
+                            index = len(cell_pin_per_net[currentNet])+1
+                            for i in range(0,len(temp_coordinates[currentNet]),2):
+                                x = temp_coordinates[currentNet][i]
+                                y = temp_coordinates[currentNet][i+1]
+                                if(x != "9e9" and wire_coordinates.get(x) == None):
+                                    wire_coordinates[x] = {}
+                                    wire_coordinates[x][y] = str(index)
+                                    index = index + 1
+                                elif(x != "9e9" and wire_coordinates[x].get(y) == None):
+                                    wire_coordinates[x] = {}
+                                    wire_coordinates[x][y] = str(index)
+                                    index = index + 1
                             #--------------- RESISTANCE -----------------------------------
 
                             nets_section_string+="\n*RES\n"
                             index = 1
-                            x_1 = ""
-                            y_1 = ""
-                            x_2 = ""
-                            y_2 = ""
-                            pin_1= []
-                            pin_2= []
-
                             z = 0
                             for i in route_cordinates[currentNet]:
+                                x_1 = ""
+                                y_1 = ""
+                                x_2 = ""
+                                y_2 = ""
+                                pin_1= []
+                                pin_2= []
                                 x_1 = route_cordinates[currentNet][z]
                                 y_1 = route_cordinates[currentNet][z+1]
                                 x_2 = route_cordinates[currentNet][z+2]
                                 y_2 = route_cordinates[currentNet][z+3]
-
+                                
+                                if(wire_coordinates.get(x_1) != None):
+                                    if(wire_coordinates[x_1].get(y_1) != None):
+                                        wire_1 = wire_coordinates[x_1][y_1]
+                                if(wire_coordinates.get(x_2) != None):
+                                    if(wire_coordinates[x_2].get(y_2) != None):
+                                        wire_2 = wire_coordinates[x_2][y_2]
+        
                                 for m in cell_pin_per_net[currentNet]:
                                     if(comp_coordinates.get(m) != None):
                                         if(comp_coordinates[m][0] == x_1 and comp_coordinates[m][1] == y_1):
@@ -447,46 +458,48 @@ def generateSpef(deffile, leffile, libfile,speffile):
                                 wire_len = dist_y if(dist_x==0) else dist_x
                                 z_4 = z-4
                                 z = z+4
-                                wire_len = wire_len + (metal_layers[metal_layers_res[z_4]][1]/2)
-                                res = resistanceCalculation(metal_layers[metal_layers_res[z_4]][0], wire_len, metal_layers[metal_layers_res[z_4]][1])
-                                #loop over components per net
-                                if(pin_1.__len__() > 0 and pin_2.__len__() > 0):
-                                    if(pin_1[1] == 1 and pin_2[1] == 1):
-                                        nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + ":"+str(cell_with_pin_per_net[currentNet][pin_1[0]])
-                                        nets_section_string+= " *" + str(name_maps_dict[pin_2[0]]) + ":"+str(cell_with_pin_per_net[currentNet][pin_2[0]])
-                                        nets_section_string+=" " + str(res) +"\n"
-                                    if(pin_1[1] == 1 and pin_2[1] == 0):
-                                        nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + ":"+cell_with_pin_per_net[currentNet][pin_1[0]]+\
-                                            " *" + str(name_maps_dict[pin_2[0]]) + " " + str(res) +"\n"
-                                    if(pin_1[1] == 0 and pin_2[1] == 1):
-                                        nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) +" *" +\
-                                             str(name_maps_dict[pin_2[0]]) + ":"+str(cell_with_pin_per_net[currentNet][pin_2[0]])+\
-                                                " " + str(res) +"\n"
-                                    if(pin_1[1] == 0 and pin_2[1] == 0):
-                                        nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + " *" +\
-                                             str(name_maps_dict[pin_2[0]]) + " " + str(res) +"\n"
-                                elif(pin_1.__len__() > 0):
-                                    if(pin_1[1] == 1):
-                                        nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + ":"+cell_with_pin_per_net[currentNet][pin_1[0]]+\
-                                            " *" + str(name_maps_dict[currentNet]) + ":"+ str(index) +\
-                                                " " + str(res) +"\n"
-                                    if(pin_1[1] == 0):
-                                        nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) +" *" +\
-                                             str(name_maps_dict[currentNet]) + ":"+str(index)+ " " + str(res) +"\n"
-                                elif(pin_2.__len__() > 0):
-                                    if(pin_2[1] == 1):
-                                        nets_section_string+= str(index) +  " *" + str(name_maps_dict[currentNet]) + ":"+ str(index) +\
-                                            " *" + str(name_maps_dict[pin_2[0]]) + ":"+cell_with_pin_per_net[currentNet][pin_2[0]]+\
-                                             " " + str(res) +"\n"
-                                    if(pin_2[1] == 0):
-                                        nets_section_string+= str(index) +  " *" + str(name_maps_dict[currentNet]) + ":"+ str(index) +\
-                                            " *" + str(name_maps_dict[currentNet])+\
-                                                " " + str(res) +"\n"
-                                else:
-                                    nets_section_string+= str(index) +  " *" + str(name_maps_dict[currentNet]) + ":"+ str(index) +\
-                                            " *" + str(name_maps_dict[currentNet]) + ":"+str(index)+\
-                                                " " + str(res) +"\n"
-                                index = index+1
+                                if(wire_len != 0):
+                                    wire_len = wire_len + (metal_layers[metal_layers_res[z_4]][1]/2)
+                                    res = resistanceCalculation(metal_layers[metal_layers_res[z_4]][0], wire_len, metal_layers[metal_layers_res[z_4]][1])
+                                    #loop over components per net
+                                    if(pin_1.__len__() > 0 and pin_2.__len__() > 0):
+                                        if(pin_1[1] == 1 and pin_2[1] == 1):
+                                            nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + ":"+str(cell_with_pin_per_net[currentNet][pin_1[0]])
+                                            nets_section_string+= " *" + str(name_maps_dict[pin_2[0]]) + ":"+str(cell_with_pin_per_net[currentNet][pin_2[0]])
+                                            nets_section_string+=" " + str(res) +"\n"
+                                        if(pin_1[1] == 1 and pin_2[1] == 0):
+                                            nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + ":"+cell_with_pin_per_net[currentNet][pin_1[0]]+\
+                                                " *" + str(name_maps_dict[pin_2[0]]) + " " + str(res) +"\n"
+                                        if(pin_1[1] == 0 and pin_2[1] == 1):
+                                            nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) +" *" +\
+                                                 str(name_maps_dict[pin_2[0]]) + ":"+str(cell_with_pin_per_net[currentNet][pin_2[0]])+\
+                                                    " " + str(res) +"\n"
+                                        if(pin_1[1] == 0 and pin_2[1] == 0):
+                                            nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + " *" +\
+                                                 str(name_maps_dict[pin_2[0]]) + " " + str(res) +"\n"
+
+                                    elif(pin_1.__len__() > 0):
+                                        if(pin_1[1] == 1):
+                                            nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) + ":"+cell_with_pin_per_net[currentNet][pin_1[0]]+\
+                                                " *" + str(name_maps_dict[currentNet]) + ":"+ str(wire_2) +\
+                                                    " " + str(res) +"\n"
+                                        if(pin_1[1] == 0):
+                                            nets_section_string+= str(index) + " *" + str(name_maps_dict[pin_1[0]]) +" *" +\
+                                                 str(name_maps_dict[currentNet]) + ":"+str(wire_2)+ " " + str(res) +"\n"
+                                    elif(pin_2.__len__() > 0):
+                                        if(pin_2[1] == 1):
+                                            nets_section_string+= str(index) +  " *" + str(name_maps_dict[currentNet]) + ":"+ str(wire_1) +\
+                                                " *" + str(name_maps_dict[pin_2[0]]) + ":"+cell_with_pin_per_net[currentNet][pin_2[0]]+\
+                                                 " " + str(res) +"\n"
+                                        if(pin_2[1] == 0):
+                                            nets_section_string+= str(index) +  " *" + str(name_maps_dict[currentNet]) + ":"+ str(wire_1) +\
+                                                " *" + str(name_maps_dict[currentNet])+\
+                                                    " " + str(res) +"\n"
+                                    else:
+                                        nets_section_string+= str(index) +  " *" + str(name_maps_dict[currentNet]) + ":"+ str(wire_1) +\
+                                                " *" + str(name_maps_dict[currentNet]) + ":"+str(wire_2)+\
+                                                    " " + str(res) +"\n"
+                                    index = index+1
 
 
                         if 'PIN' in line.split():

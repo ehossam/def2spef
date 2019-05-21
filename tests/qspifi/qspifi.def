@@ -1,0 +1,3868 @@
+VERSION 5.6 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "<>" ;
+DESIGN qspifi ;
+UNITS DISTANCE MICRONS 100 ;
+
+DIEAREA ( -480 -400 ) ( 28480 18400 ) ;
+
+TRACKS Y -400 DO 95 STEP 200 LAYER metal1 ;
+TRACKS X -480 DO 182 STEP 160 LAYER metal2 ;
+TRACKS Y -400 DO 95 STEP 200 LAYER metal3 ;
+TRACKS X -480 DO 91 STEP 320 LAYER metal4 ;
+
+COMPONENTS 308 ;
+- BUFX2_8 BUFX2 + PLACED ( 80 100 ) S ;
+- DFFSR_2 DFFSR + PLACED ( 560 100 ) S ;
+- BUFX2_16 BUFX2 + PLACED ( 4080 100 ) S ;
+- DFFSR_10 DFFSR + PLACED ( 4560 100 ) S ;
+- FILL_0_0_0 FILL + PLACED ( 8080 100 ) FS ;
+- FILL_0_0_1 FILL + PLACED ( 8240 100 ) FS ;
+- FILL_0_0_2 FILL + PLACED ( 8400 100 ) FS ;
+- BUFX2_26 BUFX2 + PLACED ( 8560 100 ) FS ;
+- BUFX2_30 BUFX2 + PLACED ( 9040 100 ) FS ;
+- BUFX4_24 BUFX4 + PLACED ( 9520 100 ) S ;
+- BUFX2_24 BUFX2 + PLACED ( 10160 100 ) FS ;
+- NOR2X1_15 NOR2X1 + PLACED ( 10640 100 ) FS ;
+- AOI21X1_9 AOI21X1 + PLACED ( 11120 100 ) S ;
+- DFFSR_16 DFFSR + PLACED ( 11760 100 ) FS ;
+- INVX1_13 INVX1 + PLACED ( 15280 100 ) S ;
+- BUFX2_22 BUFX2 + PLACED ( 15600 100 ) FS ;
+- BUFX2_28 BUFX2 + PLACED ( 16080 100 ) FS ;
+- BUFX2_18 BUFX2 + PLACED ( 16560 100 ) FS ;
+- BUFX2_9 BUFX2 + PLACED ( 17040 100 ) FS ;
+- NOR2X1_11 NOR2X1 + PLACED ( 17520 100 ) FS ;
+- BUFX2_14 BUFX2 + PLACED ( 18000 100 ) S ;
+- AOI21X1_5 AOI21X1 + PLACED ( 18480 100 ) S ;
+- OAI21X1_10 OAI21X1 + PLACED ( 19120 100 ) FS ;
+- FILL_0_1_0 FILL + PLACED ( 19760 100 ) S ;
+- FILL_0_1_1 FILL + PLACED ( 19920 100 ) S ;
+- FILL_0_1_2 FILL + PLACED ( 20080 100 ) S ;
+- DFFSR_8 DFFSR + PLACED ( 20240 100 ) S ;
+- DFFSR_31 DFFSR + PLACED ( 23760 100 ) FS ;
+- BUFX2_37 BUFX2 + PLACED ( 27280 100 ) FS ;
+- FILL_1_1 FILL + PLACED ( 27760 100 ) S ;
+- FILL_1_2 FILL + PLACED ( 27920 100 ) S ;
+- BUFX2_20 BUFX2 + PLACED ( 80 2100 ) FN ;
+- DFFSR_14 DFFSR + PLACED ( 560 2100 ) FN ;
+- INVX1_11 INVX1 + PLACED ( 4080 2100 ) N ;
+- OAI21X1_7 OAI21X1 + PLACED ( 4400 2100 ) N ;
+- OAI21X1_6 OAI21X1 + PLACED ( 5040 2100 ) FN ;
+- OAI21X1_14 OAI21X1 + PLACED ( 5680 2100 ) N ;
+- OAI21X1_15 OAI21X1 + PLACED ( 6320 2100 ) FN ;
+- AOI21X1_7 AOI21X1 + PLACED ( 6960 2100 ) N ;
+- NOR2X1_13 NOR2X1 + PLACED ( 7600 2100 ) FN ;
+- FILL_1_0_0 FILL + PLACED ( 8080 2100 ) N ;
+- FILL_1_0_1 FILL + PLACED ( 8240 2100 ) N ;
+- FILL_1_0_2 FILL + PLACED ( 8400 2100 ) N ;
+- OAI21X1_26 OAI21X1 + PLACED ( 8560 2100 ) N ;
+- INVX1_17 INVX1 + PLACED ( 9200 2100 ) N ;
+- OAI21X1_27 OAI21X1 + PLACED ( 9520 2100 ) N ;
+- DFFSR_20 DFFSR + PLACED ( 10160 2100 ) FN ;
+- OAI21X1_19 OAI21X1 + PLACED ( 13680 2100 ) N ;
+- DFFSR_12 DFFSR + PLACED ( 14320 2100 ) N ;
+- FILL_1_1_0 FILL + PLACED ( 17840 2100 ) FN ;
+- FILL_1_1_1 FILL + PLACED ( 18000 2100 ) FN ;
+- FILL_1_1_2 FILL + PLACED ( 18160 2100 ) FN ;
+- DFFSR_3 DFFSR + PLACED ( 18320 2100 ) FN ;
+- BUFX2_10 BUFX2 + PLACED ( 21840 2100 ) N ;
+- DFFSR_27 DFFSR + PLACED ( 22320 2100 ) FN ;
+- OAI21X1_33 OAI21X1 + PLACED ( 25840 2100 ) FN ;
+- INVX1_20 INVX1 + PLACED ( 26480 2100 ) FN ;
+- AOI21X1_16 AOI21X1 + PLACED ( 26800 2100 ) N ;
+- NOR2X1_22 NOR2X1 + PLACED ( 27440 2100 ) FN ;
+- FILL_2_1 FILL + PLACED ( 27920 2100 ) N ;
+- BUFX2_12 BUFX2 + PLACED ( 80 4100 ) S ;
+- DFFSR_6 DFFSR + PLACED ( 560 4100 ) S ;
+- INVX1_7 INVX1 + PLACED ( 4080 4100 ) FS ;
+- AOI21X1_3 AOI21X1 + PLACED ( 4400 4100 ) FS ;
+- NOR2X1_9 NOR2X1 + PLACED ( 5040 4100 ) S ;
+- DFFSR_24 DFFSR + PLACED ( 5520 4100 ) FS ;
+- FILL_2_0_0 FILL + PLACED ( 9040 4100 ) FS ;
+- FILL_2_0_1 FILL + PLACED ( 9200 4100 ) FS ;
+- FILL_2_0_2 FILL + PLACED ( 9360 4100 ) FS ;
+- BUFX4_20 BUFX4 + PLACED ( 9520 4100 ) FS ;
+- OAI21X1_22 OAI21X1 + PLACED ( 10160 4100 ) FS ;
+- BUFX4_21 BUFX4 + PLACED ( 10800 4100 ) S ;
+- DFFSR_18 DFFSR + PLACED ( 11440 4100 ) S ;
+- OAI21X1_23 OAI21X1 + PLACED ( 14960 4100 ) S ;
+- BUFX4_22 BUFX4 + PLACED ( 15600 4100 ) FS ;
+- OAI21X1_18 OAI21X1 + PLACED ( 16240 4100 ) S ;
+- OAI21X1_8 OAI21X1 + PLACED ( 16880 4100 ) FS ;
+- OAI21X1_9 OAI21X1 + PLACED ( 17520 4100 ) FS ;
+- BUFX4_19 BUFX4 + PLACED ( 18160 4100 ) FS ;
+- OAI21X1_32 OAI21X1 + PLACED ( 18800 4100 ) FS ;
+- FILL_2_1_0 FILL + PLACED ( 19440 4100 ) FS ;
+- FILL_2_1_1 FILL + PLACED ( 19600 4100 ) FS ;
+- FILL_2_1_2 FILL + PLACED ( 19760 4100 ) FS ;
+- OAI21X1_11 OAI21X1 + PLACED ( 19920 4100 ) FS ;
+- DFFSR_4 DFFSR + PLACED ( 20560 4100 ) S ;
+- INVX4_1 INVX4 + PLACED ( 24080 4100 ) S ;
+- DFFSR_33 DFFSR + PLACED ( 24560 4100 ) FS ;
+- BUFX2_34 BUFX2 + PLACED ( 80 6100 ) FN ;
+- INVX1_21 INVX1 + PLACED ( 560 6100 ) N ;
+- NOR2X1_23 NOR2X1 + PLACED ( 880 6100 ) N ;
+- AOI21X1_17 AOI21X1 + PLACED ( 1360 6100 ) FN ;
+- BUFX4_11 BUFX4 + PLACED ( 2000 6100 ) N ;
+- OAI21X1_35 OAI21X1 + PLACED ( 2640 6100 ) N ;
+- OAI21X1_34 OAI21X1 + PLACED ( 3280 6100 ) FN ;
+- DFFSR_28 DFFSR + PLACED ( 3920 6100 ) N ;
+- NOR2X1_19 NOR2X1 + PLACED ( 7440 6100 ) N ;
+- FILL_3_0_0 FILL + PLACED ( 7920 6100 ) FN ;
+- FILL_3_0_1 FILL + PLACED ( 8080 6100 ) FN ;
+- FILL_3_0_2 FILL + PLACED ( 8240 6100 ) FN ;
+- AOI21X1_13 AOI21X1 + PLACED ( 8400 6100 ) FN ;
+- BUFX4_5 BUFX4 + PLACED ( 9040 6100 ) N ;
+- BUFX4_13 BUFX4 + PLACED ( 9680 6100 ) FN ;
+- BUFX4_6 BUFX4 + PLACED ( 10320 6100 ) N ;
+- DFFSR_13 DFFSR + PLACED ( 10960 6100 ) FN ;
+- BUFX4_1 BUFX4 + PLACED ( 14480 6100 ) N ;
+- NOR2X1_17 NOR2X1 + PLACED ( 15120 6100 ) N ;
+- AOI21X1_11 AOI21X1 + PLACED ( 15600 6100 ) FN ;
+- INVX1_15 INVX1 + PLACED ( 16240 6100 ) FN ;
+- DFFSR_22 DFFSR + PLACED ( 16560 6100 ) FN ;
+- FILL_3_1_0 FILL + PLACED ( 20080 6100 ) FN ;
+- FILL_3_1_1 FILL + PLACED ( 20240 6100 ) FN ;
+- FILL_3_1_2 FILL + PLACED ( 20400 6100 ) FN ;
+- BUFX4_7 BUFX4 + PLACED ( 20560 6100 ) FN ;
+- BUFX4_15 BUFX4 + PLACED ( 21200 6100 ) FN ;
+- BUFX4_9 BUFX4 + PLACED ( 21840 6100 ) N ;
+- DFFNEGX1_1 DFFNEGX1 + PLACED ( 22480 6100 ) FN ;
+- NAND2X1_5 NAND2X1 + PLACED ( 24400 6100 ) FN ;
+- AND2X2_1 AND2X2 + PLACED ( 24880 6100 ) N ;
+- INVX1_22 INVX1 + PLACED ( 25520 6100 ) FN ;
+- OR2X2_3 OR2X2 + PLACED ( 25840 6100 ) N ;
+- BUFX2_6 BUFX2 + PLACED ( 26480 6100 ) N ;
+- BUFX2_39 BUFX2 + PLACED ( 26960 6100 ) N ;
+- BUFX2_1 BUFX2 + PLACED ( 27440 6100 ) N ;
+- FILL_4_1 FILL + PLACED ( 27920 6100 ) N ;
+- BUFX2_38 BUFX2 + PLACED ( 80 8100 ) S ;
+- DFFSR_32 DFFSR + PLACED ( 560 8100 ) S ;
+- BUFX4_12 BUFX4 + PLACED ( 4080 8100 ) S ;
+- DFFSR_9 DFFSR + PLACED ( 4720 8100 ) S ;
+- FILL_4_0_0 FILL + PLACED ( 8240 8100 ) S ;
+- FILL_4_0_1 FILL + PLACED ( 8400 8100 ) S ;
+- FILL_4_0_2 FILL + PLACED ( 8560 8100 ) S ;
+- OAI21X1_12 OAI21X1 + PLACED ( 8720 8100 ) S ;
+- OAI21X1_13 OAI21X1 + PLACED ( 9360 8100 ) S ;
+- OR2X2_2 OR2X2 + PLACED ( 10000 8100 ) FS ;
+- INVX1_10 INVX1 + PLACED ( 10640 8100 ) S ;
+- BUFX4_16 BUFX4 + PLACED ( 10960 8100 ) S ;
+- BUFX4_23 BUFX4 + PLACED ( 11600 8100 ) S ;
+- BUFX4_2 BUFX4 + PLACED ( 12240 8100 ) S ;
+- AOI21X1_6 AOI21X1 + PLACED ( 12880 8100 ) FS ;
+- NOR2X1_12 NOR2X1 + PLACED ( 13520 8100 ) FS ;
+- BUFX4_14 BUFX4 + PLACED ( 14000 8100 ) FS ;
+- BUFX4_25 BUFX4 + PLACED ( 14640 8100 ) S ;
+- AOI21X1_12 AOI21X1 + PLACED ( 15280 8100 ) FS ;
+- NOR2X1_18 NOR2X1 + PLACED ( 15920 8100 ) S ;
+- BUFX4_8 BUFX4 + PLACED ( 16400 8100 ) S ;
+- DFFSR_7 DFFSR + PLACED ( 17040 8100 ) S ;
+- FILL_4_1_0 FILL + PLACED ( 20560 8100 ) FS ;
+- FILL_4_1_1 FILL + PLACED ( 20720 8100 ) FS ;
+- FILL_4_1_2 FILL + PLACED ( 20880 8100 ) FS ;
+- BUFX4_10 BUFX4 + PLACED ( 21040 8100 ) FS ;
+- INVX2_1 INVX2 + PLACED ( 21680 8100 ) FS ;
+- OAI21X1_3 OAI21X1 + PLACED ( 22000 8100 ) S ;
+- BUFX2_33 BUFX2 + PLACED ( 22640 8100 ) FS ;
+- INVX1_3 INVX1 + PLACED ( 23120 8100 ) S ;
+- OAI21X1_37 OAI21X1 + PLACED ( 23440 8100 ) S ;
+- NOR2X1_24 NOR2X1 + PLACED ( 24080 8100 ) FS ;
+- OAI21X1_36 OAI21X1 + PLACED ( 24560 8100 ) FS ;
+- DFFNEGX1_5 DFFNEGX1 + PLACED ( 25200 8100 ) S ;
+- OAI21X1_40 OAI21X1 + PLACED ( 27120 8100 ) FS ;
+- FILL_5_1 FILL + PLACED ( 27760 8100 ) S ;
+- FILL_5_2 FILL + PLACED ( 27920 8100 ) S ;
+- BUFX2_32 BUFX2 + PLACED ( 80 10100 ) FN ;
+- BUFX2_7 BUFX2 + PLACED ( 560 10100 ) FN ;
+- OAI21X1_5 OAI21X1 + PLACED ( 1040 10100 ) N ;
+- OAI21X1_4 OAI21X1 + PLACED ( 1680 10100 ) FN ;
+- DFFSR_1 DFFSR + PLACED ( 2320 10100 ) FN ;
+- OAI21X1_30 OAI21X1 + PLACED ( 5840 10100 ) FN ;
+- BUFX4_4 BUFX4 + PLACED ( 6480 10100 ) FN ;
+- BUFX4_18 BUFX4 + PLACED ( 7120 10100 ) FN ;
+- FILL_5_0_0 FILL + PLACED ( 7760 10100 ) N ;
+- FILL_5_0_1 FILL + PLACED ( 7920 10100 ) N ;
+- FILL_5_0_2 FILL + PLACED ( 8080 10100 ) N ;
+- DFFSR_19 DFFSR + PLACED ( 8240 10100 ) N ;
+- OAI21X1_25 OAI21X1 + PLACED ( 11760 10100 ) FN ;
+- BUFX4_3 BUFX4 + PLACED ( 12400 10100 ) N ;
+- INVX1_16 INVX1 + PLACED ( 13040 10100 ) N ;
+- DFFSR_23 DFFSR + PLACED ( 13360 10100 ) FN ;
+- AOI21X1_4 AOI21X1 + PLACED ( 16880 10100 ) FN ;
+- INVX1_8 INVX1 + PLACED ( 17520 10100 ) N ;
+- BUFX4_17 BUFX4 + PLACED ( 17840 10100 ) N ;
+- NOR2X1_7 NOR2X1 + PLACED ( 18480 10100 ) N ;
+- NAND3X1_7 NAND3X1 + PLACED ( 18960 10100 ) FN ;
+- FILL_5_1_0 FILL + PLACED ( 19600 10100 ) N ;
+- FILL_5_1_1 FILL + PLACED ( 19760 10100 ) N ;
+- FILL_5_1_2 FILL + PLACED ( 19920 10100 ) N ;
+- OAI21X1_1 OAI21X1 + PLACED ( 20080 10100 ) N ;
+- DFFNEGX1_4 DFFNEGX1 + PLACED ( 20720 10100 ) N ;
+- INVX1_2 INVX1 + PLACED ( 22640 10100 ) N ;
+- NAND3X1_2 NAND3X1 + PLACED ( 22960 10100 ) N ;
+- NAND3X1_1 NAND3X1 + PLACED ( 23600 10100 ) N ;
+- OAI21X1_39 OAI21X1 + PLACED ( 24240 10100 ) FN ;
+- NOR2X1_25 NOR2X1 + PLACED ( 24880 10100 ) N ;
+- NAND2X1_6 NAND2X1 + PLACED ( 25360 10100 ) FN ;
+- INVX1_25 INVX1 + PLACED ( 25840 10100 ) N ;
+- INVX1_23 INVX1 + PLACED ( 26160 10100 ) N ;
+- OAI21X1_38 OAI21X1 + PLACED ( 26480 10100 ) N ;
+- AOI21X1_18 AOI21X1 + PLACED ( 27120 10100 ) N ;
+- INVX2_2 INVX2 + PLACED ( 27760 10100 ) FN ;
+- BUFX2_11 BUFX2 + PLACED ( 80 12100 ) S ;
+- INVX1_6 INVX1 + PLACED ( 560 12100 ) FS ;
+- BUFX2_15 BUFX2 + PLACED ( 880 12100 ) S ;
+- AOI21X1_2 AOI21X1 + PLACED ( 1360 12100 ) FS ;
+- NOR2X1_8 NOR2X1 + PLACED ( 2000 12100 ) FS ;
+- DFFSR_26 DFFSR + PLACED ( 2480 12100 ) S ;
+- OAI21X1_31 OAI21X1 + PLACED ( 6000 12100 ) S ;
+- FILL_6_0_0 FILL + PLACED ( 6640 12100 ) FS ;
+- FILL_6_0_1 FILL + PLACED ( 6800 12100 ) FS ;
+- FILL_6_0_2 FILL + PLACED ( 6960 12100 ) FS ;
+- DFFSR_25 DFFSR + PLACED ( 7120 12100 ) FS ;
+- OAI21X1_24 OAI21X1 + PLACED ( 10640 12100 ) FS ;
+- BUFX2_29 BUFX2 + PLACED ( 11280 12100 ) S ;
+- DFFSR_21 DFFSR + PLACED ( 11760 12100 ) FS ;
+- INVX1_12 INVX1 + PLACED ( 15280 12100 ) S ;
+- NOR2X1_14 NOR2X1 + PLACED ( 15600 12100 ) FS ;
+- AOI21X1_8 AOI21X1 + PLACED ( 16080 12100 ) S ;
+- NOR2X1_10 NOR2X1 + PLACED ( 16720 12100 ) S ;
+- DFFNEGX1_2 DFFNEGX1 + PLACED ( 17200 12100 ) FS ;
+- INVX1_4 INVX1 + PLACED ( 19120 12100 ) FS ;
+- FILL_6_1_0 FILL + PLACED ( 19440 12100 ) FS ;
+- FILL_6_1_1 FILL + PLACED ( 19600 12100 ) FS ;
+- FILL_6_1_2 FILL + PLACED ( 19760 12100 ) FS ;
+- INVX1_9 INVX1 + PLACED ( 19920 12100 ) FS ;
+- NAND2X1_3 NAND2X1 + PLACED ( 20240 12100 ) S ;
+- NAND2X1_4 NAND2X1 + PLACED ( 20720 12100 ) FS ;
+- NAND3X1_8 NAND3X1 + PLACED ( 21200 12100 ) S ;
+- NAND2X1_1 NAND2X1 + PLACED ( 21840 12100 ) FS ;
+- OAI21X1_2 OAI21X1 + PLACED ( 22320 12100 ) FS ;
+- AOI21X1_1 AOI21X1 + PLACED ( 22960 12100 ) FS ;
+- NAND2X1_2 NAND2X1 + PLACED ( 23600 12100 ) S ;
+- NOR3X1_1 NOR3X1 + PLACED ( 24080 12100 ) S ;
+- INVX1_24 INVX1 + PLACED ( 25360 12100 ) S ;
+- DFFNEGX1_3 DFFNEGX1 + PLACED ( 25680 12100 ) S ;
+- INVX1_1 INVX1 + PLACED ( 27600 12100 ) S ;
+- FILL_7_1 FILL + PLACED ( 27920 12100 ) S ;
+- DFFSR_5 DFFSR + PLACED ( 80 14100 ) FN ;
+- INVX1_19 INVX1 + PLACED ( 3600 14100 ) N ;
+- AOI21X1_15 AOI21X1 + PLACED ( 3920 14100 ) N ;
+- DFFSR_30 DFFSR + PLACED ( 4560 14100 ) FN ;
+- FILL_7_0_0 FILL + PLACED ( 8080 14100 ) N ;
+- FILL_7_0_1 FILL + PLACED ( 8240 14100 ) N ;
+- FILL_7_0_2 FILL + PLACED ( 8400 14100 ) N ;
+- OAI21X1_29 OAI21X1 + PLACED ( 8560 14100 ) N ;
+- BUFX2_19 BUFX2 + PLACED ( 9200 14100 ) FN ;
+- BUFX2_23 BUFX2 + PLACED ( 9680 14100 ) N ;
+- OAI21X1_28 OAI21X1 + PLACED ( 10160 14100 ) FN ;
+- OAI21X1_20 OAI21X1 + PLACED ( 10800 14100 ) N ;
+- OAI21X1_21 OAI21X1 + PLACED ( 11440 14100 ) FN ;
+- BUFX2_25 BUFX2 + PLACED ( 12080 14100 ) FN ;
+- NOR2X1_16 NOR2X1 + PLACED ( 12560 14100 ) N ;
+- AOI21X1_10 AOI21X1 + PLACED ( 13040 14100 ) FN ;
+- INVX1_14 INVX1 + PLACED ( 13680 14100 ) FN ;
+- OAI21X1_16 OAI21X1 + PLACED ( 14000 14100 ) N ;
+- OAI21X1_17 OAI21X1 + PLACED ( 14640 14100 ) FN ;
+- DFFSR_15 DFFSR + PLACED ( 15280 14100 ) FN ;
+- OR2X2_1 OR2X2 + PLACED ( 18800 14100 ) N ;
+- FILL_7_1_0 FILL + PLACED ( 19440 14100 ) N ;
+- FILL_7_1_1 FILL + PLACED ( 19600 14100 ) N ;
+- FILL_7_1_2 FILL + PLACED ( 19760 14100 ) N ;
+- NOR3X1_2 NOR3X1 + PLACED ( 19920 14100 ) N ;
+- NOR2X1_6 NOR2X1 + PLACED ( 21200 14100 ) FN ;
+- NOR2X1_1 NOR2X1 + PLACED ( 21680 14100 ) FN ;
+- NOR2X1_3 NOR2X1 + PLACED ( 22160 14100 ) N ;
+- NOR2X1_4 NOR2X1 + PLACED ( 22640 14100 ) N ;
+- NOR2X1_2 NOR2X1 + PLACED ( 23120 14100 ) N ;
+- NOR2X1_5 NOR2X1 + PLACED ( 23600 14100 ) FN ;
+- NOR3X1_3 NOR3X1 + PLACED ( 24080 14100 ) N ;
+- BUFX2_2 BUFX2 + PLACED ( 25360 14100 ) N ;
+- NAND3X1_5 NAND3X1 + PLACED ( 25840 14100 ) N ;
+- BUFX2_4 BUFX2 + PLACED ( 26480 14100 ) N ;
+- AOI22X1_7 AOI22X1 + PLACED ( 26960 14100 ) N ;
+- FILL_8_1 FILL + PLACED ( 27760 14100 ) N ;
+- FILL_8_2 FILL + PLACED ( 27920 14100 ) N ;
+- BUFX2_36 BUFX2 + PLACED ( 80 16100 ) S ;
+- DFFSR_29 DFFSR + PLACED ( 560 16100 ) S ;
+- NOR2X1_21 NOR2X1 + PLACED ( 4080 16100 ) FS ;
+- NOR2X1_20 NOR2X1 + PLACED ( 4560 16100 ) S ;
+- AOI21X1_14 AOI21X1 + PLACED ( 5040 16100 ) S ;
+- INVX1_18 INVX1 + PLACED ( 5680 16100 ) S ;
+- BUFX2_35 BUFX2 + PLACED ( 6000 16100 ) FS ;
+- FILL_8_0_0 FILL + PLACED ( 6480 16100 ) S ;
+- FILL_8_0_1 FILL + PLACED ( 6640 16100 ) S ;
+- FILL_8_0_2 FILL + PLACED ( 6800 16100 ) S ;
+- DFFSR_17 DFFSR + PLACED ( 6960 16100 ) S ;
+- BUFX2_31 BUFX2 + PLACED ( 10480 16100 ) FS ;
+- DFFSR_11 DFFSR + PLACED ( 10960 16100 ) FS ;
+- BUFX2_27 BUFX2 + PLACED ( 14480 16100 ) FS ;
+- BUFX2_17 BUFX2 + PLACED ( 14960 16100 ) FS ;
+- BUFX2_21 BUFX2 + PLACED ( 15440 16100 ) FS ;
+- BUFX2_13 BUFX2 + PLACED ( 15920 16100 ) FS ;
+- BUFX2_5 BUFX2 + PLACED ( 16400 16100 ) FS ;
+- NAND3X1_6 NAND3X1 + PLACED ( 16880 16100 ) S ;
+- INVX1_5 INVX1 + PLACED ( 17520 16100 ) FS ;
+- AOI22X1_10 AOI22X1 + PLACED ( 17840 16100 ) S ;
+- AOI22X1_9 AOI22X1 + PLACED ( 18640 16100 ) S ;
+- FILL_8_1_0 FILL + PLACED ( 19440 16100 ) FS ;
+- FILL_8_1_1 FILL + PLACED ( 19600 16100 ) FS ;
+- FILL_8_1_2 FILL + PLACED ( 19760 16100 ) FS ;
+- AOI22X1_11 AOI22X1 + PLACED ( 19920 16100 ) FS ;
+- AOI22X1_2 AOI22X1 + PLACED ( 20720 16100 ) FS ;
+- NAND3X1_3 NAND3X1 + PLACED ( 21520 16100 ) S ;
+- AOI22X1_1 AOI22X1 + PLACED ( 22160 16100 ) FS ;
+- AOI22X1_6 AOI22X1 + PLACED ( 22960 16100 ) FS ;
+- AOI22X1_3 AOI22X1 + PLACED ( 23760 16100 ) FS ;
+- AOI22X1_8 AOI22X1 + PLACED ( 24560 16100 ) FS ;
+- AOI22X1_5 AOI22X1 + PLACED ( 25360 16100 ) FS ;
+- NAND3X1_4 NAND3X1 + PLACED ( 26160 16100 ) FS ;
+- BUFX2_3 BUFX2 + PLACED ( 26800 16100 ) FS ;
+- AOI22X1_4 AOI22X1 + PLACED ( 27280 16100 ) FS ;
+END COMPONENTS
+
+PINS 81 ;
+- vdd + NET vdd
+  + LAYER metal4 ( -240 -120 ) ( 240 120 )
+  + PLACED ( 8000 -280 ) N ;
+- gnd + NET gnd
+  + LAYER metal4 ( -240 -120 ) ( 240 120 )
+  + PLACED ( 19680 -280 ) N ;
+- clk + NET clk
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 7200 ) N ;
+- reset + NET reset
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 9600 -200 ) N ;
+- ahb_addr<0> + NET ahb_addr<0>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 21920 18400 ) N ;
+- ahb_addr<1> + NET ahb_addr<1>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 24160 18400 ) N ;
+- ahb_addr<2> + NET ahb_addr<2>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 22880 18400 ) N ;
+- ahb_addr<3> + NET ahb_addr<3>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 19200 18400 ) N ;
+- ahb_addr<4> + NET ahb_addr<4>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 17600 18400 ) N ;
+- ahb_addr<5> + NET ahb_addr<5>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 27680 18400 ) N ;
+- ahb_addr<6> + NET ahb_addr<6>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 14800 ) N ;
+- ahb_addr<7> + NET ahb_addr<7>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 18400 18400 ) N ;
+- ahb_addr<8> + NET ahb_addr<8>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 13600 ) N ;
+- ahb_addr<9> + NET ahb_addr<9>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 24480 18400 ) N ;
+- ahb_addr<10> + NET ahb_addr<10>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 23680 18400 ) N ;
+- ahb_addr<11> + NET ahb_addr<11>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 18880 18400 ) N ;
+- ahb_addr<12> + NET ahb_addr<12>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 20640 18400 ) N ;
+- ahb_addr<13> + NET ahb_addr<13>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 26080 18400 ) N ;
+- ahb_addr<14> + NET ahb_addr<14>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 25280 18400 ) N ;
+- ahb_addr<15> + NET ahb_addr<15>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 20160 18400 ) N ;
+- ahb_addr<16> + NET ahb_addr<16>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 22400 18400 ) N ;
+- ahb_addr<17> + NET ahb_addr<17>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 25760 18400 ) N ;
+- ahb_addr<18> + NET ahb_addr<18>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 24960 18400 ) N ;
+- ahb_addr<19> + NET ahb_addr<19>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 19680 18400 ) N ;
+- ahb_addr<20> + NET ahb_addr<20>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 20960 18400 ) N ;
+- ahb_addr<21> + NET ahb_addr<21>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 17200 ) N ;
+- ahb_addr<22> + NET ahb_addr<22>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 15200 ) N ;
+- ahb_addr<23> + NET ahb_addr<23>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 18080 18400 ) N ;
+- ahb_addr<24> + NET ahb_addr<24>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 26880 18400 ) N ;
+- ahb_addr<25> + NET ahb_addr<25>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 12000 ) N ;
+- ahb_addr<26> + NET ahb_addr<26>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 12800 ) N ;
+- ahb_addr<27> + NET ahb_addr<27>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 14000 ) N ;
+- ahb_addr<28> + NET ahb_addr<28>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 21440 18400 ) N ;
+- ahb_addr<29> + NET ahb_addr<29>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 12960 18400 ) N ;
+- ahb_addr<30> + NET ahb_addr<30>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 15040 -200 ) N ;
+- ahb_addr<31> + NET ahb_addr<31>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 5440 18400 ) N ;
+- ctrl_addr_wr + NET ctrl_addr_wr
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 12400 ) N ;
+- ctrl_spi_start + NET ctrl_spi_start
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 10800 ) N ;
+- spi_I<0> + NET spi_I<0>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 4960 18400 ) N ;
+- spi_I<1> + NET spi_I<1>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 4160 18400 ) N ;
+- spi_I<2> + NET spi_I<2>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 3200 ) N ;
+- spi_I<3> + NET spi_I<3>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 6600 ) N ;
+- spi_data<0> + NET spi_data<0>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 11600 ) N ;
+- spi_data<1> + NET spi_data<1>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 1200 ) N ;
+- spi_data<2> + NET spi_data<2>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 17440 -200 ) N ;
+- spi_data<3> + NET spi_data<3>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 21760 -200 ) N ;
+- spi_data<4> + NET spi_data<4>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 13200 ) N ;
+- spi_data<5> + NET spi_data<5>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 5200 ) N ;
+- spi_data<6> + NET spi_data<6>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 16320 18400 ) N ;
+- spi_data<7> + NET spi_data<7>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 18080 -200 ) N ;
+- spi_data<8> + NET spi_data<8>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 13600 ) N ;
+- spi_data<9> + NET spi_data<9>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 4160 -200 ) N ;
+- spi_data<10> + NET spi_data<10>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 15360 18400 ) N ;
+- spi_data<11> + NET spi_data<11>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 16960 -200 ) N ;
+- spi_data<12> + NET spi_data<12>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 8800 18400 ) N ;
+- spi_data<13> + NET spi_data<13>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 3200 ) N ;
+- spi_data<14> + NET spi_data<14>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 15840 18400 ) N ;
+- spi_data<15> + NET spi_data<15>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 16000 -200 ) N ;
+- spi_data<16> + NET spi_data<16>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 9600 18400 ) N ;
+- spi_data<17> + NET spi_data<17>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 10080 -200 ) N ;
+- spi_data<18> + NET spi_data<18>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 12160 18400 ) N ;
+- spi_data<19> + NET spi_data<19>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 8480 -200 ) N ;
+- spi_data<20> + NET spi_data<20>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 14880 18400 ) N ;
+- spi_data<21> + NET spi_data<21>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 16480 -200 ) N ;
+- spi_data<22> + NET spi_data<22>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 10880 18400 ) N ;
+- spi_data<23> + NET spi_data<23>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 8960 -200 ) N ;
+- spi_data<24> + NET spi_data<24>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 10400 18400 ) N ;
+- spi_data<25> + NET spi_data<25>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 11200 ) N ;
+- spi_data<26> + NET spi_data<26>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 9200 ) N ;
+- spi_data<27> + NET spi_data<27>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 7600 ) N ;
+- spi_data<28> + NET spi_data<28>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 6400 18400 ) N ;
+- spi_data<29> + NET spi_data<29>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 17200 ) N ;
+- spi_data<30> + NET spi_data<30>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 27680 -200 ) N ;
+- spi_data<31> + NET spi_data<31>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( -160 9200 ) N ;
+- spi_O<0> + NET spi_O<0>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 15600 ) N ;
+- spi_O<1> + NET spi_O<1>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 27200 18400 ) N ;
+- spi_O<2> + NET spi_O<2>
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 16000 ) N ;
+- spi_O<3> + NET spi_O<3>
+  + LAYER metal2 ( 0 0 ) ( 1 1 )
+  + PLACED ( 16800 18400 ) N ;
+- spi_obuf_en + NET spi_obuf_en
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 11200 ) N ;
+- spi_CS + NET spi_CS
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 7200 ) N ;
+- spi_clk + NET spi_clk
+  + LAYER metal3 ( 0 0 ) ( 1 1 )
+  + PLACED ( 28320 7600 ) N ;
+END PINS
+
+NETS 286 ;
+- _42_
+  ( OR2X2_2 Y ) 
+  ( BUFX4_6 A ) 
+  ( BUFX4_5 A ) 
+  ( BUFX4_4 A ) 
+  ( BUFX4_3 A ) 
+  ( BUFX4_2 A ) 
+  ( BUFX4_1 A ) 
++ ROUTED metal1 ( 12800 9200 ) M2_M1 
+  NEW metal2 ( 12800 9200 ) ( * 8600 ) M3_M2 
+  NEW metal3 ( 12800 8600 ) ( 14560 * ) M3_M2 
+  NEW metal2 ( 14560 8600 ) ( * 7000 ) M2_M1 
+  NEW metal1 ( 10560 8600 ) M2_M1 
+  NEW metal2 ( 10560 8600 ) M3_M2 
+  NEW metal3 ( 10560 8600 ) ( 12800 * ) 
+  NEW metal1 ( 10400 7000 ) M2_M1 
+  NEW metal2 ( 10400 7000 ) ( * 8600 ) M3_M2 
+  NEW metal3 ( 10400 8600 ) ( 10560 * ) 
+  NEW metal1 ( 9120 7000 ) M2_M1 
+  NEW metal2 ( 9120 7000 ) M3_M2 
+  NEW metal3 ( 9120 7000 ) ( 10400 * ) M3_M2 
+  NEW metal1 ( 12480 11000 ) M2_M1 
+  NEW metal2 ( 12480 11000 ) M3_M2 
+  NEW metal3 ( 12480 11000 ) ( 12800 * ) M3_M2 
+  NEW metal2 ( 12800 11000 ) ( * 9200 ) 
+  NEW metal1 ( 7040 11000 ) M2_M1 
+  NEW metal2 ( 7040 11000 ) ( * 10200 ) M3_M2 
+  NEW metal3 ( 7040 10200 ) ( 10560 * ) M3_M2 
+  NEW metal2 ( 10560 10200 ) ( * 9800 ) M2_M1 ;
+- _42__bF$buf5
+  ( OAI21X1_33 B ) 
+  ( OAI21X1_11 B ) 
+  ( AOI21X1_16 B ) 
+  ( OAI21X1_23 B ) 
+  ( OAI21X1_9 B ) 
+  ( AOI21X1_5 B ) 
+  ( NOR2X1_11 B ) 
+  ( NOR2X1_22 B ) 
+  ( BUFX4_1 Y ) 
++ ROUTED metal1 ( 15360 5200 ) M2_M1 
+  NEW metal2 ( 15360 5200 ) M3_M2 
+  NEW metal3 ( 15360 5200 ) ( 14880 * ) M3_M2 
+  NEW metal2 ( 14880 5200 ) ( * 6400 ) M2_M1 
+  NEW metal1 ( 17760 5200 ) ( 17600 * ) M2_M1 
+  NEW metal2 ( 17600 5200 ) M3_M2 
+  NEW metal3 ( 17600 5200 ) ( 15360 * ) 
+  NEW metal1 ( 17920 1200 ) M2_M1 
+  NEW metal2 ( 17920 1200 ) ( * 5200 ) M3_M2 
+  NEW metal3 ( 17920 5200 ) ( 17600 * ) 
+  NEW metal1 ( 18880 1400 ) M2_M1 
+  NEW metal2 ( 18880 1400 ) M3_M2 
+  NEW metal3 ( 18880 1400 ) ( 17920 * ) M3_M2 
+  NEW metal1 ( 20160 5200 ) ( 20000 * ) M2_M1 
+  NEW metal2 ( 20000 5200 ) ( * 4600 ) M3_M2 
+  NEW metal3 ( 20000 4600 ) ( 17920 * ) M3_M2 
+  NEW metal1 ( 26240 3000 ) M2_M1 
+  NEW metal2 ( 26240 3000 ) ( * 4600 ) M3_M2 
+  NEW metal3 ( 26240 4600 ) ( 20000 * ) 
+  NEW metal1 ( 27040 2800 ) M2_M1 
+  NEW metal2 ( 27040 2800 ) M3_M2 
+  NEW metal3 ( 27040 2800 ) ( 26240 * ) M3_M2 
+  NEW metal2 ( 26240 2800 ) ( * 3000 ) 
+  NEW metal1 ( 27520 3000 ) M2_M1 
+  NEW metal2 ( 27520 3000 ) ( * 2800 ) M3_M2 
+  NEW metal3 ( 27520 2800 ) ( 27040 * ) ;
+- _42__bF$buf4
+  ( AOI21X1_14 B ) 
+  ( AOI21X1_15 B ) 
+  ( NOR2X1_21 B ) 
+  ( NOR2X1_20 B ) 
+  ( OAI21X1_25 B ) 
+  ( OAI21X1_29 B ) 
+  ( AOI21X1_6 B ) 
+  ( OAI21X1_31 B ) 
+  ( BUFX4_2 Y ) 
++ ROUTED metal1 ( 13120 9400 ) M2_M1 
+  NEW metal2 ( 13120 9400 ) M3_M2 
+  NEW metal3 ( 13120 9400 ) ( 12480 * ) M3_M2 
+  NEW metal1 ( 12480 9400 ) M2_M1 
+  NEW metal1 ( 12160 11000 ) M2_M1 
+  NEW metal2 ( 12160 11000 ) ( * 9400 ) M3_M2 
+  NEW metal3 ( 12160 9400 ) ( 12480 * ) 
+  NEW metal1 ( 6400 13200 ) ( 6880 * ) M2_M1 
+  NEW metal2 ( 6880 13200 ) ( * 11400 ) M3_M2 
+  NEW metal3 ( 6880 11400 ) ( 12160 * ) M3_M2 
+  NEW metal2 ( 12160 11400 ) ( * 11000 ) 
+  NEW metal1 ( 8800 15000 ) M2_M1 
+  NEW metal2 ( 8800 15000 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 8800 14200 ) ( 6880 * ) M3_M2 
+  NEW metal2 ( 6880 14200 ) ( * 13200 ) 
+  NEW metal1 ( 4160 14800 ) M2_M1 
+  NEW metal2 ( 4160 14800 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 4160 14200 ) ( 6880 * ) 
+  NEW metal1 ( 5440 17400 ) M2_M1 
+  NEW metal2 ( 5440 17400 ) ( * 14200 ) M3_M2 
+  NEW metal1 ( 4640 17200 ) M2_M1 
+  NEW metal2 ( 4640 17200 ) M3_M2 
+  NEW metal3 ( 4640 17200 ) ( 5440 * ) M3_M2 
+  NEW metal1 ( 4480 17200 ) ( 4640 * ) ;
+- _42__bF$buf3
+  ( AOI21X1_8 B ) 
+  ( NOR2X1_10 B ) 
+  ( AOI21X1_10 B ) 
+  ( NOR2X1_14 B ) 
+  ( OAI21X1_17 B ) 
+  ( NOR2X1_16 B ) 
+  ( OAI21X1_21 B ) 
+  ( AOI21X1_4 B ) 
+  ( BUFX4_3 Y ) 
++ ROUTED metal1 ( 11840 15000 ) M2_M1 
+  NEW metal2 ( 11840 15000 ) ( * 11800 ) M3_M2 
+  NEW metal3 ( 11840 11800 ) ( 12800 * ) M3_M2 
+  NEW metal1 ( 12800 11800 ) M2_M1 
+  NEW metal1 ( 12960 15000 ) M2_M1 
+  NEW metal2 ( 12960 15000 ) M3_M2 
+  NEW metal3 ( 12960 15000 ) ( 11840 * ) M3_M2 
+  NEW metal1 ( 13440 14800 ) M2_M1 
+  NEW metal2 ( 13440 14800 ) ( * 15000 ) M3_M2 
+  NEW metal3 ( 13440 15000 ) ( 12960 * ) 
+  NEW metal1 ( 15040 15000 ) M2_M1 
+  NEW metal2 ( 15040 15000 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 15040 14000 ) ( 13440 * ) M3_M2 
+  NEW metal2 ( 13440 14000 ) ( * 14800 ) 
+  NEW metal1 ( 16000 13200 ) M2_M1 
+  NEW metal2 ( 16000 13200 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 16000 14000 ) ( 15040 * ) 
+  NEW metal1 ( 16480 13400 ) M2_M1 
+  NEW metal2 ( 16480 13400 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 16480 14000 ) ( 16000 * ) 
+  NEW metal1 ( 16800 13200 ) ( * 13400 ) ( 16480 * ) 
+  NEW metal1 ( 17280 10800 ) M2_M1 
+  NEW metal2 ( 17280 10800 ) ( * 12200 ) M3_M2 
+  NEW metal3 ( 17280 12200 ) ( 16480 * ) M3_M2 
+  NEW metal2 ( 16480 12200 ) ( * 13400 ) ;
+- _42__bF$buf2
+  ( NOR2X1_19 B ) 
+  ( OAI21X1_13 B ) 
+  ( NOR2X1_23 B ) 
+  ( NOR2X1_8 B ) 
+  ( OAI21X1_5 B ) 
+  ( AOI21X1_17 B ) 
+  ( AOI21X1_2 B ) 
+  ( OAI21X1_35 B ) 
+  ( BUFX4_4 Y ) 
++ ROUTED metal1 ( 9760 9200 ) M2_M1 
+  NEW metal2 ( 9760 9200 ) ( * 10000 ) M3_M2 
+  NEW metal3 ( 9760 10000 ) ( 6720 * ) M3_M2 
+  NEW metal2 ( 6720 10000 ) ( * 10400 ) M2_M1 
+  NEW metal1 ( 7840 7000 ) M2_M1 
+  NEW metal2 ( 7840 7000 ) ( * 7400 ) M3_M2 
+  NEW metal3 ( 7840 7400 ) ( 9760 * ) M3_M2 
+  NEW metal2 ( 9760 7400 ) ( * 9200 ) 
+  NEW metal1 ( 2880 7000 ) M2_M1 
+  NEW metal2 ( 2880 7000 ) ( * 7400 ) M3_M2 
+  NEW metal3 ( 2880 7400 ) ( 7840 * ) 
+  NEW metal1 ( 1760 6800 ) M2_M1 
+  NEW metal2 ( 1760 6800 ) ( * 7400 ) M3_M2 
+  NEW metal3 ( 1760 7400 ) ( 2880 * ) 
+  NEW metal1 ( 1280 7000 ) M2_M1 
+  NEW metal2 ( 1280 7000 ) ( * 7400 ) M3_M2 
+  NEW metal3 ( 1280 7400 ) ( 1760 * ) 
+  NEW metal1 ( 1280 11000 ) M2_M1 
+  NEW metal2 ( 1280 11000 ) ( * 7400 ) 
+  NEW metal1 ( 1600 13400 ) M2_M1 
+  NEW metal2 ( 1600 13400 ) ( * 13000 ) M3_M2 
+  NEW metal3 ( 1600 13000 ) ( 1280 * ) M3_M2 
+  NEW metal2 ( 1280 13000 ) ( * 11000 ) 
+  NEW metal1 ( 2400 13200 ) M2_M1 
+  NEW metal2 ( 2400 13200 ) ( * 13000 ) M3_M2 
+  NEW metal3 ( 2400 13000 ) ( 1600 * ) ;
+- _42__bF$buf1
+  ( OAI21X1_15 B ) 
+  ( AOI21X1_3 B ) 
+  ( OAI21X1_7 B ) 
+  ( NOR2X1_13 B ) 
+  ( AOI21X1_7 B ) 
+  ( NOR2X1_9 B ) 
+  ( AOI21X1_13 B ) 
+  ( OAI21X1_27 B ) 
+  ( BUFX4_5 Y ) 
++ ROUTED metal1 ( 8800 6800 ) M2_M1 
+  NEW metal2 ( 8800 6800 ) M3_M2 
+  NEW metal3 ( 8800 6800 ) ( 9440 * ) M3_M2 
+  NEW metal1 ( 9440 6800 ) M2_M1 
+  NEW metal1 ( 9760 3000 ) M2_M1 
+  NEW metal2 ( 9760 3000 ) ( * 6800 ) M2_M1 
+  NEW metal1 ( 9760 6800 ) ( 9440 * ) 
+  NEW metal1 ( 7680 3000 ) M2_M1 
+  NEW metal2 ( 7680 3000 ) ( * 3600 ) M3_M2 
+  NEW metal3 ( 7680 3600 ) ( 9760 * ) M3_M2 
+  NEW metal1 ( 7200 2800 ) M2_M1 
+  NEW metal2 ( 7200 2800 ) ( * 3600 ) M3_M2 
+  NEW metal3 ( 7200 3600 ) ( 7680 * ) 
+  NEW metal1 ( 6720 3000 ) M2_M1 
+  NEW metal2 ( 6720 3000 ) M3_M2 
+  NEW metal3 ( 6720 3000 ) ( 7200 * ) M3_M2 
+  NEW metal1 ( 4640 3000 ) M2_M1 
+  NEW metal2 ( 4640 3000 ) ( * 3200 ) M3_M2 
+  NEW metal3 ( 4640 3200 ) ( 5280 * ) ( * 3000 ) ( 6720 * ) 
+  NEW metal1 ( 4640 5400 ) M2_M1 
+  NEW metal2 ( 4640 5400 ) ( * 3200 ) 
+  NEW metal1 ( 5120 5200 ) M2_M1 
+  NEW metal2 ( 5120 5200 ) M3_M2 
+  NEW metal3 ( 5120 5200 ) ( 4640 * ) M3_M2 ;
+- _42__bF$buf0
+  ( NOR2X1_17 B ) 
+  ( AOI21X1_9 B ) 
+  ( AOI21X1_11 B ) 
+  ( NOR2X1_12 B ) 
+  ( AOI21X1_12 B ) 
+  ( OAI21X1_19 B ) 
+  ( NOR2X1_18 B ) 
+  ( NOR2X1_15 B ) 
+  ( BUFX4_6 Y ) 
++ ROUTED metal1 ( 13920 9200 ) M2_M1 
+  NEW metal2 ( 13920 9200 ) ( * 8200 ) M3_M2 
+  NEW metal3 ( 13920 8200 ) ( 10720 * ) M3_M2 
+  NEW metal2 ( 10720 8200 ) ( * 7800 ) M2_M1 
+  NEW metal1 ( 15520 9400 ) M2_M1 
+  NEW metal2 ( 15520 9400 ) M3_M2 
+  NEW metal3 ( 15520 9400 ) ( 13920 * ) M3_M2 
+  NEW metal2 ( 13920 9400 ) ( * 9200 ) 
+  NEW metal1 ( 16000 9200 ) M2_M1 
+  NEW metal2 ( 16000 9200 ) ( * 9400 ) M3_M2 
+  NEW metal3 ( 16000 9400 ) ( 15520 * ) 
+  NEW metal1 ( 15520 7000 ) M2_M1 
+  NEW metal2 ( 15520 7000 ) ( * 9400 ) 
+  NEW metal1 ( 16000 6800 ) M2_M1 
+  NEW metal2 ( 16000 6800 ) ( * 9200 ) 
+  NEW metal1 ( 13920 3000 ) M2_M1 
+  NEW metal2 ( 13920 3000 ) ( * 3200 ) M3_M2 
+  NEW metal3 ( 13920 3200 ) ( * 3000 ) M4_M3 
+  NEW metal4 ( 13920 3000 ) ( * 8200 ) M4_M3 
+  NEW metal1 ( 11040 1200 ) M2_M1 
+  NEW metal2 ( 11040 1200 ) ( * 3000 ) M3_M2 
+  NEW metal3 ( 11040 3000 ) ( 13920 * ) 
+  NEW metal1 ( 11520 1400 ) M2_M1 
+  NEW metal2 ( 11520 1400 ) M3_M2 
+  NEW metal3 ( 11520 1400 ) ( 11040 * ) M3_M2 ;
+- clk
+  ( PIN clk ) 
+  ( BUFX4_12 A ) 
+  ( BUFX4_11 A ) 
+  ( BUFX4_10 A ) 
+  ( BUFX4_9 A ) 
+  ( BUFX4_8 A ) 
+  ( BUFX4_7 A ) 
++ ROUTED metal1 ( 21120 9200 ) M2_M1 
+  NEW metal2 ( 21120 9200 ) ( * 7000 ) M2_M1 
+  NEW metal1 ( 21920 7000 ) M2_M1 
+  NEW metal2 ( 21920 7000 ) M3_M2 
+  NEW metal3 ( 21920 7000 ) ( 21120 * ) M3_M2 
+  NEW metal1 ( 16960 9200 ) M2_M1 
+  NEW metal2 ( 16960 9200 ) M3_M2 
+  NEW metal3 ( 16960 9200 ) ( 21120 * ) M3_M2 
+  NEW metal1 ( 4640 9200 ) M2_M1 
+  NEW metal2 ( 4640 9200 ) ( * 8800 ) M3_M2 
+  NEW metal3 ( 4640 8800 ) ( 16960 * ) M3_M2 
+  NEW metal2 ( 16960 8800 ) ( * 9200 ) 
+  NEW metal1 ( 2080 7000 ) M2_M1 
+  NEW metal2 ( 2080 7000 ) ( * 8000 ) M3_M2 
+  NEW metal3 ( 2080 8000 ) ( 4640 * ) M3_M2 
+  NEW metal2 ( 4640 8000 ) ( * 8800 ) 
+  NEW metal3 ( -159 7200 ) ( 2080 * ) M3_M2 ;
+- clk_bF$buf5
+  ( DFFSR_16 CLK ) 
+  ( DFFSR_20 CLK ) 
+  ( DFFSR_3 CLK ) 
+  ( DFFSR_18 CLK ) 
+  ( DFFSR_12 CLK ) 
+  ( DFFSR_13 CLK ) 
+  ( DFFSR_22 CLK ) 
+  ( BUFX4_7 Y ) 
++ ROUTED metal1 ( 18400 6600 ) M2_M1 
+  NEW metal2 ( 18400 6600 ) M3_M2 
+  NEW metal3 ( 18400 6600 ) ( 20800 * ) M3_M2 
+  NEW metal1 ( 20800 6600 ) M2_M1 
+  NEW metal1 ( 20160 2600 ) M2_M1 
+  NEW metal2 ( 20160 2600 ) ( * 3800 ) ( 20320 * ) ( * 6600 ) M3_M2 
+  NEW metal1 ( 16000 2600 ) M2_M1 
+  NEW metal2 ( 16000 2600 ) M3_M2 
+  NEW metal3 ( 16000 2600 ) ( 20160 * ) M3_M2 
+  NEW metal1 ( 13440 1600 ) M2_M1 
+  NEW metal2 ( 13440 1600 ) ( * 2600 ) M3_M2 
+  NEW metal3 ( 13440 2600 ) ( 16000 * ) 
+  NEW metal1 ( 12000 2600 ) M2_M1 
+  NEW metal2 ( 12000 2600 ) ( * 2400 ) M3_M2 
+  NEW metal3 ( 12000 2400 ) ( 13440 * ) M3_M2 
+  NEW metal1 ( 13280 5600 ) M2_M1 
+  NEW metal2 ( 13280 5600 ) ( * 2600 ) M3_M2 
+  NEW metal3 ( 13280 2600 ) ( 13440 * ) 
+  NEW metal1 ( 12800 6600 ) M2_M1 
+  NEW metal2 ( 12800 6600 ) ( * 6200 ) M3_M2 
+  NEW metal3 ( 12800 6200 ) ( 13280 * ) M3_M2 
+  NEW metal2 ( 13280 6200 ) ( * 5600 ) ;
+- clk_bF$buf4
+  ( DFFSR_29 CLK ) 
+  ( DFFSR_23 CLK ) 
+  ( DFFSR_25 CLK ) 
+  ( DFFSR_11 CLK ) 
+  ( DFFSR_17 CLK ) 
+  ( DFFSR_21 CLK ) 
+  ( DFFSR_19 CLK ) 
+  ( BUFX4_8 Y ) 
++ ROUTED metal1 ( 15200 10600 ) M2_M1 
+  NEW metal2 ( 15200 10600 ) M3_M2 
+  NEW metal3 ( 15200 10600 ) ( 16640 * ) M3_M2 
+  NEW metal2 ( 16640 10600 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 13440 13600 ) M2_M1 
+  NEW metal2 ( 13440 13600 ) ( * 10600 ) M3_M2 
+  NEW metal3 ( 13440 10600 ) ( 15200 * ) 
+  NEW metal1 ( 9920 10600 ) M2_M1 
+  NEW metal2 ( 9920 10600 ) M3_M2 
+  NEW metal3 ( 9920 10600 ) ( 13440 * ) 
+  NEW metal1 ( 8800 13600 ) M2_M1 
+  NEW metal2 ( 8800 13600 ) ( * 10600 ) M3_M2 
+  NEW metal3 ( 8800 10600 ) ( 9920 * ) 
+  NEW metal1 ( 8800 17600 ) M2_M1 
+  NEW metal2 ( 8800 17600 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 8800 17000 ) M4_M3 
+  NEW metal4 ( 8800 17000 ) ( * 13800 ) M4_M3 
+  NEW metal2 ( 8800 13800 ) M3_M2 
+  NEW metal2 ( 8800 13800 ) ( * 13600 ) 
+  NEW metal1 ( 12640 17600 ) M2_M1 
+  NEW metal2 ( 12640 17600 ) M3_M2 
+  NEW metal3 ( 12640 17600 ) ( 8800 * ) M3_M2 
+  NEW metal1 ( 2400 17600 ) M2_M1 
+  NEW metal2 ( 2400 17600 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 2400 17000 ) ( 8800 * ) ;
+- clk_bF$buf3
+  ( DFFSR_27 CLK ) 
+  ( DFFSR_8 CLK ) 
+  ( DFFSR_33 CLK ) 
+  ( OR2X2_3 B ) 
+  ( DFFSR_4 CLK ) 
+  ( DFFNEGX1_1 CLK ) 
+  ( DFFSR_31 CLK ) 
+  ( BUFX4_9 Y ) 
++ ROUTED metal1 ( 22400 5600 ) M2_M1 
+  NEW metal2 ( 22400 5600 ) ( * 6800 ) M2_M1 
+  NEW metal1 ( 22400 6800 ) ( 22240 * ) 
+  NEW metal2 ( 23840 6800 ) M3_M2 
+  NEW metal3 ( 23840 6800 ) ( 22400 * ) M3_M2 
+  NEW metal1 ( 26080 6800 ) M2_M1 
+  NEW metal2 ( 26080 6800 ) M3_M2 
+  NEW metal3 ( 26080 6800 ) ( 23840 * ) 
+  NEW metal1 ( 26240 5600 ) M2_M1 
+  NEW metal2 ( 26240 5600 ) ( * 6800 ) M3_M2 
+  NEW metal3 ( 26240 6800 ) ( 26080 * ) 
+  NEW metal1 ( 24160 2600 ) M2_M1 
+  NEW metal2 ( 24160 2600 ) ( * 6800 ) M2_M1 
+  NEW metal1 ( 25440 1600 ) M2_M1 
+  NEW metal2 ( 25440 1600 ) M3_M2 
+  NEW metal3 ( 25440 1600 ) ( 24160 * ) M3_M2 
+  NEW metal2 ( 24160 1600 ) ( * 2600 ) 
+  NEW metal1 ( 22080 1600 ) M2_M1 
+  NEW metal2 ( 22080 1600 ) M3_M2 
+  NEW metal3 ( 22080 1600 ) ( 24160 * ) ;
+- clk_bF$buf2
+  ( DFFNEGX1_4 CLK ) 
+  ( DFFNEGX1_5 CLK ) 
+  ( DFFNEGX1_2 CLK ) 
+  ( DFFSR_7 CLK ) 
+  ( DFFSR_15 CLK ) 
+  ( DFFNEGX1_3 CLK ) 
+  ( BUFX4_10 Y ) 
++ ROUTED metal1 ( 21440 10800 ) M2_M1 
+  NEW metal2 ( 21440 10800 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 18880 9600 ) M2_M1 
+  NEW metal2 ( 18880 9600 ) M3_M2 
+  NEW metal3 ( 18880 9600 ) ( 21440 * ) M3_M2 
+  NEW metal2 ( 21440 9600 ) ( * 9800 ) 
+  NEW metal2 ( 17760 12800 ) ( * 10800 ) M3_M2 
+  NEW metal3 ( 17760 10800 ) ( 18880 * ) M3_M2 
+  NEW metal2 ( 18880 10800 ) ( * 9600 ) 
+  NEW metal1 ( 17120 14600 ) M2_M1 
+  NEW metal2 ( 17120 14600 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 17120 14200 ) ( 17760 * ) M3_M2 
+  NEW metal2 ( 17760 14200 ) ( * 13400 ) 
+  NEW metal2 ( 27040 12800 ) ( * 12400 ) M3_M2 
+  NEW metal3 ( 27040 12400 ) ( 21280 * ) M3_M2 
+  NEW metal2 ( 21280 12400 ) ( * 11400 ) 
+  NEW metal1 ( 26880 9400 ) M2_M1 
+  NEW metal2 ( 26880 9400 ) ( * 12400 ) M3_M2 ;
+- clk_bF$buf1
+  ( DFFSR_14 CLK ) 
+  ( DFFSR_2 CLK ) 
+  ( DFFSR_10 CLK ) 
+  ( DFFSR_6 CLK ) 
+  ( DFFSR_24 CLK ) 
+  ( DFFSR_28 CLK ) 
+  ( BUFX4_11 Y ) 
++ ROUTED metal1 ( 2400 5600 ) M2_M1 
+  NEW metal2 ( 2400 5600 ) ( * 6400 ) M2_M1 
+  NEW metal1 ( 2400 2600 ) M2_M1 
+  NEW metal2 ( 2400 2600 ) ( * 5600 ) 
+  NEW metal1 ( 2400 1600 ) M2_M1 
+  NEW metal2 ( 2400 1600 ) ( * 2600 ) 
+  NEW metal1 ( 5600 6600 ) M2_M1 
+  NEW metal2 ( 5600 6600 ) M3_M2 
+  NEW metal3 ( 5600 6600 ) ( 2400 * ) M3_M2 
+  NEW metal2 ( 2400 6600 ) ( * 6400 ) 
+  NEW metal1 ( 7200 5600 ) M2_M1 
+  NEW metal2 ( 7200 5600 ) ( * 6600 ) M3_M2 
+  NEW metal3 ( 7200 6600 ) ( 5600 * ) 
+  NEW metal1 ( 6400 1600 ) M2_M1 
+  NEW metal2 ( 6400 1600 ) M3_M2 
+  NEW metal3 ( 6400 1600 ) ( 2400 * ) M3_M2 ;
+- clk_bF$buf0
+  ( DFFSR_5 CLK ) 
+  ( DFFSR_32 CLK ) 
+  ( DFFSR_9 CLK ) 
+  ( DFFSR_1 CLK ) 
+  ( DFFSR_26 CLK ) 
+  ( DFFSR_30 CLK ) 
+  ( BUFX4_12 Y ) 
++ ROUTED metal1 ( 4160 10600 ) M2_M1 
+  NEW metal2 ( 4160 10600 ) ( * 9400 ) M2_M1 
+  NEW metal1 ( 4160 9400 ) ( 4320 * ) 
+  NEW metal1 ( 2400 9600 ) M2_M1 
+  NEW metal2 ( 2400 9600 ) M3_M2 
+  NEW metal3 ( 2400 9600 ) ( 4160 * ) M3_M2 
+  NEW metal1 ( 6560 9600 ) M2_M1 
+  NEW metal2 ( 6560 9600 ) M3_M2 
+  NEW metal3 ( 6560 9600 ) ( 4160 * ) 
+  NEW metal1 ( 4320 13600 ) M2_M1 
+  NEW metal2 ( 4320 13600 ) ( * 12400 ) ( 4160 * ) ( * 10600 ) 
+  NEW metal1 ( 6400 14600 ) M2_M1 
+  NEW metal2 ( 6400 14600 ) M3_M2 
+  NEW metal3 ( 6400 14600 ) ( 4320 * ) M3_M2 
+  NEW metal2 ( 4320 14600 ) ( * 13600 ) 
+  NEW metal1 ( 1920 14600 ) M2_M1 
+  NEW metal2 ( 1920 14600 ) M3_M2 
+  NEW metal3 ( 1920 14600 ) ( 4320 * ) ;
+- _41_
+  ( OAI21X1_3 Y ) 
+  ( BUFX4_16 A ) 
+  ( BUFX4_15 A ) 
+  ( BUFX4_14 A ) 
+  ( BUFX4_13 A ) 
++ ROUTED metal1 ( 11520 9200 ) M2_M1 
+  NEW metal2 ( 11520 9200 ) ( * 8400 ) M3_M2 
+  NEW metal3 ( 11520 8400 ) ( 10240 * ) M3_M2 
+  NEW metal2 ( 10240 8400 ) ( * 7000 ) M2_M1 
+  NEW metal1 ( 14080 9200 ) M2_M1 
+  NEW metal2 ( 14080 9200 ) ( * 8400 ) M3_M2 
+  NEW metal3 ( 14080 8400 ) ( 11520 * ) 
+  NEW metal1 ( 22240 9200 ) M2_M1 
+  NEW metal2 ( 22240 9200 ) ( * 8400 ) M3_M2 
+  NEW metal3 ( 22240 8400 ) ( 14080 * ) 
+  NEW metal1 ( 21760 7000 ) M2_M1 
+  NEW metal2 ( 21760 7000 ) ( * 8400 ) M3_M2 ;
+- _41__bF$buf3
+  ( OAI21X1_26 A ) 
+  ( OAI21X1_34 A ) 
+  ( OAI21X1_22 A ) 
+  ( OAI21X1_14 A ) 
+  ( OAI21X1_6 A ) 
+  ( BUFX4_13 Y ) 
++ ROUTED metal1 ( 10240 5400 ) ( 10080 * ) M2_M1 
+  NEW metal2 ( 10080 5400 ) ( * 5600 ) ( 9920 * ) ( * 6400 ) M2_M1 
+  NEW metal1 ( 8640 2800 ) ( 8480 * ) M2_M1 
+  NEW metal2 ( 8480 2800 ) ( * 5600 ) M3_M2 
+  NEW metal3 ( 8480 5600 ) ( 9920 * ) M3_M2 
+  NEW metal1 ( 5760 2800 ) M2_M1 
+  NEW metal2 ( 5760 2800 ) M3_M2 
+  NEW metal3 ( 5760 2800 ) ( 8480 * ) M3_M2 
+  NEW metal1 ( 5600 2800 ) ( 5760 * ) 
+  NEW metal1 ( 3840 6800 ) M2_M1 
+  NEW metal2 ( 3840 6800 ) ( * 2800 ) M3_M2 
+  NEW metal3 ( 3840 2800 ) ( 5760 * ) ;
+- _41__bF$buf2
+  ( OAI21X1_24 A ) 
+  ( OAI21X1_16 A ) 
+  ( OAI21X1_28 A ) 
+  ( OAI21X1_20 A ) 
+  ( BUFX4_14 Y ) 
++ ROUTED metal1 ( 14080 14800 ) M2_M1 
+  NEW metal2 ( 14080 14800 ) M3_M2 
+  NEW metal3 ( 14080 14800 ) ( 14240 * ) M4_M3 
+  NEW metal4 ( 14240 14800 ) ( * 10000 ) M4_M3 
+  NEW metal3 ( 14240 10000 ) ( 14400 * ) M3_M2 
+  NEW metal2 ( 14400 10000 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 10720 14800 ) M2_M1 
+  NEW metal2 ( 10720 14800 ) M3_M2 
+  NEW metal3 ( 10720 14800 ) ( 14080 * ) 
+  NEW metal1 ( 10880 14800 ) ( 10720 * ) 
+  NEW metal1 ( 10720 13400 ) M2_M1 
+  NEW metal2 ( 10720 13400 ) ( * 14800 ) ;
+- _41__bF$buf1
+  ( OAI21X1_32 A ) 
+  ( OAI21X1_10 A ) 
+  ( OAI21X1_18 A ) 
+  ( OAI21X1_8 A ) 
+  ( BUFX4_15 Y ) 
++ ROUTED metal1 ( 18880 5400 ) M2_M1 
+  NEW metal2 ( 18880 5400 ) ( * 5600 ) M3_M2 
+  NEW metal3 ( 18880 5600 ) ( 21440 * ) M3_M2 
+  NEW metal2 ( 21440 5600 ) ( * 6400 ) M2_M1 
+  NEW metal1 ( 16960 5400 ) M2_M1 
+  NEW metal2 ( 16960 5400 ) ( * 5600 ) M3_M2 
+  NEW metal3 ( 16960 5600 ) ( 18880 * ) 
+  NEW metal1 ( 16800 5400 ) ( 16960 * ) 
+  NEW metal1 ( 19200 1400 ) M2_M1 
+  NEW metal2 ( 19200 1400 ) ( * 5600 ) M3_M2 ;
+- _41__bF$buf0
+  ( OAI21X1_4 A ) 
+  ( OAI21X1_30 A ) 
+  ( OAI21X1_12 A ) 
+  ( OR2X2_2 B ) 
+  ( BUFX4_16 Y ) 
++ ROUTED metal1 ( 10240 9400 ) M2_M1 
+  NEW metal2 ( 10240 9400 ) M3_M2 
+  NEW metal3 ( 10240 9400 ) ( 11040 * ) M3_M2 
+  NEW metal1 ( 11040 9400 ) M2_M1 
+  NEW metal1 ( 11040 9400 ) ( 11200 * ) 
+  NEW metal1 ( 9280 9400 ) M2_M1 
+  NEW metal2 ( 9280 9400 ) ( * 9800 ) M3_M2 
+  NEW metal3 ( 9280 9800 ) ( 10240 * ) M3_M2 
+  NEW metal2 ( 10240 9800 ) ( * 9400 ) 
+  NEW metal1 ( 6400 10800 ) ( 6560 * ) M2_M1 
+  NEW metal2 ( 6560 10800 ) ( * 9800 ) M3_M2 
+  NEW metal3 ( 6560 9800 ) ( 9280 * ) 
+  NEW metal1 ( 2240 10800 ) M2_M1 
+  NEW metal2 ( 2240 10800 ) M3_M2 
+  NEW metal3 ( 2240 10800 ) ( 6560 * ) M3_M2 ;
+- _40_
+  ( NOR2X1_7 Y ) 
+  ( BUFX4_20 A ) 
+  ( BUFX4_19 A ) 
+  ( BUFX4_18 A ) 
+  ( BUFX4_17 A ) 
++ ROUTED metal1 ( 18720 11000 ) M2_M1 
+  NEW metal2 ( 18720 11000 ) M3_M2 
+  NEW metal3 ( 18720 11000 ) ( 17920 * ) M3_M2 
+  NEW metal1 ( 17920 11000 ) M2_M1 
+  NEW metal1 ( 18240 5200 ) M2_M1 
+  NEW metal2 ( 18240 5200 ) M3_M2 
+  NEW metal3 ( 18240 5200 ) ( 18080 * ) M4_M3 
+  NEW metal4 ( 18080 5200 ) ( * 11000 ) M4_M3 
+  NEW metal1 ( 9600 5200 ) M2_M1 
+  NEW metal2 ( 9600 5200 ) ( * 6000 ) M3_M2 
+  NEW metal3 ( 9600 6000 ) ( 18080 * ) M4_M3 
+  NEW metal1 ( 7680 11000 ) M2_M1 
+  NEW metal2 ( 7680 11000 ) ( * 8600 ) M3_M2 
+  NEW metal3 ( 7680 8600 ) ( 9600 * ) M3_M2 
+  NEW metal2 ( 9600 8600 ) ( * 6000 ) ;
+- _40__bF$buf3
+  ( OAI21X1_20 B ) 
+  ( OAI21X1_28 B ) 
+  ( OAI21X1_16 B ) 
+  ( OAI21X1_24 B ) 
+  ( NAND3X1_7 C ) 
+  ( BUFX4_17 Y ) 
++ ROUTED metal1 ( 19200 11400 ) M2_M1 
+  NEW metal2 ( 19200 11400 ) M3_M2 
+  NEW metal3 ( 19200 11400 ) ( 18240 * ) M3_M2 
+  NEW metal1 ( 18240 11400 ) M2_M1 
+  NEW metal1 ( 14240 15000 ) M2_M1 
+  NEW metal2 ( 14240 15000 ) ( * 13600 ) M3_M2 
+  NEW metal3 ( 14240 13600 ) ( 18240 * ) M3_M2 
+  NEW metal2 ( 18240 13600 ) ( * 11400 ) 
+  NEW metal1 ( 10880 13200 ) M2_M1 
+  NEW metal2 ( 10880 13200 ) ( * 13600 ) M3_M2 
+  NEW metal3 ( 10880 13600 ) ( 14240 * ) 
+  NEW metal1 ( 11040 15000 ) ( 10880 * ) M2_M1 
+  NEW metal2 ( 10880 15000 ) ( * 13600 ) 
+  NEW metal1 ( 10560 15000 ) ( 10880 * ) ;
+- _40__bF$buf2
+  ( OAI21X1_34 B ) 
+  ( OAI21X1_12 B ) 
+  ( OAI21X1_4 B ) 
+  ( OAI21X1_30 B ) 
+  ( OR2X2_2 A ) 
+  ( BUFX4_18 Y ) 
++ ROUTED metal1 ( 6240 11000 ) M2_M1 
+  NEW metal2 ( 6240 11000 ) M3_M2 
+  NEW metal3 ( 6240 11000 ) ( 7200 * ) M3_M2 
+  NEW metal2 ( 7200 11000 ) ( * 10800 ) M2_M1 
+  NEW metal1 ( 7200 10800 ) ( 7360 * ) 
+  NEW metal1 ( 2080 11000 ) M2_M1 
+  NEW metal2 ( 2080 11000 ) M3_M2 
+  NEW metal3 ( 2080 11000 ) ( 6240 * ) 
+  NEW metal1 ( 3680 7000 ) M2_M1 
+  NEW metal2 ( 3680 7000 ) ( * 8200 ) M3_M2 
+  NEW metal3 ( 3680 8200 ) M4_M3 
+  NEW metal4 ( 3680 8200 ) ( * 11000 ) M4_M3 
+  NEW metal1 ( 9120 9200 ) M2_M1 
+  NEW metal2 ( 9120 9200 ) ( 8960 * ) M3_M2 
+  NEW metal3 ( 8960 9200 ) ( 9120 * ) M4_M3 
+  NEW metal4 ( 9120 9200 ) ( * 11000 ) M4_M3 
+  NEW metal3 ( 9120 11000 ) ( 7200 * ) 
+  NEW metal1 ( 10080 9600 ) M2_M1 
+  NEW metal2 ( 10080 9600 ) ( * 9400 ) M3_M2 
+  NEW metal3 ( 10080 9400 ) ( 9120 * ) ( * 9200 ) ;
+- _40__bF$buf1
+  ( OAI21X1_18 B ) 
+  ( OAI21X1_8 B ) 
+  ( OAI21X1_32 B ) 
+  ( OAI21X1_10 B ) 
+  ( BUFX4_19 Y ) 
++ ROUTED metal1 ( 19040 5200 ) ( 18720 * ) ( * 5400 ) ( 18560 * ) 
+  NEW metal1 ( 17120 5200 ) M2_M1 
+  NEW metal2 ( 17120 5200 ) ( * 5400 ) M3_M2 
+  NEW metal3 ( 17120 5400 ) ( 18560 * ) M3_M2 
+  NEW metal1 ( 18560 5400 ) M2_M1 
+  NEW metal1 ( 16640 5200 ) ( 17120 * ) 
+  NEW metal1 ( 19360 1200 ) M2_M1 
+  NEW metal2 ( 19360 1200 ) ( * 1800 ) M3_M2 
+  NEW metal3 ( 19360 1800 ) ( 18880 * ) M3_M2 
+  NEW metal2 ( 18880 1800 ) ( * 5200 ) M2_M1 ;
+- _40__bF$buf0
+  ( OAI21X1_22 B ) 
+  ( OAI21X1_6 B ) 
+  ( OAI21X1_14 B ) 
+  ( OAI21X1_26 B ) 
+  ( BUFX4_20 Y ) 
++ ROUTED metal1 ( 10400 5200 ) ( 10080 * ) M2_M1 
+  NEW metal2 ( 10080 5200 ) ( 9920 * ) ( * 5400 ) M2_M1 
+  NEW metal1 ( 8800 3000 ) M2_M1 
+  NEW metal2 ( 8800 3000 ) ( * 3400 ) M3_M2 
+  NEW metal3 ( 8800 3400 ) ( 9920 * ) M3_M2 
+  NEW metal2 ( 9920 3400 ) ( * 5200 ) 
+  NEW metal1 ( 5920 3000 ) M2_M1 
+  NEW metal2 ( 5920 3000 ) ( * 3400 ) M3_M2 
+  NEW metal3 ( 5920 3400 ) ( 8800 * ) 
+  NEW metal1 ( 5440 3000 ) ( 5920 * ) ;
+- reset
+  ( PIN reset ) 
+  ( BUFX4_25 A ) 
+  ( BUFX4_24 A ) 
+  ( BUFX4_23 A ) 
+  ( BUFX4_22 A ) 
+  ( BUFX4_21 A ) 
++ ROUTED metal1 ( 12160 9200 ) M2_M1 
+  NEW metal2 ( 12160 9200 ) M3_M2 
+  NEW metal3 ( 12160 9200 ) ( 11360 * ) M3_M2 
+  NEW metal2 ( 11360 9200 ) ( * 5200 ) M2_M1 
+  NEW metal1 ( 15200 9200 ) M2_M1 
+  NEW metal2 ( 15200 9200 ) M3_M2 
+  NEW metal3 ( 15200 9200 ) ( 12160 * ) 
+  NEW metal1 ( 15680 5200 ) M2_M1 
+  NEW metal2 ( 15680 5200 ) ( * 9200 ) M3_M2 
+  NEW metal3 ( 15680 9200 ) ( 15200 * ) 
+  NEW metal1 ( 10080 1200 ) M2_M1 
+  NEW metal2 ( 10080 1200 ) ( * 2800 ) ( 10240 * ) ( * 4000 ) M3_M2 
+  NEW metal3 ( 10240 4000 ) ( 11360 * ) M3_M2 
+  NEW metal2 ( 11360 4000 ) ( * 5200 ) 
+  NEW metal2 ( 9600 -199 ) ( * 400 ) M3_M2 
+  NEW metal3 ( 9600 400 ) ( 10080 * ) M3_M2 
+  NEW metal2 ( 10080 400 ) ( * 1200 ) ;
+- reset_bF$buf4
+  ( DFFSR_32 R ) 
+  ( DFFSR_6 R ) 
+  ( DFFSR_24 R ) 
+  ( DFFSR_18 R ) 
+  ( DFFSR_13 R ) 
+  ( DFFSR_9 R ) 
+  ( DFFSR_28 R ) 
+  ( BUFX4_21 Y ) 
++ ROUTED metal1 ( 12480 5200 ) M2_M1 
+  NEW metal2 ( 12480 5200 ) M3_M2 
+  NEW metal3 ( 12480 5200 ) ( 11040 * ) M3_M2 
+  NEW metal2 ( 11040 5200 ) ( * 5400 ) M2_M1 
+  NEW metal1 ( 12000 7000 ) M2_M1 
+  NEW metal2 ( 12000 7000 ) ( * 5200 ) M3_M2 
+  NEW metal1 ( 8000 5200 ) M2_M1 
+  NEW metal2 ( 8000 5200 ) M3_M2 
+  NEW metal3 ( 8000 5200 ) ( 11040 * ) 
+  NEW metal1 ( 6400 7000 ) M2_M1 
+  NEW metal2 ( 6400 7000 ) ( * 6200 ) M3_M2 
+  NEW metal3 ( 6400 6200 ) ( 6080 * ) M3_M2 
+  NEW metal2 ( 6080 6200 ) ( * 5200 ) M2_M1 
+  NEW metal1 ( 6880 9200 ) M2_M1 
+  NEW metal2 ( 6880 9200 ) ( * 6200 ) M3_M2 
+  NEW metal3 ( 6880 6200 ) ( 6400 * ) 
+  NEW metal1 ( 3680 5200 ) M2_M1 
+  NEW metal2 ( 3680 5200 ) ( * 6200 ) M3_M2 
+  NEW metal3 ( 3680 6200 ) ( 6080 * ) 
+  NEW metal1 ( 3520 9200 ) M2_M1 
+  NEW metal2 ( 3520 9200 ) ( * 6200 ) M3_M2 
+  NEW metal3 ( 3520 6200 ) ( 3680 * ) ;
+- reset_bF$buf3
+  ( DFFSR_27 R ) 
+  ( DFFSR_3 R ) 
+  ( DFFSR_8 R ) 
+  ( DFFSR_22 R ) 
+  ( DFFSR_4 R ) 
+  ( DFFSR_31 R ) 
+  ( DFFSR_33 S ) 
+  ( BUFX4_22 Y ) 
++ ROUTED metal1 ( 19360 7000 ) M2_M1 
+  NEW metal2 ( 19360 7000 ) ( * 6400 ) M3_M2 
+  NEW metal3 ( 19360 6400 ) ( 16000 * ) M3_M2 
+  NEW metal2 ( 16000 6400 ) ( * 5800 ) M2_M1 
+  NEW metal1 ( 21600 5200 ) M2_M1 
+  NEW metal2 ( 21600 5200 ) ( * 6400 ) M3_M2 
+  NEW metal3 ( 21600 6400 ) ( 19360 * ) 
+  NEW metal1 ( 23360 3000 ) M2_M1 
+  NEW metal2 ( 23360 3000 ) ( * 5200 ) M2_M1 
+  NEW metal1 ( 23360 1200 ) M2_M1 
+  NEW metal2 ( 23360 1200 ) ( * 3000 ) 
+  NEW metal1 ( 21280 3000 ) M2_M1 
+  NEW metal2 ( 21280 3000 ) ( * 1200 ) M2_M1 
+  NEW metal1 ( 24160 1200 ) M2_M1 
+  NEW metal2 ( 24160 1200 ) M3_M2 
+  NEW metal3 ( 24160 1200 ) ( 23360 * ) M3_M2 
+  NEW metal1 ( 25280 5040 ) M2_M1 
+  NEW metal2 ( 25280 5000 ) ( * 3000 ) M2_M1 ;
+- reset_bF$buf2
+  ( DFFSR_5 R ) 
+  ( DFFSR_25 R ) 
+  ( DFFSR_19 R ) 
+  ( DFFSR_29 R ) 
+  ( DFFSR_1 R ) 
+  ( DFFSR_30 R ) 
+  ( DFFSR_26 R ) 
+  ( BUFX4_23 Y ) 
++ ROUTED metal1 ( 10720 11000 ) M2_M1 
+  NEW metal2 ( 10720 11000 ) ( * 10200 ) M3_M2 
+  NEW metal3 ( 10720 10200 ) ( 11840 * ) M3_M2 
+  NEW metal2 ( 11840 10200 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 8480 13200 ) M2_M1 
+  NEW metal2 ( 8480 13200 ) ( * 11000 ) M2_M1 
+  NEW metal1 ( 8480 11000 ) ( 8470 * ) 
+  NEW metal1 ( 7520 15000 ) M2_M1 
+  NEW metal2 ( 7520 15000 ) ( * 13200 ) M2_M1 
+  NEW metal1 ( 5600 13200 ) M2_M1 
+  NEW metal2 ( 5600 13200 ) ( * 15000 ) M2_M1 
+  NEW metal1 ( 5440 11000 ) M2_M1 
+  NEW metal2 ( 5440 11000 ) ( 5600 * ) ( * 13200 ) 
+  NEW metal1 ( 3200 15000 ) M2_M1 
+  NEW metal2 ( 3200 15000 ) M3_M2 
+  NEW metal3 ( 3200 15000 ) ( 5600 * ) M3_M2 
+  NEW metal1 ( 3520 17200 ) M2_M1 
+  NEW metal2 ( 3520 17200 ) ( * 15000 ) M3_M2 ;
+- reset_bF$buf1
+  ( DFFSR_2 R ) 
+  ( DFFSR_14 R ) 
+  ( DFFSR_10 R ) 
+  ( DFFSR_20 R ) 
+  ( DFFSR_12 R ) 
+  ( DFFSR_16 R ) 
+  ( BUFX4_24 Y ) 
++ ROUTED metal1 ( 7680 1200 ) M2_M1 
+  NEW metal2 ( 7680 1200 ) M3_M2 
+  NEW metal3 ( 7680 1200 ) ( 9600 * ) M3_M2 
+  NEW metal2 ( 9600 1200 ) ( * 1400 ) M2_M1 
+  NEW metal1 ( 9600 1400 ) ( 9760 * ) 
+  NEW metal1 ( 12160 1200 ) M2_M1 
+  NEW metal2 ( 12160 1200 ) M3_M2 
+  NEW metal3 ( 12160 1200 ) ( 9600 * ) 
+  NEW metal1 ( 11200 3000 ) M2_M1 
+  NEW metal2 ( 11200 3000 ) ( * 1200 ) M3_M2 
+  NEW metal1 ( 3680 1200 ) M2_M1 
+  NEW metal2 ( 3680 1200 ) M3_M2 
+  NEW metal3 ( 3680 1200 ) ( 5600 * ) M3_M2 
+  NEW metal1 ( 5600 1200 ) M2_M1 
+  NEW metal1 ( 3680 3000 ) M2_M1 
+  NEW metal2 ( 3680 3000 ) ( * 1200 ) 
+  NEW metal1 ( 14720 3000 ) M2_M1 
+  NEW metal2 ( 14720 3000 ) ( * 1200 ) M3_M2 
+  NEW metal3 ( 14720 1200 ) ( 14240 * ) M3_M2 
+  NEW metal1 ( 14240 1200 ) M2_M1 ;
+- reset_bF$buf0
+  ( DFFSR_7 R ) 
+  ( DFFSR_11 R ) 
+  ( DFFSR_17 R ) 
+  ( DFFSR_15 R ) 
+  ( DFFSR_23 R ) 
+  ( DFFSR_21 R ) 
+  ( BUFX4_25 Y ) 
++ ROUTED metal1 ( 14400 11000 ) M2_M1 
+  NEW metal2 ( 14400 11000 ) ( * 10200 ) M3_M2 
+  NEW metal3 ( 14400 10200 ) ( 14880 * ) M3_M2 
+  NEW metal2 ( 14880 10200 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 14240 13200 ) M2_M1 
+  NEW metal2 ( 14240 13200 ) ( 14400 * ) ( * 11000 ) 
+  NEW metal1 ( 18080 9200 ) M2_M1 
+  NEW metal2 ( 18080 9200 ) ( * 10200 ) M3_M2 
+  NEW metal3 ( 18080 10200 ) ( 14880 * ) 
+  NEW metal1 ( 18080 15000 ) M2_M1 
+  NEW metal2 ( 18080 15000 ) ( * 10200 ) 
+  NEW metal1 ( 13440 17200 ) M2_M1 
+  NEW metal2 ( 13440 17200 ) ( * 16000 ) M3_M2 
+  NEW metal3 ( 13440 16000 ) ( 14400 * ) M3_M2 
+  NEW metal2 ( 14400 16000 ) ( * 13200 ) 
+  NEW metal1 ( 10080 17200 ) M2_M1 
+  NEW metal2 ( 10080 17200 ) M3_M2 
+  NEW metal3 ( 10080 17200 ) ( 11200 * ) M3_M2 
+  NEW metal1 ( 11200 17200 ) M2_M1 
+  NEW metal1 ( 11200 17200 ) ( * 17190 ) ;
+- spi_cntr<4>
+  ( DFFNEGX1_5 Q ) 
+  ( OAI21X1_3 C ) 
+  ( INVX4_1 A ) 
++ ROUTED metal1 ( 25280 8400 ) M2_M1 
+  NEW metal2 ( 25280 8400 ) ( * 6600 ) M3_M2 
+  NEW metal3 ( 25280 6600 ) ( 24480 * ) M3_M2 
+  NEW metal2 ( 24480 6600 ) ( * 5400 ) M2_M1 
+  NEW metal1 ( 22080 9000 ) M2_M1 
+  NEW metal2 ( 22080 9000 ) ( * 6600 ) M3_M2 
+  NEW metal3 ( 22080 6600 ) ( 24480 * ) ;
+- _106_
+  ( BUFX2_39 A ) 
+  ( OAI21X1_40 A ) 
+  ( AOI21X1_18 B ) 
+  ( OAI21X1_37 A ) 
+  ( OAI21X1_36 A ) 
+  ( NAND3X1_2 C ) 
+  ( NAND2X1_2 A ) 
+  ( NAND3X1_1 C ) 
+  ( INVX4_1 Y ) 
++ ROUTED metal1 ( 24640 9400 ) M2_M1 
+  NEW metal2 ( 24640 9400 ) ( * 6400 ) M3_M2 
+  NEW metal3 ( 24640 6400 ) ( 24320 * ) M3_M2 
+  NEW metal2 ( 24320 6400 ) ( * 5800 ) M2_M1 
+  NEW metal1 ( 24000 9400 ) M2_M1 
+  NEW metal2 ( 24000 9400 ) M3_M2 
+  NEW metal3 ( 24000 9400 ) ( 24640 * ) M3_M2 
+  NEW metal1 ( 24000 11400 ) M2_M1 
+  NEW metal2 ( 24000 11400 ) ( * 9400 ) 
+  NEW metal1 ( 24000 13400 ) M2_M1 
+  NEW metal2 ( 24000 13400 ) ( * 11400 ) 
+  NEW metal1 ( 23360 11400 ) M2_M1 
+  NEW metal2 ( 23360 11400 ) M3_M2 
+  NEW metal3 ( 23360 11400 ) ( 24000 * ) M3_M2 
+  NEW metal1 ( 27040 7000 ) M2_M1 
+  NEW metal2 ( 27040 7000 ) ( * 6400 ) M3_M2 
+  NEW metal3 ( 27040 6400 ) ( 24640 * ) 
+  NEW metal1 ( 27200 9400 ) M2_M1 
+  NEW metal2 ( 27200 9400 ) ( * 6400 ) M3_M2 
+  NEW metal3 ( 27200 6400 ) ( 27040 * ) 
+  NEW metal1 ( 27360 10800 ) ( 27200 * ) M2_M1 
+  NEW metal2 ( 27200 10800 ) ( * 9400 ) ;
+- ahb_addr<8>
+  ( PIN ahb_addr<8> ) 
+  ( INVX1_1 A ) 
++ ROUTED metal3 ( 28320 13600 ) ( 28160 * ) M3_M2 
+  NEW metal1 ( 28160 13600 ) M2_M1 
+  NEW metal1 ( 28160 13600 ) ( 27840 * ) ;
+- _3_
+  ( NOR3X1_1 A ) 
+  ( INVX1_1 Y ) 
++ ROUTED metal1 ( 25120 13600 ) M2_M1 
+  NEW metal2 ( 25120 13600 ) M3_M2 
+  NEW metal3 ( 25120 13600 ) ( 27680 * ) M3_M2 
+  NEW metal1 ( 27680 13600 ) M2_M1 ;
+- spi_cntr<1>
+  ( DFFNEGX1_2 Q ) 
+  ( NAND2X1_4 A ) 
+  ( OR2X2_1 A ) 
+  ( OAI21X1_2 A ) 
+  ( INVX1_4 A ) 
+  ( NAND2X1_1 A ) 
++ ROUTED metal1 ( 22400 13400 ) M2_M1 
+  NEW metal2 ( 22400 13400 ) M3_M2 
+  NEW metal3 ( 22400 13400 ) ( 21920 * ) M3_M2 
+  NEW metal1 ( 21920 13400 ) M2_M1 
+  NEW metal1 ( 20800 13400 ) M2_M1 
+  NEW metal2 ( 20800 13400 ) M3_M2 
+  NEW metal3 ( 20800 13400 ) ( 21920 * ) 
+  NEW metal1 ( 19200 13600 ) M2_M1 
+  NEW metal2 ( 19200 13600 ) ( * 13400 ) M3_M2 
+  NEW metal3 ( 19200 13400 ) ( 20800 * ) 
+  NEW metal1 ( 19040 13800 ) M2_M1 
+  NEW metal2 ( 19040 13800 ) ( * 13400 ) M3_M2 
+  NEW metal3 ( 19040 13400 ) ( 19200 * ) 
+  NEW metal1 ( 18880 14600 ) M2_M1 
+  NEW metal2 ( 18880 14600 ) ( * 13400 ) M2_M1 
+  NEW metal1 ( 18880 13400 ) ( * 13450 ) ;
+- spi_cntr<0>
+  ( DFFNEGX1_1 Q ) 
+  ( NAND2X1_3 A ) 
+  ( OR2X2_1 B ) 
+  ( INVX2_1 A ) 
+  ( NAND2X1_1 B ) 
++ ROUTED metal1 ( 20640 13400 ) M2_M1 
+  NEW metal2 ( 20640 13400 ) ( * 13200 ) M3_M2 
+  NEW metal3 ( 20640 13200 ) ( 22240 * ) M3_M2 
+  NEW metal2 ( 22240 13200 ) ( * 13000 ) M2_M1 
+  NEW metal1 ( 19040 14800 ) M2_M1 
+  NEW metal2 ( 19040 14800 ) M3_M2 
+  NEW metal3 ( 19040 14800 ) ( 20640 * ) M3_M2 
+  NEW metal2 ( 20640 14800 ) ( * 13400 ) 
+  NEW metal1 ( 21760 9400 ) M2_M1 
+  NEW metal2 ( 21760 9400 ) M3_M2 
+  NEW metal3 ( 21760 9400 ) ( 22240 * ) M3_M2 
+  NEW metal2 ( 22240 9400 ) ( * 13000 ) 
+  NEW metal1 ( 22560 7800 ) M2_M1 
+  NEW metal2 ( 22560 7800 ) ( * 8600 ) M3_M2 
+  NEW metal3 ( 22560 8600 ) ( 21760 * ) M3_M2 
+  NEW metal2 ( 21760 8600 ) ( * 9400 ) ;
+- _4_
+  ( INVX1_24 A ) 
+  ( NOR2X1_5 A ) 
+  ( NOR3X1_1 B ) 
+  ( NAND2X1_1 Y ) 
++ ROUTED metal1 ( 24000 14600 ) M2_M1 
+  NEW metal2 ( 24000 14600 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 24000 14200 ) ( 22240 * ) M3_M2 
+  NEW metal2 ( 22240 14200 ) ( * 13800 ) M2_M1 
+  NEW metal1 ( 24960 13400 ) M2_M1 
+  NEW metal2 ( 24960 13400 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 24960 14200 ) ( 24000 * ) 
+  NEW metal1 ( 25600 13600 ) M2_M1 
+  NEW metal2 ( 25600 13600 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 25600 14200 ) ( 24960 * ) ;
+- spi_cntr<2>
+  ( DFFNEGX1_3 Q ) 
+  ( NAND2X1_6 A ) 
+  ( OAI21X1_3 A ) 
+  ( NAND3X1_2 A ) 
+  ( OAI21X1_2 C ) 
+  ( INVX1_2 A ) 
++ ROUTED metal1 ( 23040 11200 ) M2_M1 
+  NEW metal2 ( 23040 11200 ) ( * 11000 ) M3_M2 
+  NEW metal3 ( 23040 11000 ) ( 22720 * ) M3_M2 
+  NEW metal2 ( 22720 11000 ) ( * 10600 ) M2_M1 
+  NEW metal1 ( 22560 9400 ) M2_M1 
+  NEW metal2 ( 22560 9400 ) ( 22720 * ) ( * 10600 ) 
+  NEW metal1 ( 22880 13000 ) M2_M1 
+  NEW metal2 ( 22880 13000 ) ( * 12000 ) ( 23040 * ) ( * 11200 ) 
+  NEW metal1 ( 25760 10800 ) M2_M1 
+  NEW metal2 ( 25760 10800 ) M3_M2 
+  NEW metal3 ( 25760 10800 ) ( 23040 * ) M3_M2 
+  NEW metal2 ( 23040 10800 ) ( * 11000 ) 
+  NEW metal1 ( 25760 12400 ) M2_M1 
+  NEW metal2 ( 25760 12400 ) ( * 10800 ) ;
+- _5_
+  ( NOR2X1_7 A ) 
+  ( OAI21X1_1 C ) 
+  ( NAND3X1_1 B ) 
+  ( INVX1_2 Y ) 
++ ROUTED metal1 ( 23840 11000 ) M2_M1 
+  NEW metal2 ( 23840 11000 ) ( * 10600 ) M3_M2 
+  NEW metal3 ( 23840 10600 ) ( 22880 * ) M3_M2 
+  NEW metal1 ( 22880 10600 ) M2_M1 
+  NEW metal1 ( 20640 11200 ) M2_M1 
+  NEW metal2 ( 20640 11200 ) ( * 10600 ) M3_M2 
+  NEW metal3 ( 20640 10600 ) ( 22880 * ) 
+  NEW metal1 ( 18560 10600 ) M2_M1 
+  NEW metal2 ( 18560 10600 ) M3_M2 
+  NEW metal3 ( 18560 10600 ) ( 20640 * ) ;
+- spi_cntr<3>
+  ( DFFNEGX1_4 Q ) 
+  ( NOR2X1_25 A ) 
+  ( OAI21X1_3 B ) 
+  ( NAND3X1_2 B ) 
+  ( INVX1_3 A ) 
+  ( NAND3X1_1 A ) 
++ ROUTED metal1 ( 23200 11000 ) M2_M1 
+  NEW metal2 ( 23200 11000 ) M3_M2 
+  NEW metal3 ( 23200 11000 ) ( 23680 * ) M3_M2 
+  NEW metal1 ( 23680 11000 ) M2_M1 
+  NEW metal1 ( 23680 11000 ) ( * 11050 ) 
+  NEW metal1 ( 23360 9600 ) M2_M1 
+  NEW metal2 ( 23360 9600 ) ( * 11000 ) M3_M2 
+  NEW metal1 ( 24960 10600 ) M2_M1 
+  NEW metal2 ( 24960 10600 ) ( * 11000 ) M3_M2 
+  NEW metal3 ( 24960 11000 ) ( 23680 * ) 
+  NEW metal1 ( 22560 10400 ) M2_M1 
+  NEW metal2 ( 22560 10400 ) M3_M2 
+  NEW metal3 ( 22560 10400 ) ( 23360 * ) M3_M2 
+  NEW metal1 ( 22400 9200 ) M2_M1 
+  NEW metal2 ( 22400 9200 ) ( * 10400 ) M3_M2 
+  NEW metal3 ( 22400 10400 ) ( 22560 * ) ;
+- _6_
+  ( NOR2X1_5 B ) 
+  ( NOR2X1_4 B ) 
+  ( NOR2X1_3 B ) 
+  ( NOR2X1_2 B ) 
+  ( NOR3X1_1 C ) 
+  ( NAND3X1_1 Y ) 
++ ROUTED metal1 ( 24800 13200 ) M2_M1 
+  NEW metal2 ( 24800 13200 ) M3_M2 
+  NEW metal3 ( 24800 13200 ) ( 24160 * ) M3_M2 
+  NEW metal2 ( 24160 13200 ) ( * 11800 ) M2_M1 
+  NEW metal1 ( 23680 15000 ) M2_M1 
+  NEW metal2 ( 23680 15000 ) ( * 13200 ) M3_M2 
+  NEW metal3 ( 23680 13200 ) ( 24160 * ) 
+  NEW metal1 ( 23520 15000 ) ( 23680 * ) 
+  NEW metal1 ( 23040 15000 ) M2_M1 
+  NEW metal2 ( 23040 15000 ) M3_M2 
+  NEW metal3 ( 23040 15000 ) ( 23680 * ) M3_M2 
+  NEW metal1 ( 22560 15000 ) M2_M1 
+  NEW metal2 ( 22560 15000 ) M3_M2 
+  NEW metal3 ( 22560 15000 ) ( 23040 * ) ;
+- _7_
+  ( NOR3X1_3 B ) 
+  ( NOR3X1_1 Y ) 
++ ROUTED metal1 ( 24480 14800 ) M2_M1 
+  NEW metal2 ( 24480 14800 ) ( 24640 * ) ( * 13800 ) M2_M1 ;
+- _8_
+  ( NOR2X1_24 A ) 
+  ( NOR2X1_7 B ) 
+  ( NAND2X1_2 B ) 
+  ( INVX1_3 Y ) 
++ ROUTED metal1 ( 24160 9600 ) M2_M1 
+  NEW metal2 ( 24160 9600 ) ( * 10000 ) M3_M2 
+  NEW metal3 ( 24160 10000 ) ( 23200 * ) M3_M2 
+  NEW metal2 ( 23200 10000 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 23680 13000 ) M2_M1 
+  NEW metal2 ( 23680 13000 ) ( * 11200 ) M3_M2 
+  NEW metal3 ( 23680 11200 ) ( 24160 * ) M3_M2 
+  NEW metal2 ( 24160 11200 ) ( * 10000 ) 
+  NEW metal1 ( 18880 11000 ) M2_M1 
+  NEW metal2 ( 18880 11000 ) ( * 11200 ) M3_M2 
+  NEW metal3 ( 18880 11200 ) ( 23680 * ) ;
+- _9_
+  ( AOI21X1_1 C ) 
+  ( NAND2X1_2 Y ) 
++ ROUTED metal1 ( 23520 13600 ) ( 23680 * ) ( 23770 * ) ;
+- _10_
+  ( NAND3X1_7 A ) 
+  ( NAND2X1_3 B ) 
+  ( OAI21X1_1 A ) 
+  ( INVX1_4 Y ) 
++ ROUTED metal1 ( 19520 11200 ) M2_M1 
+  NEW metal2 ( 19520 11200 ) ( * 12400 ) M2_M1 
+  NEW metal1 ( 19520 12400 ) ( 19360 * ) 
+  NEW metal1 ( 20160 10800 ) ( * 11000 ) ( 19520 * ) ( * 11050 ) 
+  NEW metal1 ( 20320 13000 ) M2_M1 
+  NEW metal2 ( 20320 13000 ) M3_M2 
+  NEW metal3 ( 20320 13000 ) ( 19520 * ) M3_M2 
+  NEW metal2 ( 19520 13000 ) ( * 12400 ) ;
+- _11_
+  ( OAI21X1_37 C ) 
+  ( NAND3X1_7 B ) 
+  ( NAND2X1_4 B ) 
+  ( OAI21X1_2 B ) 
+  ( OAI21X1_1 B ) 
+  ( INVX2_1 Y ) 
++ ROUTED metal1 ( 23520 9000 ) M2_M1 
+  NEW metal2 ( 23520 9000 ) ( * 9200 ) M3_M2 
+  NEW metal3 ( 23520 9200 ) ( 22080 * ) M3_M2 
+  NEW metal1 ( 22080 9200 ) M2_M1 
+  NEW metal1 ( 22080 9200 ) ( 21920 * ) 
+  NEW metal1 ( 20320 11000 ) M2_M1 
+  NEW metal2 ( 20320 11000 ) ( * 10200 ) M3_M2 
+  NEW metal3 ( 20320 10200 ) ( 22080 * ) M3_M2 
+  NEW metal2 ( 22080 10200 ) ( * 9200 ) 
+  NEW metal1 ( 19360 11000 ) M2_M1 
+  NEW metal2 ( 19360 11000 ) M3_M2 
+  NEW metal3 ( 19360 11000 ) ( 20320 * ) M3_M2 
+  NEW metal1 ( 21120 13000 ) M2_M1 
+  NEW metal2 ( 21120 13000 ) ( 20960 * ) ( * 10200 ) M3_M2 
+  NEW metal1 ( 22560 13200 ) M2_M1 
+  NEW metal2 ( 22560 13200 ) ( * 13000 ) M3_M2 
+  NEW metal3 ( 22560 13000 ) ( 21120 * ) M3_M2 ;
+- _12_
+  ( INVX1_23 A ) 
+  ( AOI21X1_1 A ) 
+  ( OAI21X1_1 Y ) 
++ ROUTED metal1 ( 23040 13200 ) M2_M1 
+  NEW metal2 ( 23040 13200 ) ( * 12600 ) M3_M2 
+  NEW metal3 ( 23040 12600 ) ( 20320 * ) M3_M2 
+  NEW metal2 ( 20320 12600 ) ( * 11800 ) M2_M1 
+  NEW metal1 ( 20320 11800 ) ( 20350 * ) 
+  NEW metal1 ( 26240 10600 ) M2_M1 
+  NEW metal2 ( 26240 10600 ) ( * 12200 ) M3_M2 
+  NEW metal3 ( 26240 12200 ) ( 23040 * ) M3_M2 
+  NEW metal2 ( 23040 12200 ) ( * 12600 ) ;
+- _13_
+  ( AOI21X1_1 B ) 
+  ( OAI21X1_2 Y ) 
++ ROUTED metal1 ( 23200 13400 ) ( 22880 * ) ;
+- _14_
+  ( NOR3X1_3 C ) 
+  ( AOI21X1_1 Y ) 
++ ROUTED metal1 ( 24640 15000 ) ( 24320 * ) M2_M1 
+  NEW metal2 ( 24320 15000 ) ( * 14800 ) M3_M2 
+  NEW metal3 ( 24320 14800 ) ( 23360 * ) M3_M2 
+  NEW metal2 ( 23360 14800 ) ( * 13800 ) M2_M1 ;
+- ahb_addr<4>
+  ( PIN ahb_addr<4> ) 
+  ( INVX1_5 A ) 
++ ROUTED metal2 ( 17600 18400 ) ( * 17600 ) M2_M1 ;
+- _15_
+  ( NOR3X1_2 A ) 
+  ( INVX1_5 Y ) 
++ ROUTED metal1 ( 20160 14600 ) M2_M1 
+  NEW metal2 ( 20160 14600 ) ( * 16200 ) M3_M2 
+  NEW metal3 ( 20160 16200 ) ( 17760 * ) M3_M2 
+  NEW metal2 ( 17760 16200 ) ( * 16400 ) M2_M1 ;
+- _16_
+  ( NOR2X1_6 A ) 
+  ( NOR2X1_4 A ) 
+  ( NOR3X1_2 B ) 
+  ( OR2X2_1 Y ) 
++ ROUTED metal1 ( 20320 14800 ) ( 19360 * ) 
+  NEW metal1 ( 21600 14600 ) M2_M1 
+  NEW metal2 ( 21600 14600 ) M3_M2 
+  NEW metal3 ( 21600 14600 ) ( 20480 * ) M3_M2 
+  NEW metal2 ( 20480 14600 ) ( * 14800 ) M2_M1 
+  NEW metal1 ( 20480 14800 ) ( 20470 * ) 
+  NEW metal1 ( 22720 14600 ) M2_M1 
+  NEW metal2 ( 22720 14600 ) M3_M2 
+  NEW metal3 ( 22720 14600 ) ( 21600 * ) ;
+- _17_
+  ( NOR2X1_6 B ) 
+  ( NOR2X1_1 B ) 
+  ( NOR3X1_2 C ) 
+  ( NAND3X1_2 Y ) 
++ ROUTED metal1 ( 21760 15000 ) M2_M1 
+  NEW metal2 ( 21760 15000 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 21760 14000 ) ( 23200 * ) M3_M2 
+  NEW metal2 ( 23200 14000 ) ( * 11800 ) M2_M1 
+  NEW metal1 ( 21280 15000 ) M2_M1 
+  NEW metal2 ( 21280 15000 ) M3_M2 
+  NEW metal3 ( 21280 15000 ) ( 21760 * ) M3_M2 
+  NEW metal1 ( 20480 15000 ) M2_M1 
+  NEW metal2 ( 20480 15000 ) M3_M2 
+  NEW metal3 ( 20480 15000 ) ( 21280 * ) ;
+- _18_
+  ( NOR3X1_3 A ) 
+  ( NOR3X1_2 Y ) 
++ ROUTED metal1 ( 24320 14600 ) M2_M1 
+  NEW metal2 ( 24320 14600 ) M3_M2 
+  NEW metal3 ( 24320 14600 ) ( 23200 * ) ( * 14800 ) ( 21280 * ) M3_M2 
+  NEW metal1 ( 21280 14800 ) M2_M1 
+  NEW metal1 ( 21280 14800 ) ( 20800 * ) ( 20750 * ) ;
+- _19_
+  ( NAND3X1_3 C ) 
+  ( NOR3X1_3 Y ) 
++ ROUTED metal1 ( 21760 16800 ) M2_M1 
+  NEW metal2 ( 21760 16800 ) ( * 15600 ) M3_M2 
+  NEW metal3 ( 21760 15600 ) ( 22400 * ) M3_M2 
+  NEW metal2 ( 22400 15600 ) ( * 14400 ) M3_M2 
+  NEW metal3 ( 22400 14400 ) ( 24480 * ) M3_M2 
+  NEW metal1 ( 24480 14400 ) M2_M1 ;
+- _20_
+  ( NAND3X1_8 B ) 
+  ( NOR2X1_2 A ) 
+  ( NOR2X1_1 A ) 
+  ( NAND2X1_3 Y ) 
++ ROUTED metal1 ( 21600 13200 ) M2_M1 
+  NEW metal2 ( 21600 13200 ) ( * 13800 ) M3_M2 
+  NEW metal3 ( 21600 13800 ) ( 20480 * ) M3_M2 
+  NEW metal1 ( 20480 13800 ) M2_M1 
+  NEW metal1 ( 20480 13800 ) ( 20450 * ) 
+  NEW metal1 ( 22080 14600 ) M2_M1 
+  NEW metal2 ( 22080 14600 ) ( * 13800 ) M3_M2 
+  NEW metal3 ( 22080 13800 ) ( 21600 * ) 
+  NEW metal1 ( 23200 14600 ) ( 23040 * ) M2_M1 
+  NEW metal2 ( 23040 14600 ) ( * 13800 ) M3_M2 
+  NEW metal3 ( 23040 13800 ) ( 22080 * ) ;
+- _21_
+  ( AOI22X1_9 A ) 
+  ( AOI22X1_6 A ) 
+  ( AOI22X1_3 A ) 
+  ( AOI22X1_1 A ) 
+  ( NOR2X1_1 Y ) 
++ ROUTED metal1 ( 22240 17200 ) M2_M1 
+  NEW metal2 ( 22240 17200 ) ( * 15000 ) M2_M1 
+  NEW metal1 ( 22240 15000 ) ( 21920 * ) 
+  NEW metal1 ( 23040 17200 ) M2_M1 
+  NEW metal2 ( 23040 17200 ) ( * 16200 ) M3_M2 
+  NEW metal3 ( 23040 16200 ) ( 22240 * ) M3_M2 
+  NEW metal1 ( 23840 17200 ) M2_M1 
+  NEW metal2 ( 23840 17200 ) M3_M2 
+  NEW metal3 ( 23840 17200 ) ( 23040 * ) M3_M2 
+  NEW metal1 ( 19360 17200 ) M2_M1 
+  NEW metal2 ( 19360 17200 ) M3_M2 
+  NEW metal3 ( 19360 17200 ) ( 22240 * ) M3_M2 ;
+- _22_
+  ( AOI22X1_11 A ) 
+  ( AOI22X1_8 A ) 
+  ( AOI22X1_5 A ) 
+  ( AOI22X1_1 D ) 
+  ( NOR2X1_2 Y ) 
++ ROUTED metal1 ( 22720 17400 ) M2_M1 
+  NEW metal2 ( 22720 17400 ) M3_M2 
+  NEW metal3 ( 22720 17400 ) ( 23360 * ) M3_M2 
+  NEW metal2 ( 23360 17400 ) ( * 15800 ) M2_M1 
+  NEW metal1 ( 23360 15800 ) ( 23390 * ) 
+  NEW metal1 ( 24640 17200 ) M2_M1 
+  NEW metal2 ( 24640 17200 ) ( * 16600 ) M3_M2 
+  NEW metal3 ( 24640 16600 ) ( 23360 * ) M3_M2 
+  NEW metal1 ( 25440 17200 ) M2_M1 
+  NEW metal2 ( 25440 17200 ) ( * 16600 ) M3_M2 
+  NEW metal3 ( 25440 16600 ) ( 24640 * ) 
+  NEW metal1 ( 20000 17200 ) M2_M1 
+  NEW metal2 ( 20000 17200 ) ( * 17400 ) M3_M2 
+  NEW metal3 ( 20000 17400 ) ( 22720 * ) ;
+- ahb_addr<0>
+  ( PIN ahb_addr<0> ) 
+  ( AOI22X1_1 B ) 
++ ROUTED metal2 ( 21920 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 21920 18200 ) ( 22240 * ) M3_M2 
+  NEW metal2 ( 22240 18200 ) ( * 17400 ) M2_M1 
+  NEW metal1 ( 22240 17400 ) ( 22400 * ) ;
+- ahb_addr<16>
+  ( PIN ahb_addr<16> ) 
+  ( AOI22X1_1 C ) 
++ ROUTED metal2 ( 22400 18400 ) ( * 17200 ) M3_M2 
+  NEW metal3 ( 22400 17200 ) ( 22880 * ) M3_M2 
+  NEW metal1 ( 22880 17200 ) M2_M1 ;
+- _23_
+  ( NAND3X1_3 A ) 
+  ( AOI22X1_1 Y ) 
++ ROUTED metal1 ( 22080 17000 ) M2_M1 
+  NEW metal2 ( 22080 17000 ) ( * 16800 ) M3_M2 
+  NEW metal3 ( 22080 16800 ) ( 22720 * ) M3_M2 
+  NEW metal1 ( 22720 16800 ) M2_M1 ;
+- _24_
+  ( NAND3X1_8 C ) 
+  ( NOR2X1_3 A ) 
+  ( NAND2X1_4 Y ) 
++ ROUTED metal1 ( 21440 12800 ) M2_M1 
+  NEW metal2 ( 21440 12800 ) ( * 13600 ) M3_M2 
+  NEW metal3 ( 21440 13600 ) ( 21120 * ) M3_M2 
+  NEW metal1 ( 21120 13600 ) M2_M1 
+  NEW metal1 ( 21120 13600 ) ( 21030 * ) 
+  NEW metal1 ( 22240 14600 ) M2_M1 
+  NEW metal2 ( 22240 14600 ) ( * 14400 ) M3_M2 
+  NEW metal3 ( 22240 14400 ) ( 21440 * ) M3_M2 
+  NEW metal2 ( 21440 14400 ) ( * 13600 ) ;
+- _25_
+  ( AOI22X1_11 D ) 
+  ( AOI22X1_8 D ) 
+  ( AOI22X1_5 D ) 
+  ( AOI22X1_2 A ) 
+  ( NOR2X1_3 Y ) 
++ ROUTED metal1 ( 20800 17200 ) M2_M1 
+  NEW metal2 ( 20800 17200 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 20800 17000 ) ( 22400 * ) M3_M2 
+  NEW metal2 ( 22400 17000 ) ( * 15800 ) M2_M1 
+  NEW metal1 ( 22400 15800 ) ( 22430 * ) 
+  NEW metal1 ( 20480 17400 ) ( 20800 * ) M2_M1 
+  NEW metal2 ( 20800 17400 ) ( * 17200 ) 
+  NEW metal1 ( 25120 17400 ) M2_M1 
+  NEW metal2 ( 25120 17400 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 25120 17000 ) ( 22400 * ) 
+  NEW metal1 ( 25920 17400 ) M2_M1 
+  NEW metal2 ( 25920 17400 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 25920 17000 ) ( 25120 * ) ;
+- _26_
+  ( AOI22X1_10 D ) 
+  ( AOI22X1_7 D ) 
+  ( AOI22X1_4 D ) 
+  ( AOI22X1_2 D ) 
+  ( NOR2X1_4 Y ) 
++ ROUTED metal1 ( 21280 17400 ) M2_M1 
+  NEW metal2 ( 21280 17400 ) ( * 16600 ) M3_M2 
+  NEW metal3 ( 21280 16600 ) ( 22880 * ) M3_M2 
+  NEW metal2 ( 22880 16600 ) ( * 15800 ) M2_M1 
+  NEW metal1 ( 22880 15800 ) ( 22910 * ) 
+  NEW metal1 ( 18080 17400 ) M2_M1 
+  NEW metal2 ( 18080 17400 ) ( * 16600 ) M3_M2 
+  NEW metal3 ( 18080 16600 ) ( 21280 * ) 
+  NEW metal1 ( 27840 17400 ) M2_M1 
+  NEW metal2 ( 27840 17400 ) ( * 16400 ) M3_M2 
+  NEW metal3 ( 27840 16400 ) ( 22880 * ) M3_M2 
+  NEW metal1 ( 27520 14800 ) ( 27840 * ) M2_M1 
+  NEW metal2 ( 27840 14800 ) ( * 16400 ) ;
+- ahb_addr<12>
+  ( PIN ahb_addr<12> ) 
+  ( AOI22X1_2 B ) 
++ ROUTED metal2 ( 20640 18400 ) ( * 18000 ) M3_M2 
+  NEW metal3 ( 20640 18000 ) ( 20960 * ) M3_M2 
+  NEW metal2 ( 20960 18000 ) ( * 17400 ) M2_M1 ;
+- ahb_addr<20>
+  ( PIN ahb_addr<20> ) 
+  ( AOI22X1_2 C ) 
++ ROUTED metal2 ( 20960 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 20960 18200 ) ( 21440 * ) M3_M2 
+  NEW metal2 ( 21440 18200 ) ( * 17200 ) M2_M1 ;
+- _27_
+  ( NAND3X1_3 B ) 
+  ( AOI22X1_2 Y ) 
++ ROUTED metal1 ( 21920 17200 ) M2_M1 
+  NEW metal2 ( 21920 17200 ) ( * 17600 ) M3_M2 
+  NEW metal3 ( 21920 17600 ) ( 21280 * ) M3_M2 
+  NEW metal1 ( 21280 17600 ) M2_M1 
+  NEW metal1 ( 21280 17600 ) ( 21190 * ) ;
+- _103_<0>
+  ( BUFX2_2 A ) 
+  ( NAND3X1_3 Y ) 
++ ROUTED metal1 ( 25440 15000 ) M2_M1 
+  NEW metal2 ( 25440 15000 ) ( * 15200 ) M3_M2 
+  NEW metal3 ( 25440 15200 ) ( 21920 * ) M3_M2 
+  NEW metal2 ( 21920 15200 ) ( * 16400 ) M2_M1 ;
+- _28_
+  ( AOI22X1_9 D ) 
+  ( AOI22X1_6 D ) 
+  ( AOI22X1_3 D ) 
+  ( NOR2X1_5 Y ) 
++ ROUTED metal1 ( 23520 17400 ) M2_M1 
+  NEW metal2 ( 23520 17400 ) ( * 17000 ) ( 23680 * ) ( * 15800 ) M2_M1 
+  NEW metal1 ( 24320 17400 ) M2_M1 
+  NEW metal2 ( 24320 17400 ) M3_M2 
+  NEW metal3 ( 24320 17400 ) ( 23520 * ) M3_M2 
+  NEW metal1 ( 18880 17400 ) M2_M1 
+  NEW metal2 ( 18880 17400 ) ( * 16000 ) M3_M2 
+  NEW metal3 ( 18880 16000 ) ( 23680 * ) M3_M2 ;
+- ahb_addr<1>
+  ( PIN ahb_addr<1> ) 
+  ( AOI22X1_3 B ) 
++ ROUTED metal2 ( 24160 18400 ) ( 24000 * ) ( * 17400 ) M2_M1 ;
+- ahb_addr<9>
+  ( PIN ahb_addr<9> ) 
+  ( AOI22X1_3 C ) 
++ ROUTED metal2 ( 24480 18400 ) ( * 17200 ) M2_M1 ;
+- _29_
+  ( NAND3X1_4 A ) 
+  ( AOI22X1_3 Y ) 
++ ROUTED metal1 ( 26240 17000 ) M2_M1 
+  NEW metal2 ( 26240 17000 ) ( * 16800 ) M3_M2 
+  NEW metal3 ( 26240 16800 ) ( 24320 * ) M3_M2 
+  NEW metal1 ( 24320 16800 ) M2_M1 ;
+- _30_
+  ( AOI22X1_10 A ) 
+  ( AOI22X1_7 A ) 
+  ( AOI22X1_4 A ) 
+  ( NOR2X1_6 Y ) 
++ ROUTED metal1 ( 18560 17200 ) M2_M1 
+  NEW metal2 ( 18560 17200 ) ( * 16400 ) M3_M2 
+  NEW metal3 ( 18560 16400 ) ( 21280 * ) M3_M2 
+  NEW metal2 ( 21280 16400 ) ( * 15800 ) M2_M1 
+  NEW metal1 ( 27040 15000 ) M2_M1 
+  NEW metal2 ( 27040 15000 ) ( * 15800 ) M3_M2 
+  NEW metal3 ( 27040 15800 ) ( 21280 * ) M3_M2 
+  NEW metal1 ( 27360 17200 ) M2_M1 
+  NEW metal2 ( 27360 17200 ) ( * 15800 ) M3_M2 
+  NEW metal3 ( 27360 15800 ) ( 27040 * ) ;
+- ahb_addr<5>
+  ( PIN ahb_addr<5> ) 
+  ( AOI22X1_4 B ) 
++ ROUTED metal2 ( 27680 18400 ) ( 27520 * ) ( * 17400 ) M2_M1 ;
+- ahb_addr<21>
+  ( PIN ahb_addr<21> ) 
+  ( AOI22X1_4 C ) 
++ ROUTED metal3 ( 28320 17200 ) ( 28000 * ) M3_M2 
+  NEW metal1 ( 28000 17200 ) M2_M1 ;
+- _31_
+  ( NAND3X1_4 B ) 
+  ( AOI22X1_4 Y ) 
++ ROUTED metal1 ( 26400 17200 ) M2_M1 
+  NEW metal2 ( 26400 17200 ) M3_M2 
+  NEW metal3 ( 26400 17200 ) ( 27680 * ) M3_M2 
+  NEW metal1 ( 27680 17200 ) M2_M1 ;
+- ahb_addr<17>
+  ( PIN ahb_addr<17> ) 
+  ( AOI22X1_5 B ) 
++ ROUTED metal2 ( 25760 18400 ) ( 25600 * ) ( * 17400 ) M2_M1 ;
+- ahb_addr<13>
+  ( PIN ahb_addr<13> ) 
+  ( AOI22X1_5 C ) 
++ ROUTED metal2 ( 26080 18400 ) ( * 17200 ) M2_M1 ;
+- _32_
+  ( NAND3X1_4 C ) 
+  ( AOI22X1_5 Y ) 
++ ROUTED metal1 ( 26560 16800 ) M2_M1 
+  NEW metal2 ( 26560 16800 ) ( * 16600 ) M3_M2 
+  NEW metal3 ( 26560 16600 ) ( 25920 * ) M3_M2 
+  NEW metal1 ( 25920 16600 ) M2_M1 ;
+- _103_<1>
+  ( BUFX2_3 A ) 
+  ( NAND3X1_4 Y ) 
++ ROUTED metal1 ( 26880 17200 ) ( 26720 * ) ;
+- ahb_addr<2>
+  ( PIN ahb_addr<2> ) 
+  ( AOI22X1_6 B ) 
++ ROUTED metal2 ( 22880 18400 ) ( * 17400 ) M2_M1 
+  NEW metal1 ( 22880 17400 ) ( 23200 * ) ;
+- ahb_addr<10>
+  ( PIN ahb_addr<10> ) 
+  ( AOI22X1_6 C ) 
++ ROUTED metal2 ( 23680 18400 ) ( * 17200 ) M2_M1 ;
+- _33_
+  ( NAND3X1_5 A ) 
+  ( AOI22X1_6 Y ) 
++ ROUTED metal1 ( 25920 15200 ) M2_M1 
+  NEW metal2 ( 25920 15200 ) ( * 15400 ) M3_M2 
+  NEW metal3 ( 25920 15400 ) ( 23520 * ) M3_M2 
+  NEW metal2 ( 23520 15400 ) ( * 16400 ) M2_M1 ;
+- ahb_addr<6>
+  ( PIN ahb_addr<6> ) 
+  ( AOI22X1_7 B ) 
++ ROUTED metal3 ( 28320 14800 ) ( 27840 * ) ( * 15000 ) ( 27200 * ) M3_M2 
+  NEW metal2 ( 27200 15000 ) ( * 14800 ) M2_M1 ;
+- ahb_addr<22>
+  ( PIN ahb_addr<22> ) 
+  ( AOI22X1_7 C ) 
++ ROUTED metal3 ( 28320 15200 ) ( 28160 * ) M3_M2 
+  NEW metal2 ( 28160 15200 ) ( * 15000 ) M2_M1 
+  NEW metal1 ( 28160 15000 ) ( 27680 * ) ;
+- _34_
+  ( NAND3X1_5 B ) 
+  ( AOI22X1_7 Y ) 
++ ROUTED metal1 ( 26080 15000 ) M2_M1 
+  NEW metal2 ( 26080 15000 ) ( * 14800 ) M3_M2 
+  NEW metal3 ( 26080 14800 ) ( 27360 * ) M3_M2 
+  NEW metal1 ( 27360 14800 ) M2_M1 ;
+- ahb_addr<18>
+  ( PIN ahb_addr<18> ) 
+  ( AOI22X1_8 B ) 
++ ROUTED metal2 ( 24960 18400 ) ( 24800 * ) ( * 17400 ) M2_M1 ;
+- ahb_addr<14>
+  ( PIN ahb_addr<14> ) 
+  ( AOI22X1_8 C ) 
++ ROUTED metal2 ( 25280 18400 ) ( * 17200 ) M2_M1 ;
+- _35_
+  ( NAND3X1_5 C ) 
+  ( AOI22X1_8 Y ) 
++ ROUTED metal1 ( 26240 15400 ) M2_M1 
+  NEW metal2 ( 26240 15400 ) ( * 15600 ) M3_M2 
+  NEW metal3 ( 26240 15600 ) ( 25120 * ) M3_M2 
+  NEW metal2 ( 25120 15600 ) ( * 16400 ) M2_M1 ;
+- _103_<2>
+  ( BUFX2_4 A ) 
+  ( NAND3X1_5 Y ) 
++ ROUTED metal1 ( 26560 15000 ) ( 26400 * ) ;
+- ahb_addr<3>
+  ( PIN ahb_addr<3> ) 
+  ( AOI22X1_9 B ) 
++ ROUTED metal2 ( 19200 18400 ) ( * 17400 ) M2_M1 ;
+- ahb_addr<11>
+  ( PIN ahb_addr<11> ) 
+  ( AOI22X1_9 C ) 
++ ROUTED metal2 ( 18880 18400 ) ( 18720 * ) ( * 17200 ) M2_M1 ;
+- _36_
+  ( NAND3X1_6 A ) 
+  ( AOI22X1_9 Y ) 
++ ROUTED metal1 ( 17440 17000 ) M2_M1 
+  NEW metal2 ( 17440 17000 ) ( * 17600 ) M3_M2 
+  NEW metal3 ( 17440 17600 ) ( 18880 * ) M3_M2 
+  NEW metal1 ( 18880 17600 ) M2_M1 
+  NEW metal1 ( 18880 17600 ) ( 18970 * ) ;
+- ahb_addr<7>
+  ( PIN ahb_addr<7> ) 
+  ( AOI22X1_10 B ) 
++ ROUTED metal2 ( 18400 18400 ) ( * 17400 ) M2_M1 ;
+- ahb_addr<23>
+  ( PIN ahb_addr<23> ) 
+  ( AOI22X1_10 C ) 
++ ROUTED metal2 ( 18080 18400 ) ( 17920 * ) ( * 17200 ) M2_M1 ;
+- _37_
+  ( NAND3X1_6 B ) 
+  ( AOI22X1_10 Y ) 
++ ROUTED metal1 ( 17280 17200 ) M2_M1 
+  NEW metal2 ( 17280 17200 ) ( * 17800 ) M3_M2 
+  NEW metal3 ( 17280 17800 ) ( 18080 * ) M3_M2 
+  NEW metal1 ( 18080 17800 ) M2_M1 
+  NEW metal1 ( 18080 17800 ) ( 18110 * ) ;
+- ahb_addr<19>
+  ( PIN ahb_addr<19> ) 
+  ( AOI22X1_11 B ) 
++ ROUTED metal2 ( 19680 18400 ) ( 20000 * ) ( * 18600 ) ( 20320 * ) ( * 18000 ) ( 20160 * ) ( * 17400 ) M2_M1 ;
+- ahb_addr<15>
+  ( PIN ahb_addr<15> ) 
+  ( AOI22X1_11 C ) 
++ ROUTED metal2 ( 20160 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 20160 18200 ) ( 20480 * ) M3_M2 
+  NEW metal2 ( 20480 18200 ) ( * 17800 ) ( 20640 * ) ( * 17200 ) M2_M1 ;
+- _38_
+  ( NAND3X1_6 C ) 
+  ( AOI22X1_11 Y ) 
++ ROUTED metal1 ( 17120 16800 ) M2_M1 
+  NEW metal2 ( 17120 16800 ) M3_M2 
+  NEW metal3 ( 17120 16800 ) ( 20320 * ) M3_M2 
+  NEW metal2 ( 20320 16800 ) ( * 17200 ) M2_M1 ;
+- _103_<3>
+  ( BUFX2_5 A ) 
+  ( NAND3X1_6 Y ) 
++ ROUTED metal1 ( 16480 17200 ) M2_M1 
+  NEW metal2 ( 16480 17200 ) M3_M2 
+  NEW metal3 ( 16480 17200 ) ( 16960 * ) M3_M2 
+  NEW metal1 ( 16960 17200 ) M2_M1 ;
+- _105_<4>
+  ( DFFSR_5 Q ) 
+  ( BUFX2_11 A ) 
+  ( INVX1_6 A ) 
++ ROUTED metal1 ( 480 13200 ) ( 640 * ) M2_M1 
+  NEW metal2 ( 640 13200 ) ( * 13600 ) M2_M1 
+  NEW metal1 ( 320 14400 ) M2_M1 
+  NEW metal2 ( 320 14400 ) M3_M2 
+  NEW metal3 ( 320 14400 ) ( 640 * ) M3_M2 
+  NEW metal2 ( 640 14400 ) ( * 13600 ) ;
+- _39_
+  ( AOI21X1_2 A ) 
+  ( OAI21X1_5 A ) 
+  ( INVX1_6 Y ) 
++ ROUTED metal1 ( 1440 13200 ) M2_M1 
+  NEW metal2 ( 1440 13200 ) M3_M2 
+  NEW metal3 ( 1440 13200 ) ( 800 * ) M3_M2 
+  NEW metal1 ( 800 13200 ) M2_M1 
+  NEW metal1 ( 1120 10800 ) M2_M1 
+  NEW metal2 ( 1120 10800 ) ( * 13200 ) M3_M2 ;
+- _105_<0>
+  ( DFFSR_1 Q ) 
+  ( BUFX2_7 A ) 
+  ( OAI21X1_4 C ) 
++ ROUTED metal1 ( 2560 11400 ) M2_M1 
+  NEW metal2 ( 2560 11400 ) M3_M2 
+  NEW metal3 ( 2560 11400 ) ( 1760 * ) M3_M2 
+  NEW metal1 ( 1760 11400 ) M2_M1 
+  NEW metal1 ( 1760 11400 ) ( 1770 * ) 
+  NEW metal1 ( 960 11000 ) M2_M1 
+  NEW metal2 ( 960 11000 ) ( * 11400 ) M3_M2 
+  NEW metal3 ( 960 11400 ) ( 1760 * ) ;
+- _43_
+  ( OAI21X1_5 C ) 
+  ( OAI21X1_4 Y ) 
++ ROUTED metal1 ( 1600 11200 ) ( * 11000 ) ( 1920 * ) ;
+- _2_<0>
+  ( DFFSR_1 D ) 
+  ( OAI21X1_5 Y ) 
++ ROUTED metal1 ( 4480 10800 ) M2_M1 
+  NEW metal2 ( 4480 10800 ) ( * 10600 ) M3_M2 
+  NEW metal3 ( 4480 10600 ) ( 1600 * ) M3_M2 
+  NEW metal1 ( 1600 10600 ) M2_M1 ;
+- _105_<5>
+  ( DFFSR_6 Q ) 
+  ( BUFX2_12 A ) 
+  ( INVX1_7 A ) 
++ ROUTED metal1 ( 780 5400 ) M2_M1 
+  NEW metal2 ( 800 5400 ) M3_M2 
+  NEW metal3 ( 800 5400 ) ( 4160 * ) M3_M2 
+  NEW metal2 ( 4160 5400 ) ( * 5600 ) M2_M1 
+  NEW metal1 ( 480 5200 ) ( 790 * ) ;
+- _44_
+  ( AOI21X1_3 A ) 
+  ( OAI21X1_7 A ) 
+  ( INVX1_7 Y ) 
++ ROUTED metal1 ( 4480 5200 ) ( 4320 * ) 
+  NEW metal1 ( 4480 2800 ) M2_M1 
+  NEW metal2 ( 4480 2800 ) ( * 5200 ) M2_M1 ;
+- _105_<1>
+  ( DFFSR_2 Q ) 
+  ( BUFX2_8 A ) 
+  ( OAI21X1_6 C ) 
++ ROUTED metal1 ( 800 1800 ) M2_M1 
+  NEW metal2 ( 800 1800 ) ( * 2000 ) M3_M2 
+  NEW metal3 ( 800 2000 ) ( 5120 * ) M3_M2 
+  NEW metal2 ( 5120 2000 ) ( * 3200 ) M2_M1 
+  NEW metal1 ( 480 1200 ) ( 790 * ) ;
+- _45_
+  ( OAI21X1_7 C ) 
+  ( OAI21X1_6 Y ) 
++ ROUTED metal1 ( 4960 3200 ) ( * 3000 ) ( 5280 * ) ;
+- _2_<1>
+  ( DFFSR_2 D ) 
+  ( OAI21X1_7 Y ) 
++ ROUTED metal1 ( 2720 1400 ) M2_M1 
+  NEW metal2 ( 2720 1400 ) ( * 2200 ) M3_M2 
+  NEW metal3 ( 2720 2200 ) ( 4800 * ) M3_M2 
+  NEW metal2 ( 4800 2200 ) ( * 2800 ) M2_M1 ;
+- _105_<6>
+  ( DFFSR_7 Q ) 
+  ( BUFX2_13 A ) 
+  ( INVX1_8 A ) 
++ ROUTED metal1 ( 17280 9600 ) ( 17120 * ) M2_M1 
+  NEW metal2 ( 17120 9600 ) M3_M2 
+  NEW metal3 ( 17120 9600 ) ( 17600 * ) M3_M2 
+  NEW metal2 ( 17600 9600 ) ( * 10600 ) M2_M1 
+  NEW metal1 ( 16000 17200 ) M2_M1 
+  NEW metal2 ( 16000 17200 ) ( 16160 * ) ( * 9600 ) M3_M2 
+  NEW metal3 ( 16160 9600 ) ( 17120 * ) ;
+- _46_
+  ( AOI21X1_4 A ) 
+  ( OAI21X1_9 A ) 
+  ( INVX1_8 Y ) 
++ ROUTED metal1 ( 17440 11000 ) ( 17760 * ) 
+  NEW metal1 ( 17600 5400 ) M2_M1 
+  NEW metal2 ( 17600 5400 ) ( * 8200 ) ( 17760 * ) ( * 10400 ) M2_M1 ;
+- _105_<2>
+  ( DFFSR_3 Q ) 
+  ( BUFX2_9 A ) 
+  ( OAI21X1_8 C ) 
++ ROUTED metal1 ( 18560 3800 ) M2_M1 
+  NEW metal2 ( 18560 3800 ) M3_M2 
+  NEW metal3 ( 18560 3800 ) ( 17440 * ) M3_M2 
+  NEW metal2 ( 17440 3800 ) ( * 4800 ) M2_M1 
+  NEW metal1 ( 17440 4800 ) ( 17430 * ) 
+  NEW metal1 ( 17120 1200 ) M2_M1 
+  NEW metal2 ( 17120 1200 ) ( * 3800 ) M3_M2 
+  NEW metal3 ( 17120 3800 ) ( 17440 * ) ;
+- _47_
+  ( OAI21X1_9 C ) 
+  ( OAI21X1_8 Y ) 
++ ROUTED metal1 ( 18080 5000 ) M2_M1 
+  NEW metal2 ( 18080 5000 ) M3_M2 
+  NEW metal3 ( 18080 5000 ) ( 17280 * ) M3_M2 
+  NEW metal1 ( 17240 5000 ) M2_M1 ;
+- _2_<2>
+  ( DFFSR_3 D ) 
+  ( OAI21X1_9 Y ) 
++ ROUTED metal1 ( 20480 2800 ) M2_M1 
+  NEW metal2 ( 20480 2800 ) M3_M2 
+  NEW metal3 ( 20480 2800 ) ( 17760 * ) M3_M2 
+  NEW metal2 ( 17760 2800 ) ( * 4400 ) M2_M1 
+  NEW metal1 ( 17760 4400 ) ( 17790 * ) ;
+- _105_<7>
+  ( DFFSR_8 Q ) 
+  ( BUFX2_14 A ) 
+  ( INVX1_9 A ) 
++ ROUTED metal1 ( 18400 1200 ) M2_M1 
+  NEW metal2 ( 18400 1200 ) ( 18560 * ) M3_M2 
+  NEW metal3 ( 18560 1200 ) ( 18400 * ) M4_M3 
+  NEW metal4 ( 18400 1200 ) ( * 10400 ) M4_M3 
+  NEW metal3 ( 18400 10400 ) ( 19680 * ) M3_M2 
+  NEW metal2 ( 19680 10400 ) ( * 13600 ) M2_M1 
+  NEW metal1 ( 19680 13600 ) ( 20000 * ) 
+  NEW metal1 ( 20460 1200 ) M2_M1 
+  NEW metal2 ( 20480 1200 ) M3_M2 
+  NEW metal3 ( 20480 1200 ) ( 18560 * ) ;
+- _48_
+  ( AOI21X1_5 A ) 
+  ( OAI21X1_11 A ) 
+  ( INVX1_9 Y ) 
++ ROUTED metal1 ( 20000 5400 ) M2_M1 
+  NEW metal2 ( 20000 5400 ) ( 20160 * ) ( * 12400 ) M2_M1 
+  NEW metal1 ( 19040 1200 ) M2_M1 
+  NEW metal2 ( 19040 1200 ) ( * 4000 ) M3_M2 
+  NEW metal3 ( 19040 4000 ) ( 20160 * ) M3_M2 
+  NEW metal2 ( 20160 4000 ) ( * 5400 ) ;
+- _105_<3>
+  ( DFFSR_4 Q ) 
+  ( BUFX2_10 A ) 
+  ( OAI21X1_10 C ) 
++ ROUTED metal1 ( 21920 3000 ) M2_M1 
+  NEW metal2 ( 21920 3000 ) ( * 2400 ) M3_M2 
+  NEW metal3 ( 21920 2400 ) ( 20160 * ) M3_M2 
+  NEW metal2 ( 20160 2400 ) ( * 1000 ) M2_M1 
+  NEW metal1 ( 20160 1000 ) ( 19680 * ) 
+  NEW metal1 ( 20800 4400 ) M2_M1 
+  NEW metal2 ( 20800 4400 ) ( * 4200 ) M3_M2 
+  NEW metal3 ( 20800 4200 ) ( 21920 * ) M3_M2 
+  NEW metal2 ( 21920 4200 ) ( * 3000 ) ;
+- _49_
+  ( OAI21X1_11 C ) 
+  ( OAI21X1_10 Y ) 
++ ROUTED metal1 ( 20480 5000 ) M2_M1 
+  NEW metal2 ( 20480 5000 ) M3_M2 
+  NEW metal3 ( 20480 5000 ) ( 20320 * ) M4_M3 
+  NEW metal4 ( 20320 5000 ) ( * 1800 ) M4_M3 
+  NEW metal3 ( 20320 1800 ) ( 20000 * ) M3_M2 
+  NEW metal1 ( 20000 1800 ) M2_M1 
+  NEW metal1 ( 20000 1800 ) ( 19680 * ) ;
+- _2_<3>
+  ( DFFSR_4 D ) 
+  ( OAI21X1_11 Y ) 
++ ROUTED metal1 ( 22720 5400 ) M2_M1 
+  NEW metal2 ( 22720 5400 ) M3_M2 
+  NEW metal3 ( 22720 5400 ) ( 20640 * ) M3_M2 
+  NEW metal1 ( 20640 5400 ) M2_M1 
+  NEW metal1 ( 20640 5400 ) ( 20480 * ) ;
+- _105_<8>
+  ( DFFSR_9 Q ) 
+  ( BUFX2_15 A ) 
+  ( OAI21X1_12 C ) 
+  ( NOR2X1_8 A ) 
++ ROUTED metal1 ( 1280 13200 ) M2_M1 
+  NEW metal2 ( 1280 13200 ) ( * 13400 ) M3_M2 
+  NEW metal3 ( 1280 13400 ) ( 2080 * ) M3_M2 
+  NEW metal2 ( 2080 13400 ) ( * 13600 ) M2_M1 
+  NEW metal1 ( 4960 9800 ) M2_M1 
+  NEW metal2 ( 4960 9800 ) M3_M2 
+  NEW metal3 ( 4960 9800 ) ( 2400 * ) M4_M3 
+  NEW metal4 ( 2400 9800 ) ( * 13400 ) M4_M3 
+  NEW metal3 ( 2400 13400 ) ( 2080 * ) 
+  NEW metal1 ( 8800 9000 ) M2_M1 
+  NEW metal2 ( 8800 9000 ) M3_M2 
+  NEW metal3 ( 8800 9000 ) ( 4960 * ) M3_M2 
+  NEW metal2 ( 4960 9000 ) ( * 9800 ) ;
+- _50_
+  ( AOI21X1_2 C ) 
+  ( NOR2X1_8 Y ) 
++ ROUTED metal1 ( 1920 13600 ) ( * 13400 ) ( 2240 * ) ;
+- _2_<4>
+  ( DFFSR_5 D ) 
+  ( AOI21X1_2 Y ) 
++ ROUTED metal1 ( 2240 14800 ) M2_M1 
+  NEW metal2 ( 2240 14800 ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 2240 14200 ) ( 1760 * ) M3_M2 
+  NEW metal2 ( 1760 14200 ) ( * 13800 ) M2_M1 ;
+- _105_<9>
+  ( DFFSR_10 Q ) 
+  ( BUFX2_16 A ) 
+  ( OAI21X1_14 C ) 
+  ( NOR2X1_9 A ) 
++ ROUTED metal1 ( 6240 3200 ) M2_M1 
+  NEW metal2 ( 6240 3200 ) M3_M2 
+  NEW metal3 ( 6240 3200 ) ( 5440 * ) M3_M2 
+  NEW metal2 ( 5440 3200 ) ( * 5600 ) M2_M1 
+  NEW metal1 ( 4800 1800 ) M2_M1 
+  NEW metal2 ( 4800 1800 ) M3_M2 
+  NEW metal3 ( 4800 1800 ) ( 5440 * ) M3_M2 
+  NEW metal2 ( 5440 1800 ) ( * 3200 ) 
+  NEW metal1 ( 4480 1200 ) ( 4790 * ) ;
+- _51_
+  ( AOI21X1_3 C ) 
+  ( NOR2X1_9 Y ) 
++ ROUTED metal1 ( 4960 5600 ) ( 5280 * ) ;
+- _2_<5>
+  ( DFFSR_6 D ) 
+  ( AOI21X1_3 Y ) 
++ ROUTED metal1 ( 2720 5400 ) M2_M1 
+  NEW metal2 ( 2720 5400 ) ( * 5600 ) M3_M2 
+  NEW metal3 ( 2720 5600 ) ( 4800 * ) M3_M2 
+  NEW metal1 ( 4800 5600 ) M2_M1 ;
+- _105_<10>
+  ( DFFSR_11 Q ) 
+  ( BUFX2_17 A ) 
+  ( OAI21X1_16 C ) 
+  ( NOR2X1_10 A ) 
++ ROUTED metal1 ( 14560 15200 ) M2_M1 
+  NEW metal2 ( 14560 15200 ) ( * 13800 ) M3_M2 
+  NEW metal3 ( 14560 13800 ) ( 17120 * ) M3_M2 
+  NEW metal2 ( 17120 13800 ) ( * 13600 ) M2_M1 
+  NEW metal1 ( 14240 16400 ) M2_M1 
+  NEW metal2 ( 14240 16400 ) M3_M2 
+  NEW metal3 ( 14240 16400 ) ( 14560 * ) M3_M2 
+  NEW metal2 ( 14560 16400 ) ( * 15200 ) 
+  NEW metal1 ( 15040 17200 ) M2_M1 
+  NEW metal2 ( 15040 17200 ) ( * 16400 ) M3_M2 
+  NEW metal3 ( 15040 16400 ) ( 14560 * ) ;
+- _52_
+  ( AOI21X1_4 C ) 
+  ( NOR2X1_10 Y ) 
++ ROUTED metal1 ( 16960 10600 ) M2_M1 
+  NEW metal2 ( 16960 10600 ) ( * 12400 ) M2_M1 
+  NEW metal1 ( 16960 12400 ) ( 16930 * ) ;
+- _2_<6>
+  ( DFFSR_7 D ) 
+  ( AOI21X1_4 Y ) 
++ ROUTED metal1 ( 19200 9400 ) M2_M1 
+  NEW metal2 ( 19200 9400 ) M3_M2 
+  NEW metal3 ( 19200 9400 ) ( 17280 * ) M3_M2 
+  NEW metal2 ( 17280 9400 ) ( * 9800 ) ( 17120 * ) ( * 10400 ) M2_M1 ;
+- _105_<11>
+  ( DFFSR_12 Q ) 
+  ( BUFX2_18 A ) 
+  ( OAI21X1_18 C ) 
+  ( NOR2X1_11 A ) 
++ ROUTED metal1 ( 17600 2400 ) M2_M1 
+  NEW metal2 ( 17600 2400 ) ( * 1600 ) M2_M1 
+  NEW metal1 ( 16640 1200 ) M2_M1 
+  NEW metal2 ( 16640 1200 ) ( * 1400 ) M3_M2 
+  NEW metal3 ( 16640 1400 ) ( 17600 * ) M3_M2 
+  NEW metal2 ( 17600 1400 ) ( * 1600 ) 
+  NEW metal1 ( 16320 5000 ) M2_M1 
+  NEW metal2 ( 16320 5000 ) ( * 4600 ) M3_M2 
+  NEW metal3 ( 16320 4600 ) ( 17600 * ) M3_M2 
+  NEW metal2 ( 17600 4600 ) ( * 3800 ) M2_M1 ;
+- _53_
+  ( AOI21X1_5 C ) 
+  ( NOR2X1_11 Y ) 
++ ROUTED metal1 ( 18560 1600 ) M2_M1 
+  NEW metal2 ( 18560 1600 ) M3_M2 
+  NEW metal3 ( 18560 1600 ) ( 17760 * ) M3_M2 
+  NEW metal1 ( 17760 1600 ) M2_M1 ;
+- _2_<7>
+  ( DFFSR_8 D ) 
+  ( AOI21X1_5 Y ) 
++ ROUTED metal1 ( 22400 1400 ) M2_M1 
+  NEW metal2 ( 22400 1400 ) M3_M2 
+  NEW metal3 ( 22400 1400 ) ( 21920 * ) ( * 1600 ) ( 18720 * ) M3_M2 
+  NEW metal1 ( 18720 1600 ) M2_M1 ;
+- _105_<12>
+  ( DFFSR_13 Q ) 
+  ( BUFX2_19 A ) 
+  ( INVX1_10 A ) 
++ ROUTED metal1 ( 11200 7800 ) M2_M1 
+  NEW metal2 ( 11200 7800 ) M3_M2 
+  NEW metal3 ( 11200 7800 ) ( 10880 * ) M3_M2 
+  NEW metal2 ( 10880 7800 ) ( * 9600 ) M2_M1 
+  NEW metal1 ( 9600 15000 ) M2_M1 
+  NEW metal2 ( 9600 15000 ) ( * 11200 ) M3_M2 
+  NEW metal3 ( 9600 11200 ) ( 9760 * ) M4_M3 
+  NEW metal4 ( 9760 11200 ) ( * 9600 ) M4_M3 
+  NEW metal3 ( 9760 9600 ) ( 10880 * ) M3_M2 ;
+- _54_
+  ( AOI21X1_6 A ) 
+  ( OAI21X1_13 A ) 
+  ( INVX1_10 Y ) 
++ ROUTED metal1 ( 9920 9400 ) M2_M1 
+  NEW metal2 ( 9920 9400 ) ( * 9200 ) M3_M2 
+  NEW metal3 ( 9920 9200 ) ( 10720 * ) M3_M2 
+  NEW metal1 ( 10720 9200 ) M2_M1 
+  NEW metal1 ( 12960 9200 ) M2_M1 
+  NEW metal2 ( 12960 9200 ) ( * 9000 ) M3_M2 
+  NEW metal3 ( 12960 9000 ) ( 10720 * ) M3_M2 
+  NEW metal2 ( 10720 9000 ) ( * 9200 ) ;
+- _55_
+  ( OAI21X1_13 C ) 
+  ( OAI21X1_12 Y ) 
++ ROUTED metal1 ( 9440 9000 ) M2_M1 
+  NEW metal2 ( 9440 9000 ) M3_M2 
+  NEW metal3 ( 9440 9000 ) ( 9120 * ) M3_M2 
+  NEW metal1 ( 9120 9000 ) M2_M1 
+  NEW metal1 ( 9120 9000 ) ( 9030 * ) ;
+- _2_<8>
+  ( DFFSR_9 D ) 
+  ( OAI21X1_13 Y ) 
++ ROUTED metal1 ( 6880 9400 ) M2_M1 
+  NEW metal2 ( 6880 9400 ) ( * 9600 ) M3_M2 
+  NEW metal3 ( 6880 9600 ) ( 9440 * ) M3_M2 
+  NEW metal1 ( 9440 9600 ) M2_M1 ;
+- _105_<13>
+  ( DFFSR_14 Q ) 
+  ( BUFX2_20 A ) 
+  ( INVX1_11 A ) 
++ ROUTED metal1 ( 800 2600 ) M2_M1 
+  NEW metal2 ( 800 2600 ) M3_M2 
+  NEW metal3 ( 800 2600 ) ( 4160 * ) M3_M2 
+  NEW metal1 ( 4160 2600 ) M2_M1 
+  NEW metal1 ( 480 3000 ) ( 790 * ) ;
+- _56_
+  ( AOI21X1_7 A ) 
+  ( OAI21X1_15 A ) 
+  ( INVX1_11 Y ) 
++ ROUTED metal1 ( 7040 3000 ) ( 6880 * ) M2_M1 
+  NEW metal2 ( 6880 3000 ) ( * 3600 ) M3_M2 
+  NEW metal3 ( 6880 3600 ) ( 4320 * ) M3_M2 
+  NEW metal1 ( 4320 3600 ) M2_M1 
+  NEW metal1 ( 6880 2800 ) M2_M1 
+  NEW metal2 ( 6880 2800 ) ( * 3000 ) ;
+- _57_
+  ( OAI21X1_15 C ) 
+  ( OAI21X1_14 Y ) 
++ ROUTED metal1 ( 6400 3200 ) ( * 3000 ) ( 6080 * ) ;
+- _2_<9>
+  ( DFFSR_10 D ) 
+  ( OAI21X1_15 Y ) 
++ ROUTED metal1 ( 6720 1400 ) M2_M1 
+  NEW metal2 ( 6720 1400 ) ( * 1800 ) M3_M2 
+  NEW metal3 ( 6720 1800 ) ( 6400 * ) M3_M2 
+  NEW metal2 ( 6400 1800 ) ( * 2400 ) M2_M1 ;
+- _105_<14>
+  ( DFFSR_15 Q ) 
+  ( BUFX2_21 A ) 
+  ( INVX1_12 A ) 
++ ROUTED metal1 ( 15520 14400 ) M2_M1 
+  NEW metal2 ( 15520 14400 ) ( * 13600 ) M2_M1 
+  NEW metal1 ( 15520 17200 ) M2_M1 
+  NEW metal2 ( 15520 17200 ) ( * 15800 ) M2_M1 ;
+- _58_
+  ( AOI21X1_8 A ) 
+  ( OAI21X1_17 A ) 
+  ( INVX1_12 Y ) 
++ ROUTED metal1 ( 15200 14800 ) ( 15360 * ) M2_M1 
+  NEW metal2 ( 15360 14800 ) ( * 13800 ) M2_M1 
+  NEW metal1 ( 16640 13200 ) M2_M1 
+  NEW metal2 ( 16640 13200 ) M3_M2 
+  NEW metal3 ( 16640 13200 ) ( 15360 * ) M3_M2 
+  NEW metal2 ( 15360 13200 ) ( * 13800 ) ;
+- _59_
+  ( OAI21X1_17 C ) 
+  ( OAI21X1_16 Y ) 
++ ROUTED metal1 ( 14720 15200 ) ( * 15000 ) ( 14400 * ) ;
+- _2_<10>
+  ( DFFSR_11 D ) 
+  ( OAI21X1_17 Y ) 
++ ROUTED metal1 ( 12320 17400 ) M2_M1 
+  NEW metal2 ( 12320 17400 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 12320 17000 ) ( 14880 * ) M3_M2 
+  NEW metal2 ( 14880 17000 ) ( * 15200 ) ( 14920 * ) M2_M1 ;
+- _105_<15>
+  ( DFFSR_16 Q ) 
+  ( BUFX2_22 A ) 
+  ( INVX1_13 A ) 
++ ROUTED metal1 ( 15680 1200 ) ( 15520 * ) M2_M1 
+  NEW metal2 ( 15520 1200 ) ( * 1600 ) M2_M1 
+  NEW metal1 ( 15050 1200 ) ( 15200 * ) M2_M1 
+  NEW metal2 ( 15200 1200 ) M3_M2 
+  NEW metal3 ( 15200 1200 ) ( 15520 * ) M3_M2 ;
+- _60_
+  ( AOI21X1_9 A ) 
+  ( OAI21X1_19 A ) 
+  ( INVX1_13 Y ) 
++ ROUTED metal1 ( 13760 2800 ) M2_M1 
+  NEW metal2 ( 13760 2800 ) ( * 2200 ) M3_M2 
+  NEW metal3 ( 13760 2200 ) ( 15360 * ) M3_M2 
+  NEW metal2 ( 15360 2200 ) ( * 1800 ) M2_M1 
+  NEW metal1 ( 11680 1200 ) M2_M1 
+  NEW metal2 ( 11680 1200 ) ( * 2200 ) M3_M2 
+  NEW metal3 ( 11680 2200 ) ( 13760 * ) ;
+- _61_
+  ( OAI21X1_19 C ) 
+  ( OAI21X1_18 Y ) 
++ ROUTED metal1 ( 14240 3200 ) M2_M1 
+  NEW metal2 ( 14240 3200 ) ( * 4000 ) M3_M2 
+  NEW metal3 ( 14240 4000 ) ( 16480 * ) M3_M2 
+  NEW metal2 ( 16480 4000 ) ( * 5000 ) ( 16520 * ) M2_M1 ;
+- _2_<11>
+  ( DFFSR_12 D ) 
+  ( OAI21X1_19 Y ) 
++ ROUTED metal1 ( 15680 2800 ) M2_M1 
+  NEW metal2 ( 15680 2800 ) M3_M2 
+  NEW metal3 ( 15680 2800 ) ( 14240 * ) M3_M2 
+  NEW metal1 ( 14240 2800 ) M2_M1 ;
+- _105_<16>
+  ( DFFSR_17 Q ) 
+  ( BUFX2_23 A ) 
+  ( OAI21X1_20 C ) 
+  ( NOR2X1_12 A ) 
++ ROUTED metal1 ( 11360 15200 ) M2_M1 
+  NEW metal2 ( 11360 15200 ) ( 11520 * ) M3_M2 
+  NEW metal3 ( 11520 15200 ) ( 11360 * ) M4_M3 
+  NEW metal4 ( 11360 15200 ) ( * 10000 ) M4_M3 
+  NEW metal3 ( 11360 10000 ) ( 13600 * ) M3_M2 
+  NEW metal2 ( 13600 10000 ) ( * 9600 ) M2_M1 
+  NEW metal1 ( 9760 15000 ) M2_M1 
+  NEW metal2 ( 9760 15000 ) ( * 15200 ) M3_M2 
+  NEW metal3 ( 9760 15200 ) ( 11360 * ) 
+  NEW metal1 ( 7200 16400 ) M2_M1 
+  NEW metal2 ( 7200 16400 ) ( 7360 * ) M3_M2 
+  NEW metal3 ( 7360 16400 ) ( 7200 * ) M4_M3 
+  NEW metal4 ( 7200 16400 ) ( * 15200 ) M4_M3 
+  NEW metal3 ( 7200 15200 ) ( 9760 * ) ;
+- _62_
+  ( AOI21X1_6 C ) 
+  ( NOR2X1_12 Y ) 
++ ROUTED metal1 ( 13440 9600 ) ( * 9400 ) ( 13760 * ) ;
+- _2_<12>
+  ( DFFSR_13 D ) 
+  ( AOI21X1_6 Y ) 
++ ROUTED metal1 ( 13120 6800 ) M2_M1 
+  NEW metal2 ( 13120 6800 ) ( * 8000 ) M3_M2 
+  NEW metal3 ( 13120 8000 ) ( 13440 * ) M3_M2 
+  NEW metal2 ( 13440 8000 ) ( * 8400 ) M2_M1 ;
+- _105_<17>
+  ( DFFSR_18 Q ) 
+  ( BUFX2_24 A ) 
+  ( OAI21X1_22 C ) 
+  ( NOR2X1_13 A ) 
++ ROUTED metal1 ( 10240 1200 ) M2_M1 
+  NEW metal2 ( 10240 1200 ) ( * 1400 ) M3_M2 
+  NEW metal3 ( 10240 1400 ) ( 8480 * ) M3_M2 
+  NEW metal2 ( 8480 1400 ) ( * 2600 ) M2_M1 
+  NEW metal1 ( 8480 2600 ) ( 8000 * ) 
+  NEW metal1 ( 10720 5000 ) M2_M1 
+  NEW metal2 ( 10720 5000 ) ( * 2400 ) M3_M2 
+  NEW metal3 ( 10720 2400 ) ( 10240 * ) M3_M2 
+  NEW metal2 ( 10240 2400 ) ( * 1400 ) 
+  NEW metal1 ( 11680 4800 ) M2_M1 
+  NEW metal2 ( 11680 4800 ) M3_M2 
+  NEW metal3 ( 11680 4800 ) ( 10720 * ) M3_M2 ;
+- _63_
+  ( AOI21X1_7 C ) 
+  ( NOR2X1_13 Y ) 
++ ROUTED metal1 ( 7520 2600 ) ( 7840 * ) ;
+- _2_<13>
+  ( DFFSR_14 D ) 
+  ( AOI21X1_7 Y ) 
++ ROUTED metal1 ( 2720 2800 ) M2_M1 
+  NEW metal2 ( 2720 2800 ) ( * 2400 ) M3_M2 
+  NEW metal3 ( 2720 2400 ) ( 7360 * ) M3_M2 
+  NEW metal1 ( 7360 2400 ) M2_M1 ;
+- _105_<18>
+  ( DFFSR_19 Q ) 
+  ( BUFX2_25 A ) 
+  ( OAI21X1_24 C ) 
+  ( NOR2X1_14 A ) 
++ ROUTED metal1 ( 12480 15000 ) M2_M1 
+  NEW metal2 ( 12480 15000 ) ( * 14600 ) M3_M2 
+  NEW metal3 ( 12480 14600 ) ( 15680 * ) M3_M2 
+  NEW metal2 ( 15680 14600 ) ( * 13600 ) M2_M1 
+  NEW metal1 ( 11200 13000 ) M2_M1 
+  NEW metal2 ( 11200 13000 ) ( * 14600 ) M3_M2 
+  NEW metal3 ( 11200 14600 ) ( 12480 * ) 
+  NEW metal1 ( 11520 11800 ) M2_M1 
+  NEW metal2 ( 11520 11800 ) M3_M2 
+  NEW metal3 ( 11520 11800 ) ( 11200 * ) M3_M2 
+  NEW metal2 ( 11200 11800 ) ( * 13000 ) ;
+- _64_
+  ( AOI21X1_8 C ) 
+  ( NOR2X1_14 Y ) 
++ ROUTED metal1 ( 16160 13600 ) ( 15840 * ) ;
+- _2_<14>
+  ( DFFSR_15 D ) 
+  ( AOI21X1_8 Y ) 
++ ROUTED metal1 ( 17440 14800 ) M2_M1 
+  NEW metal2 ( 17440 14800 ) M3_M2 
+  NEW metal3 ( 17440 14800 ) ( 16320 * ) M3_M2 
+  NEW metal2 ( 16320 14800 ) ( * 13800 ) M2_M1 ;
+- _105_<19>
+  ( DFFSR_20 Q ) 
+  ( BUFX2_26 A ) 
+  ( OAI21X1_26 C ) 
+  ( NOR2X1_15 A ) 
++ ROUTED metal1 ( 10400 2400 ) M2_M1 
+  NEW metal2 ( 10400 2400 ) ( * 2200 ) M3_M2 
+  NEW metal3 ( 10400 2200 ) ( 10720 * ) M3_M2 
+  NEW metal2 ( 10720 2200 ) ( * 1600 ) M2_M1 
+  NEW metal1 ( 9120 3200 ) M2_M1 
+  NEW metal2 ( 9120 3200 ) ( * 2200 ) M3_M2 
+  NEW metal3 ( 9120 2200 ) ( 10400 * ) 
+  NEW metal1 ( 8640 1200 ) M2_M1 
+  NEW metal2 ( 8640 1200 ) ( * 2200 ) M3_M2 
+  NEW metal3 ( 8640 2200 ) ( 9120 * ) ;
+- _65_
+  ( AOI21X1_9 C ) 
+  ( NOR2X1_15 Y ) 
++ ROUTED metal1 ( 11200 1600 ) ( 10880 * ) ;
+- _2_<15>
+  ( DFFSR_16 D ) 
+  ( AOI21X1_9 Y ) 
++ ROUTED metal1 ( 13120 1400 ) M2_M1 
+  NEW metal2 ( 13120 1400 ) ( * 1600 ) M3_M2 
+  NEW metal3 ( 13120 1600 ) ( 11360 * ) M3_M2 
+  NEW metal1 ( 11360 1600 ) M2_M1 ;
+- _105_<20>
+  ( DFFSR_21 Q ) 
+  ( BUFX2_27 A ) 
+  ( INVX1_14 A ) 
++ ROUTED metal1 ( 14560 17200 ) M2_M1 
+  NEW metal2 ( 14560 17200 ) ( * 16600 ) M3_M2 
+  NEW metal3 ( 14560 16600 ) ( 13920 * ) M3_M2 
+  NEW metal2 ( 13920 16600 ) ( * 14600 ) M2_M1 
+  NEW metal1 ( 15040 13800 ) M2_M1 
+  NEW metal2 ( 15040 13800 ) ( 14880 * ) ( * 14200 ) M3_M2 
+  NEW metal3 ( 14880 14200 ) ( 13920 * ) M3_M2 
+  NEW metal2 ( 13920 14200 ) ( * 14600 ) ;
+- _66_
+  ( AOI21X1_10 A ) 
+  ( OAI21X1_21 A ) 
+  ( INVX1_14 Y ) 
++ ROUTED metal1 ( 13600 15000 ) ( 13760 * ) 
+  NEW metal1 ( 12000 14800 ) M2_M1 
+  NEW metal2 ( 12000 14800 ) ( * 15200 ) M3_M2 
+  NEW metal3 ( 12000 15200 ) ( 13600 * ) M3_M2 
+  NEW metal2 ( 13600 15200 ) ( * 15000 ) M2_M1 ;
+- _67_
+  ( OAI21X1_21 C ) 
+  ( OAI21X1_20 Y ) 
++ ROUTED metal1 ( 11520 15200 ) ( * 15000 ) ( 11200 * ) ;
+- _2_<16>
+  ( DFFSR_17 D ) 
+  ( OAI21X1_21 Y ) 
++ ROUTED metal1 ( 9120 17400 ) M2_M1 
+  NEW metal2 ( 9120 17400 ) ( * 16200 ) M3_M2 
+  NEW metal3 ( 9120 16200 ) ( 11840 * ) M3_M2 
+  NEW metal2 ( 11840 16200 ) ( * 15800 ) M2_M1 
+  NEW metal1 ( 11840 15800 ) ( 11810 * ) ;
+- _105_<21>
+  ( DFFSR_22 Q ) 
+  ( BUFX2_28 A ) 
+  ( INVX1_15 A ) 
++ ROUTED metal1 ( 16800 6600 ) ( 16480 * ) 
+  NEW metal1 ( 16160 1200 ) M2_M1 
+  NEW metal2 ( 16160 1200 ) M3_M2 
+  NEW metal3 ( 16160 1200 ) ( 16800 * ) M3_M2 
+  NEW metal2 ( 16800 1200 ) ( * 6400 ) M2_M1 ;
+- _68_
+  ( AOI21X1_11 A ) 
+  ( OAI21X1_23 A ) 
+  ( INVX1_15 Y ) 
++ ROUTED metal1 ( 16160 7000 ) ( 16320 * ) 
+  NEW metal1 ( 15520 5400 ) M2_M1 
+  NEW metal2 ( 15520 5400 ) M3_M2 
+  NEW metal3 ( 15520 5400 ) ( 16160 * ) M3_M2 
+  NEW metal2 ( 16160 5400 ) ( * 6800 ) M2_M1 
+  NEW metal1 ( 16160 6800 ) ( 16320 * ) ;
+- _69_
+  ( OAI21X1_23 C ) 
+  ( OAI21X1_22 Y ) 
++ ROUTED metal1 ( 15040 5000 ) M2_M1 
+  NEW metal2 ( 15040 5000 ) M3_M2 
+  NEW metal3 ( 15040 5000 ) ( 10880 * ) M3_M2 
+  NEW metal2 ( 10880 5000 ) ( * 5200 ) M2_M1 
+  NEW metal1 ( 10880 5200 ) ( 10560 * ) ;
+- _2_<17>
+  ( DFFSR_18 D ) 
+  ( OAI21X1_23 Y ) 
++ ROUTED metal1 ( 13600 5400 ) M2_M1 
+  NEW metal2 ( 13600 5400 ) M3_M2 
+  NEW metal3 ( 13600 5400 ) ( 15040 * ) M3_M2 
+  NEW metal1 ( 15040 5400 ) M2_M1 ;
+- _105_<22>
+  ( DFFSR_23 Q ) 
+  ( BUFX2_29 A ) 
+  ( INVX1_16 A ) 
++ ROUTED metal1 ( 13600 10600 ) M2_M1 
+  NEW metal2 ( 13600 10600 ) ( * 10800 ) M3_M2 
+  NEW metal3 ( 13600 10800 ) ( 13120 * ) M3_M2 
+  NEW metal2 ( 13120 10800 ) ( * 10600 ) M2_M1 
+  NEW metal1 ( 11680 13200 ) M2_M1 
+  NEW metal2 ( 11680 13200 ) ( * 12800 ) M3_M2 
+  NEW metal3 ( 11680 12800 ) ( 13120 * ) M3_M2 
+  NEW metal2 ( 13120 12800 ) ( * 10800 ) ;
+- _70_
+  ( AOI21X1_12 A ) 
+  ( OAI21X1_25 A ) 
+  ( INVX1_16 Y ) 
++ ROUTED metal1 ( 12320 10800 ) M2_M1 
+  NEW metal2 ( 12320 10800 ) M3_M2 
+  NEW metal3 ( 12320 10800 ) ( 12960 * ) M3_M2 
+  NEW metal1 ( 12960 10800 ) M2_M1 
+  NEW metal1 ( 12960 10800 ) ( 13280 * ) 
+  NEW metal1 ( 15360 9200 ) M2_M1 
+  NEW metal2 ( 15360 9200 ) ( * 9600 ) M3_M2 
+  NEW metal3 ( 15360 9600 ) ( 12960 * ) M3_M2 
+  NEW metal2 ( 12960 9600 ) ( * 10800 ) ;
+- _71_
+  ( OAI21X1_25 C ) 
+  ( OAI21X1_24 Y ) 
++ ROUTED metal1 ( 11840 11200 ) M2_M1 
+  NEW metal2 ( 11840 11200 ) M3_M2 
+  NEW metal3 ( 11840 11200 ) ( 10880 * ) M3_M2 
+  NEW metal2 ( 10880 11200 ) ( * 12400 ) M2_M1 
+  NEW metal1 ( 10880 12400 ) ( 10910 * ) ;
+- _2_<18>
+  ( DFFSR_19 D ) 
+  ( OAI21X1_25 Y ) 
++ ROUTED metal1 ( 9600 10800 ) M2_M1 
+  NEW metal2 ( 9600 10800 ) M3_M2 
+  NEW metal3 ( 9600 10800 ) ( 11680 * ) M3_M2 
+  NEW metal1 ( 11680 10800 ) M2_M1 
+  NEW metal1 ( 11680 10800 ) ( 11840 * ) ;
+- _105_<23>
+  ( DFFSR_24 Q ) 
+  ( BUFX2_30 A ) 
+  ( INVX1_17 A ) 
++ ROUTED metal1 ( 9120 1200 ) M2_M1 
+  NEW metal2 ( 9120 1200 ) ( 9280 * ) ( * 2600 ) M2_M1 
+  NEW metal1 ( 8800 4800 ) ( 8960 * ) M2_M1 
+  NEW metal2 ( 8960 4800 ) ( * 2600 ) M3_M2 
+  NEW metal3 ( 8960 2600 ) ( 9280 * ) M3_M2 ;
+- _72_
+  ( AOI21X1_13 A ) 
+  ( OAI21X1_27 A ) 
+  ( INVX1_17 Y ) 
++ ROUTED metal1 ( 9600 2800 ) ( 9440 * ) 
+  NEW metal1 ( 8960 7000 ) M2_M1 
+  NEW metal2 ( 8960 7000 ) ( * 6600 ) M3_M2 
+  NEW metal3 ( 8960 6600 ) ( 9440 * ) M3_M2 
+  NEW metal2 ( 9440 6600 ) ( * 3800 ) M2_M1 ;
+- _73_
+  ( OAI21X1_27 C ) 
+  ( OAI21X1_26 Y ) 
++ ROUTED metal1 ( 10080 3200 ) M2_M1 
+  NEW metal2 ( 10080 3200 ) ( * 3000 ) M3_M2 
+  NEW metal3 ( 10080 3000 ) ( 9280 * ) M3_M2 
+  NEW metal2 ( 9280 3000 ) ( * 2800 ) M2_M1 
+  NEW metal1 ( 9280 2800 ) ( 9120 * ) ;
+- _2_<19>
+  ( DFFSR_20 D ) 
+  ( OAI21X1_27 Y ) 
++ ROUTED metal1 ( 12320 2800 ) M2_M1 
+  NEW metal2 ( 12320 2800 ) ( * 2600 ) M3_M2 
+  NEW metal3 ( 12320 2600 ) ( 10240 * ) M3_M2 
+  NEW metal1 ( 10240 2600 ) M2_M1 
+  NEW metal1 ( 10240 2600 ) ( 10080 * ) ;
+- _105_<24>
+  ( DFFSR_25 Q ) 
+  ( BUFX2_31 A ) 
+  ( OAI21X1_28 C ) 
+  ( NOR2X1_16 A ) 
++ ROUTED metal1 ( 10400 13800 ) M2_M1 
+  NEW metal2 ( 10400 13800 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 10400 14000 ) ( 12640 * ) M3_M2 
+  NEW metal2 ( 12640 14000 ) ( * 14600 ) M2_M1 
+  NEW metal1 ( 10240 15200 ) M2_M1 
+  NEW metal2 ( 10240 15200 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 10240 14000 ) ( 10400 * ) 
+  NEW metal1 ( 10560 17200 ) M2_M1 
+  NEW metal2 ( 10560 17200 ) ( * 17000 ) M3_M2 
+  NEW metal3 ( 10560 17000 ) ( 10240 * ) M3_M2 
+  NEW metal2 ( 10240 17000 ) ( * 15200 ) ;
+- _74_
+  ( AOI21X1_10 C ) 
+  ( NOR2X1_16 Y ) 
++ ROUTED metal1 ( 13120 14600 ) ( 12800 * ) ;
+- _2_<20>
+  ( DFFSR_21 D ) 
+  ( AOI21X1_10 Y ) 
++ ROUTED metal1 ( 13120 13400 ) M2_M1 
+  NEW metal2 ( 13120 13400 ) ( * 14800 ) M2_M1 
+  NEW metal1 ( 13120 14800 ) ( 13280 * ) ;
+- _105_<25>
+  ( DFFSR_26 Q ) 
+  ( BUFX2_32 A ) 
+  ( OAI21X1_30 C ) 
+  ( NOR2X1_17 A ) 
++ ROUTED metal1 ( 5920 11200 ) M2_M1 
+  NEW metal2 ( 5920 11200 ) M3_M2 
+  NEW metal3 ( 5920 11200 ) ( 7520 * ) M3_M2 
+  NEW metal2 ( 7520 11200 ) ( * 7200 ) M3_M2 
+  NEW metal3 ( 7520 7200 ) ( 15200 * ) M3_M2 
+  NEW metal2 ( 15200 7200 ) ( * 6600 ) M2_M1 
+  NEW metal1 ( 2720 12400 ) M2_M1 
+  NEW metal2 ( 2720 12400 ) ( * 11200 ) M3_M2 
+  NEW metal3 ( 2720 11200 ) ( 5920 * ) 
+  NEW metal1 ( 480 11000 ) M2_M1 
+  NEW metal2 ( 480 11000 ) ( * 11200 ) M3_M2 
+  NEW metal3 ( 480 11200 ) ( 2720 * ) ;
+- _75_
+  ( AOI21X1_11 C ) 
+  ( NOR2X1_17 Y ) 
++ ROUTED metal1 ( 15680 6600 ) ( 15360 * ) ;
+- _2_<21>
+  ( DFFSR_22 D ) 
+  ( AOI21X1_11 Y ) 
++ ROUTED metal1 ( 18720 6800 ) M2_M1 
+  NEW metal2 ( 18720 6800 ) M3_M2 
+  NEW metal3 ( 18720 6800 ) ( 15840 * ) M3_M2 
+  NEW metal1 ( 15840 6800 ) M2_M1 ;
+- _105_<26>
+  ( DFFSR_27 Q ) 
+  ( BUFX2_33 A ) 
+  ( OAI21X1_32 C ) 
+  ( NOR2X1_18 A ) 
++ ROUTED metal1 ( 19360 5000 ) M2_M1 
+  NEW metal2 ( 19360 5000 ) ( * 5800 ) M3_M2 
+  NEW metal3 ( 19360 5800 ) ( 16320 * ) M3_M2 
+  NEW metal2 ( 16320 5800 ) ( * 9600 ) M2_M1 
+  NEW metal1 ( 22560 3800 ) M2_M1 
+  NEW metal2 ( 22560 3800 ) M3_M2 
+  NEW metal3 ( 22560 3800 ) ( 19360 * ) M3_M2 
+  NEW metal2 ( 19360 3800 ) ( * 5000 ) 
+  NEW metal1 ( 22720 9200 ) M2_M1 
+  NEW metal2 ( 22720 9200 ) ( * 5800 ) M3_M2 
+  NEW metal3 ( 22720 5800 ) ( 19360 * ) ;
+- _76_
+  ( AOI21X1_12 C ) 
+  ( NOR2X1_18 Y ) 
++ ROUTED metal1 ( 15840 9600 ) ( 16160 * ) ;
+- _2_<22>
+  ( DFFSR_23 D ) 
+  ( AOI21X1_12 Y ) 
++ ROUTED metal1 ( 15520 10800 ) M2_M1 
+  NEW metal2 ( 15520 10800 ) ( * 10200 ) ( 15680 * ) ( * 9800 ) M2_M1 ;
+- _105_<27>
+  ( DFFSR_28 Q ) 
+  ( BUFX2_34 A ) 
+  ( OAI21X1_34 C ) 
+  ( NOR2X1_19 A ) 
++ ROUTED metal1 ( 7200 6600 ) ( 7520 * ) 
+  NEW metal1 ( 3360 7200 ) M2_M1 
+  NEW metal2 ( 3360 7200 ) M3_M2 
+  NEW metal3 ( 3360 7200 ) ( 7200 * ) M3_M2 
+  NEW metal1 ( 7200 7200 ) M2_M1 
+  NEW metal1 ( 7200 7200 ) ( 7210 * ) 
+  NEW metal1 ( 480 7000 ) M2_M1 
+  NEW metal2 ( 480 7000 ) M3_M2 
+  NEW metal3 ( 480 7000 ) ( 3360 * ) M3_M2 
+  NEW metal2 ( 3360 7000 ) ( * 7200 ) ;
+- _77_
+  ( AOI21X1_13 C ) 
+  ( NOR2X1_19 Y ) 
++ ROUTED metal1 ( 8480 6600 ) ( 7680 * ) ;
+- _2_<23>
+  ( DFFSR_24 D ) 
+  ( AOI21X1_13 Y ) 
++ ROUTED metal1 ( 6880 5400 ) M2_M1 
+  NEW metal2 ( 6880 5400 ) M3_M2 
+  NEW metal3 ( 6880 5400 ) ( 8640 * ) M3_M2 
+  NEW metal2 ( 8640 5400 ) ( * 6400 ) M2_M1 ;
+- _105_<28>
+  ( DFFSR_29 Q ) 
+  ( BUFX2_35 A ) 
+  ( INVX1_18 A ) 
++ ROUTED metal1 ( 6080 17200 ) ( 5920 * ) M2_M1 
+  NEW metal2 ( 5920 17200 ) ( * 17600 ) M2_M1 
+  NEW metal1 ( 780 17400 ) M2_M1 
+  NEW metal2 ( 800 17400 ) M3_M2 
+  NEW metal3 ( 800 17400 ) ( 5920 * ) M3_M2 ;
+- _78_
+  ( AOI21X1_14 A ) 
+  ( OAI21X1_29 A ) 
+  ( INVX1_18 Y ) 
++ ROUTED metal1 ( 5600 17200 ) ( 5760 * ) 
+  NEW metal1 ( 8640 14800 ) M2_M1 
+  NEW metal2 ( 8640 14800 ) ( * 15400 ) M3_M2 
+  NEW metal3 ( 8640 15400 ) ( 5600 * ) M3_M2 
+  NEW metal2 ( 5600 15400 ) ( * 17200 ) M2_M1 ;
+- _79_
+  ( OAI21X1_29 C ) 
+  ( OAI21X1_28 Y ) 
++ ROUTED metal1 ( 9120 15200 ) M2_M1 
+  NEW metal2 ( 9120 15200 ) ( * 15000 ) M3_M2 
+  NEW metal3 ( 9120 15000 ) ( 10400 * ) M3_M2 
+  NEW metal1 ( 10400 15000 ) M2_M1 ;
+- _2_<24>
+  ( DFFSR_25 D ) 
+  ( OAI21X1_29 Y ) 
++ ROUTED metal1 ( 8480 13400 ) M2_M1 
+  NEW metal2 ( 8480 13400 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 8480 14000 ) ( 9120 * ) M3_M2 
+  NEW metal2 ( 9120 14000 ) ( * 14400 ) M2_M1 ;
+- _105_<29>
+  ( DFFSR_30 Q ) 
+  ( BUFX2_36 A ) 
+  ( INVX1_19 A ) 
++ ROUTED metal1 ( 4800 15400 ) M2_M1 
+  NEW metal2 ( 4800 15400 ) M3_M2 
+  NEW metal3 ( 4800 15400 ) ( 3680 * ) M3_M2 
+  NEW metal2 ( 3680 15400 ) ( * 14600 ) M2_M1 
+  NEW metal1 ( 480 17200 ) M2_M1 
+  NEW metal2 ( 480 17200 ) ( * 15400 ) M3_M2 
+  NEW metal3 ( 480 15400 ) ( 3680 * ) ;
+- _80_
+  ( AOI21X1_15 A ) 
+  ( OAI21X1_31 A ) 
+  ( INVX1_19 Y ) 
++ ROUTED metal1 ( 4000 15000 ) ( 3840 * ) 
+  NEW metal1 ( 6560 13400 ) M2_M1 
+  NEW metal2 ( 6560 13400 ) ( * 14000 ) M3_M2 
+  NEW metal3 ( 6560 14000 ) ( 3840 * ) M3_M2 
+  NEW metal2 ( 3840 14000 ) ( * 14400 ) M2_M1 ;
+- _81_
+  ( OAI21X1_31 C ) 
+  ( OAI21X1_30 Y ) 
++ ROUTED metal1 ( 6080 13000 ) M2_M1 
+  NEW metal2 ( 6080 13000 ) ( * 11000 ) M2_M1 ;
+- _2_<25>
+  ( DFFSR_26 D ) 
+  ( OAI21X1_31 Y ) 
++ ROUTED metal1 ( 4640 13400 ) M2_M1 
+  NEW metal2 ( 4640 13400 ) M3_M2 
+  NEW metal3 ( 4640 13400 ) ( 6080 * ) M3_M2 
+  NEW metal1 ( 6080 13400 ) M2_M1 ;
+- _105_<30>
+  ( DFFSR_31 Q ) 
+  ( BUFX2_37 A ) 
+  ( INVX1_20 A ) 
++ ROUTED metal1 ( 27040 1800 ) M2_M1 
+  NEW metal2 ( 27040 1800 ) M3_M2 
+  NEW metal3 ( 27040 1800 ) ( 26720 * ) M3_M2 
+  NEW metal2 ( 26720 1800 ) ( * 2600 ) M2_M1 
+  NEW metal1 ( 27360 1200 ) ( 27050 * ) ;
+- _82_
+  ( AOI21X1_16 A ) 
+  ( OAI21X1_33 A ) 
+  ( INVX1_20 Y ) 
++ ROUTED metal1 ( 26400 2800 ) ( 26560 * ) 
+  NEW metal1 ( 26880 3000 ) ( 26560 * ) ;
+- _83_
+  ( OAI21X1_33 C ) 
+  ( OAI21X1_32 Y ) 
++ ROUTED metal1 ( 25920 3200 ) M2_M1 
+  NEW metal2 ( 25920 3200 ) ( * 4400 ) M3_M2 
+  NEW metal3 ( 25920 4400 ) ( 19040 * ) M3_M2 
+  NEW metal1 ( 19040 4400 ) M2_M1 
+  NEW metal1 ( 19040 4400 ) ( 19070 * ) ;
+- _2_<26>
+  ( DFFSR_27 D ) 
+  ( OAI21X1_33 Y ) 
++ ROUTED metal1 ( 24480 2800 ) M2_M1 
+  NEW metal2 ( 24480 2800 ) M3_M2 
+  NEW metal3 ( 24480 2800 ) ( 25920 * ) M3_M2 
+  NEW metal1 ( 25920 2800 ) M2_M1 ;
+- _105_<31>
+  ( DFFSR_32 Q ) 
+  ( BUFX2_38 A ) 
+  ( INVX1_21 A ) 
++ ROUTED metal1 ( 800 8800 ) ( 640 * ) M2_M1 
+  NEW metal2 ( 640 8800 ) ( * 6600 ) M2_M1 
+  NEW metal1 ( 480 9200 ) ( 790 * ) ;
+- _84_
+  ( AOI21X1_17 A ) 
+  ( OAI21X1_35 A ) 
+  ( INVX1_21 Y ) 
++ ROUTED metal1 ( 1920 7000 ) M2_M1 
+  NEW metal2 ( 1920 7000 ) ( * 6800 ) M3_M2 
+  NEW metal3 ( 1920 6800 ) ( 960 * ) M3_M2 
+  NEW metal1 ( 960 6800 ) M2_M1 
+  NEW metal1 ( 960 6800 ) ( 800 * ) 
+  NEW metal1 ( 2720 6800 ) M2_M1 
+  NEW metal2 ( 2720 6800 ) M3_M2 
+  NEW metal3 ( 2720 6800 ) ( 1920 * ) ;
+- _85_
+  ( OAI21X1_35 C ) 
+  ( OAI21X1_34 Y ) 
++ ROUTED metal1 ( 3200 7200 ) ( * 7000 ) ( 3520 * ) ;
+- _2_<27>
+  ( DFFSR_28 D ) 
+  ( OAI21X1_35 Y ) 
++ ROUTED metal1 ( 5280 6800 ) M2_M1 
+  NEW metal2 ( 5280 6800 ) M3_M2 
+  NEW metal3 ( 5280 6800 ) ( 3200 * ) M3_M2 
+  NEW metal1 ( 3200 6800 ) M2_M1 ;
+- spi_I<0>
+  ( PIN spi_I<0> ) 
+  ( NOR2X1_20 A ) 
++ ROUTED metal2 ( 4960 18400 ) ( * 17600 ) M2_M1 ;
+- _86_
+  ( AOI21X1_14 C ) 
+  ( NOR2X1_20 Y ) 
++ ROUTED metal1 ( 5120 17600 ) ( * 17400 ) ( 4800 * ) ;
+- _2_<28>
+  ( DFFSR_29 D ) 
+  ( AOI21X1_14 Y ) 
++ ROUTED metal1 ( 2720 17400 ) M2_M1 
+  NEW metal2 ( 2720 17400 ) ( * 17600 ) M3_M2 
+  NEW metal3 ( 2720 17600 ) ( 5280 * ) M3_M2 
+  NEW metal1 ( 5280 17600 ) M2_M1 ;
+- spi_I<1>
+  ( PIN spi_I<1> ) 
+  ( NOR2X1_21 A ) 
++ ROUTED metal2 ( 4160 18400 ) ( * 17600 ) M2_M1 ;
+- _87_
+  ( AOI21X1_15 C ) 
+  ( NOR2X1_21 Y ) 
++ ROUTED metal1 ( 4480 14600 ) M2_M1 
+  NEW metal2 ( 4480 14600 ) ( * 16400 ) M2_M1 ;
+- _2_<29>
+  ( DFFSR_30 D ) 
+  ( AOI21X1_15 Y ) 
++ ROUTED metal1 ( 6720 14800 ) M2_M1 
+  NEW metal2 ( 6720 14800 ) M3_M2 
+  NEW metal3 ( 6720 14800 ) ( 4640 * ) M3_M2 
+  NEW metal2 ( 4640 14800 ) ( * 15000 ) M2_M1 
+  NEW metal1 ( 4640 15000 ) ( 4480 * ) ;
+- spi_I<2>
+  ( PIN spi_I<2> ) 
+  ( NOR2X1_22 A ) 
++ ROUTED metal3 ( 28320 3200 ) ( 28160 * ) M3_M2 
+  NEW metal2 ( 28160 3200 ) ( * 2600 ) M2_M1 
+  NEW metal1 ( 28160 2600 ) ( 27840 * ) ;
+- _88_
+  ( AOI21X1_16 C ) 
+  ( NOR2X1_22 Y ) 
++ ROUTED metal1 ( 27360 2600 ) ( 27680 * ) ;
+- _2_<30>
+  ( DFFSR_31 D ) 
+  ( AOI21X1_16 Y ) 
++ ROUTED metal1 ( 25120 1400 ) M2_M1 
+  NEW metal2 ( 25120 1400 ) M3_M2 
+  NEW metal3 ( 25120 1400 ) ( 27200 * ) M3_M2 
+  NEW metal2 ( 27200 1400 ) ( * 2400 ) M2_M1 ;
+- spi_I<3>
+  ( PIN spi_I<3> ) 
+  ( NOR2X1_23 A ) 
++ ROUTED metal3 ( -159 6600 ) ( 960 * ) M3_M2 
+  NEW metal1 ( 960 6600 ) M2_M1 ;
+- _89_
+  ( AOI21X1_17 C ) 
+  ( NOR2X1_23 Y ) 
++ ROUTED metal1 ( 1440 6600 ) ( 1120 * ) ;
+- _2_<31>
+  ( DFFSR_32 D ) 
+  ( AOI21X1_17 Y ) 
++ ROUTED metal1 ( 2720 9400 ) M2_M1 
+  NEW metal2 ( 2720 9400 ) M3_M2 
+  NEW metal3 ( 2720 9400 ) ( 1440 * ) M3_M2 
+  NEW metal2 ( 1440 9400 ) ( * 7800 ) M2_M1 ;
+- ctrl_spi_start
+  ( PIN ctrl_spi_start ) 
+  ( AOI21X1_18 C ) 
+  ( INVX2_2 A ) 
++ ROUTED metal3 ( 28320 10800 ) ( 28160 * ) M3_M2 
+  NEW metal1 ( 28160 10800 ) M2_M1 
+  NEW metal1 ( 28160 10800 ) ( 28000 * ) 
+  NEW metal1 ( 27680 10600 ) M2_M1 
+  NEW metal2 ( 27680 10600 ) ( * 10800 ) M3_M2 
+  NEW metal3 ( 27680 10800 ) ( 28160 * ) ;
+- _90_
+  ( OAI21X1_39 C ) 
+  ( OAI21X1_38 C ) 
+  ( NAND3X1_8 A ) 
+  ( NAND2X1_5 A ) 
+  ( AND2X2_1 B ) 
+  ( INVX2_2 Y ) 
++ ROUTED metal1 ( 27040 11200 ) M2_M1 
+  NEW metal2 ( 27040 11200 ) M3_M2 
+  NEW metal3 ( 27040 11200 ) ( 27840 * ) M3_M2 
+  NEW metal1 ( 27840 11200 ) M2_M1 
+  NEW metal1 ( 24320 11200 ) M2_M1 
+  NEW metal2 ( 24320 11200 ) M3_M2 
+  NEW metal3 ( 24320 11200 ) ( 27040 * ) 
+  NEW metal1 ( 21760 13000 ) M2_M1 
+  NEW metal2 ( 21760 13000 ) ( * 11800 ) M3_M2 
+  NEW metal3 ( 21760 11800 ) ( 24320 * ) M3_M2 
+  NEW metal2 ( 24320 11800 ) ( * 11200 ) 
+  NEW metal1 ( 25120 7000 ) M2_M1 
+  NEW metal2 ( 25120 7000 ) ( * 7200 ) M3_M2 
+  NEW metal3 ( 25120 7200 ) ( * 7000 ) M4_M3 
+  NEW metal4 ( 25120 7000 ) ( * 11200 ) M4_M3 
+  NEW metal1 ( 24800 6800 ) M2_M1 
+  NEW metal2 ( 24800 6800 ) ( * 7000 ) M3_M2 
+  NEW metal3 ( 24800 7000 ) ( 25120 * ) ;
+- _102_
+  ( DFFSR_33 Q ) 
+  ( BUFX2_1 A ) 
+  ( OR2X2_3 A ) 
+  ( INVX1_22 A ) 
++ ROUTED metal1 ( 25920 6600 ) ( 25760 * ) 
+  NEW metal1 ( 27520 7000 ) M2_M1 
+  NEW metal2 ( 27520 7000 ) M3_M2 
+  NEW metal3 ( 27520 7000 ) ( 25920 * ) M3_M2 
+  NEW metal2 ( 25920 7000 ) ( * 6600 ) M2_M1 
+  NEW metal1 ( 27840 5800 ) M2_M1 
+  NEW metal2 ( 27840 5800 ) ( * 7000 ) M3_M2 
+  NEW metal3 ( 27840 7000 ) ( 27520 * ) ;
+- _91_
+  ( OAI21X1_36 C ) 
+  ( INVX1_22 Y ) 
++ ROUTED metal1 ( 25120 9000 ) M2_M1 
+  NEW metal2 ( 25120 9000 ) M3_M2 
+  NEW metal3 ( 25120 9000 ) ( 25600 * ) M3_M2 
+  NEW metal2 ( 25600 9000 ) ( * 7800 ) M2_M1 ;
+- _92_
+  ( OAI21X1_37 B ) 
+  ( OAI21X1_36 B ) 
+  ( NAND3X1_7 Y ) 
++ ROUTED metal1 ( 23840 9200 ) M2_M1 
+  NEW metal2 ( 23840 9200 ) ( * 9800 ) M3_M2 
+  NEW metal3 ( 23840 9800 ) ( 19200 * ) M3_M2 
+  NEW metal2 ( 19200 9800 ) ( * 10400 ) M2_M1 
+  NEW metal1 ( 24800 9200 ) M2_M1 
+  NEW metal2 ( 24800 9200 ) ( * 9800 ) M3_M2 
+  NEW metal3 ( 24800 9800 ) ( 23840 * ) ;
+- _93_
+  ( AND2X2_1 A ) 
+  ( OAI21X1_36 Y ) 
++ ROUTED metal1 ( 24960 6800 ) M2_M1 
+  NEW metal2 ( 24960 6800 ) ( * 9000 ) ( 24920 * ) M2_M1 ;
+- _0_
+  ( DFFSR_33 D ) 
+  ( AND2X2_1 Y ) 
++ ROUTED metal1 ( 25920 5400 ) M2_M1 
+  NEW metal2 ( 25920 5400 ) ( * 6000 ) M3_M2 
+  NEW metal3 ( 25920 6000 ) ( 25440 * ) M3_M2 
+  NEW metal2 ( 25440 6000 ) ( * 6400 ) M2_M1 ;
+- _94_
+  ( NAND2X1_5 B ) 
+  ( OAI21X1_37 Y ) 
++ ROUTED metal1 ( 24480 7200 ) M2_M1 
+  NEW metal2 ( 24480 7200 ) ( * 7600 ) M3_M2 
+  NEW metal3 ( 24480 7600 ) ( 23840 * ) M3_M2 
+  NEW metal2 ( 23840 7600 ) ( * 8400 ) M2_M1 
+  NEW metal1 ( 23840 8400 ) ( 23810 * ) ;
+- _1_<0>
+  ( DFFNEGX1_1 D ) 
+  ( NAND2X1_5 Y ) 
++ ROUTED metal1 ( 23680 7000 ) M2_M1 
+  NEW metal2 ( 23680 7000 ) M3_M2 
+  NEW metal3 ( 23680 7000 ) ( 24480 * ) M3_M2 
+  NEW metal1 ( 24480 7000 ) M2_M1 
+  NEW metal1 ( 24480 7000 ) ( 24640 * ) ;
+- _1_<1>
+  ( DFFNEGX1_2 D ) 
+  ( NAND3X1_8 Y ) 
++ ROUTED metal1 ( 17920 13200 ) M2_M1 
+  NEW metal2 ( 17920 13200 ) ( * 12800 ) M3_M2 
+  NEW metal3 ( 17920 12800 ) ( 21280 * ) M3_M2 
+  NEW metal1 ( 21280 12800 ) M2_M1 ;
+- _95_
+  ( OAI21X1_38 A ) 
+  ( INVX1_23 Y ) 
++ ROUTED metal1 ( 26560 10800 ) ( 26400 * ) ;
+- _96_
+  ( NAND2X1_6 B ) 
+  ( INVX1_24 Y ) 
++ ROUTED metal1 ( 25440 11200 ) M2_M1 
+  NEW metal2 ( 25440 11200 ) ( * 12400 ) M2_M1 ;
+- _97_
+  ( NOR2X1_24 B ) 
+  ( INVX1_25 A ) 
+  ( NAND2X1_6 Y ) 
++ ROUTED metal1 ( 25920 10600 ) M2_M1 
+  NEW metal2 ( 25920 10600 ) M3_M2 
+  NEW metal3 ( 25920 10600 ) ( 25600 * ) M3_M2 
+  NEW metal1 ( 25600 10600 ) M2_M1 
+  NEW metal1 ( 24480 9200 ) M2_M1 
+  NEW metal2 ( 24480 9200 ) M3_M2 
+  NEW metal3 ( 24480 9200 ) ( 25600 * ) M3_M2 
+  NEW metal2 ( 25600 9200 ) ( * 10600 ) ;
+- _98_
+  ( NOR2X1_25 B ) 
+  ( OAI21X1_38 B ) 
+  ( INVX1_25 Y ) 
++ ROUTED metal1 ( 26720 11000 ) ( 26560 * ) M2_M1 
+  NEW metal2 ( 26560 11000 ) M3_M2 
+  NEW metal3 ( 26560 11000 ) ( 26080 * ) M3_M2 
+  NEW metal1 ( 26080 11000 ) M2_M1 
+  NEW metal1 ( 25280 11000 ) M2_M1 
+  NEW metal2 ( 25280 11000 ) M3_M2 
+  NEW metal3 ( 25280 11000 ) ( 26080 * ) ;
+- _1_<2>
+  ( DFFNEGX1_3 D ) 
+  ( OAI21X1_38 Y ) 
++ ROUTED metal1 ( 26880 13200 ) ( 26720 * ) M2_M1 
+  NEW metal2 ( 26720 13200 ) ( * 11800 ) M2_M1 
+  NEW metal1 ( 26720 11800 ) ( 26750 * ) ;
+- _99_
+  ( OAI21X1_40 B ) 
+  ( AOI21X1_18 A ) 
+  ( OAI21X1_39 A ) 
+  ( NOR2X1_24 Y ) 
++ ROUTED metal1 ( 24800 10800 ) M2_M1 
+  NEW metal2 ( 24800 10800 ) ( * 10600 ) M3_M2 
+  NEW metal3 ( 24800 10600 ) ( 24320 * ) M3_M2 
+  NEW metal2 ( 24320 10600 ) ( * 9800 ) M2_M1 
+  NEW metal1 ( 27200 11000 ) ( 27040 * ) M2_M1 
+  NEW metal2 ( 27040 11000 ) ( * 10400 ) M3_M2 
+  NEW metal3 ( 27040 10400 ) ( 24800 * ) M3_M2 
+  NEW metal2 ( 24800 10400 ) ( * 10600 ) 
+  NEW metal1 ( 27360 9200 ) M2_M1 
+  NEW metal2 ( 27360 9200 ) ( * 10400 ) M3_M2 
+  NEW metal3 ( 27360 10400 ) ( 27040 * ) ;
+- _100_
+  ( OAI21X1_39 B ) 
+  ( NOR2X1_25 Y ) 
++ ROUTED metal1 ( 24640 11000 ) ( 25120 * ) ;
+- _1_<3>
+  ( DFFNEGX1_4 D ) 
+  ( OAI21X1_39 Y ) 
++ ROUTED metal1 ( 21440 11000 ) M2_M1 
+  NEW metal2 ( 21440 11000 ) ( * 11600 ) M3_M2 
+  NEW metal3 ( 21440 11600 ) ( 24640 * ) M3_M2 
+  NEW metal1 ( 24640 11600 ) M2_M1 
+  NEW metal1 ( 24640 11600 ) ( 24610 * ) ;
+- _101_
+  ( OAI21X1_40 C ) 
+  ( AOI21X1_18 Y ) 
++ ROUTED metal1 ( 27680 9000 ) M2_M1 
+  NEW metal2 ( 27680 9000 ) ( 27520 * ) ( * 10400 ) M2_M1 ;
+- _1_<4>
+  ( DFFNEGX1_5 D ) 
+  ( OAI21X1_40 Y ) 
++ ROUTED metal1 ( 26400 9200 ) M2_M1 
+  NEW metal2 ( 26400 9200 ) M3_M2 
+  NEW metal3 ( 26400 9200 ) ( 27680 * ) M3_M2 
+  NEW metal1 ( 27680 9200 ) M2_M1 
+  NEW metal1 ( 27680 9200 ) ( 27520 * ) ;
+- _104_
+  ( BUFX2_6 A ) 
+  ( OR2X2_3 Y ) 
++ ROUTED metal1 ( 26560 7000 ) ( 26400 * ) ;
+- spi_CS
+  ( PIN spi_CS ) 
+  ( BUFX2_1 Y ) 
++ ROUTED metal3 ( 28320 7200 ) ( 28160 * ) M3_M2 
+  NEW metal2 ( 28160 7200 ) ( * 7400 ) M2_M1 
+  NEW metal1 ( 28160 7400 ) ( 27840 * ) ;
+- spi_O<0>
+  ( PIN spi_O<0> ) 
+  ( BUFX2_2 Y ) 
++ ROUTED metal3 ( 28320 15600 ) ( * 15400 ) ( 26080 * ) M3_M2 
+  NEW metal1 ( 26080 15400 ) M2_M1 
+  NEW metal1 ( 26080 15400 ) ( 25760 * ) ;
+- spi_O<1>
+  ( PIN spi_O<1> ) 
+  ( BUFX2_3 Y ) 
++ ROUTED metal2 ( 27200 18400 ) ( * 17800 ) M2_M1 ;
+- spi_O<2>
+  ( PIN spi_O<2> ) 
+  ( BUFX2_4 Y ) 
++ ROUTED metal3 ( 28320 16000 ) ( 26880 * ) M3_M2 
+  NEW metal2 ( 26880 16000 ) ( * 15800 ) M2_M1 ;
+- spi_O<3>
+  ( PIN spi_O<3> ) 
+  ( BUFX2_5 Y ) 
++ ROUTED metal2 ( 16800 18400 ) ( * 17800 ) M2_M1 ;
+- spi_clk
+  ( PIN spi_clk ) 
+  ( BUFX2_6 Y ) 
++ ROUTED metal3 ( 28320 7600 ) ( 26880 * ) M3_M2 
+  NEW metal1 ( 26880 7600 ) M2_M1 ;
+- spi_data<0>
+  ( PIN spi_data<0> ) 
+  ( BUFX2_7 Y ) 
++ ROUTED metal3 ( -159 11600 ) ( 640 * ) M3_M2 
+  NEW metal1 ( 640 11600 ) M2_M1 ;
+- spi_data<1>
+  ( PIN spi_data<1> ) 
+  ( BUFX2_8 Y ) 
++ ROUTED metal3 ( -159 1200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 1200 ) ( * 1400 ) M2_M1 ;
+- spi_data<2>
+  ( PIN spi_data<2> ) 
+  ( BUFX2_9 Y ) 
++ ROUTED metal2 ( 17440 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<3>
+  ( PIN spi_data<3> ) 
+  ( BUFX2_10 Y ) 
++ ROUTED metal2 ( 21760 -199 ) ( * 200 ) M3_M2 
+  NEW metal3 ( 21760 200 ) ( 21920 * ) M4_M3 
+  NEW metal4 ( 21920 200 ) ( * 2000 ) M4_M3 
+  NEW metal3 ( 21920 2000 ) ( 22240 * ) M3_M2 
+  NEW metal2 ( 22240 2000 ) ( * 2400 ) M2_M1 ;
+- spi_data<4>
+  ( PIN spi_data<4> ) 
+  ( BUFX2_11 Y ) 
++ ROUTED metal3 ( -159 13200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 13200 ) ( * 13400 ) M2_M1 ;
+- spi_data<5>
+  ( PIN spi_data<5> ) 
+  ( BUFX2_12 Y ) 
++ ROUTED metal3 ( -159 5200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 5200 ) ( * 5400 ) M2_M1 ;
+- spi_data<6>
+  ( PIN spi_data<6> ) 
+  ( BUFX2_13 Y ) 
++ ROUTED metal2 ( 16320 18400 ) ( * 17800 ) M2_M1 ;
+- spi_data<7>
+  ( PIN spi_data<7> ) 
+  ( BUFX2_14 Y ) 
++ ROUTED metal2 ( 18080 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<8>
+  ( PIN spi_data<8> ) 
+  ( BUFX2_15 Y ) 
++ ROUTED metal3 ( -159 13600 ) ( 960 * ) M3_M2 
+  NEW metal1 ( 960 13600 ) M2_M1 ;
+- spi_data<9>
+  ( PIN spi_data<9> ) 
+  ( BUFX2_16 Y ) 
++ ROUTED metal2 ( 4160 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<10>
+  ( PIN spi_data<10> ) 
+  ( BUFX2_17 Y ) 
++ ROUTED metal2 ( 15360 18400 ) ( * 17800 ) M2_M1 ;
+- spi_data<11>
+  ( PIN spi_data<11> ) 
+  ( BUFX2_18 Y ) 
++ ROUTED metal2 ( 16960 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<12>
+  ( PIN spi_data<12> ) 
+  ( BUFX2_19 Y ) 
++ ROUTED metal2 ( 8800 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 8800 18200 ) ( 9120 * ) M4_M3 
+  NEW metal4 ( 9120 18200 ) ( * 16400 ) M4_M3 
+  NEW metal3 ( 9120 16400 ) ( 9280 * ) M3_M2 
+  NEW metal2 ( 9280 16400 ) ( * 15800 ) M2_M1 ;
+- spi_data<13>
+  ( PIN spi_data<13> ) 
+  ( BUFX2_20 Y ) 
++ ROUTED metal3 ( -159 3200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 3200 ) ( * 3400 ) M2_M1 ;
+- spi_data<14>
+  ( PIN spi_data<14> ) 
+  ( BUFX2_21 Y ) 
++ ROUTED metal2 ( 15840 18400 ) ( * 17800 ) M2_M1 ;
+- spi_data<15>
+  ( PIN spi_data<15> ) 
+  ( BUFX2_22 Y ) 
++ ROUTED metal2 ( 16000 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<16>
+  ( PIN spi_data<16> ) 
+  ( BUFX2_23 Y ) 
++ ROUTED metal2 ( 9600 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 9600 18200 ) ( 9920 * ) M3_M2 
+  NEW metal2 ( 9920 18200 ) ( * 17000 ) ( 10080 * ) ( * 15800 ) M2_M1 ;
+- spi_data<17>
+  ( PIN spi_data<17> ) 
+  ( BUFX2_24 Y ) 
++ ROUTED metal2 ( 10080 -199 ) ( * 200 ) M3_M2 
+  NEW metal3 ( 10080 200 ) ( 10560 * ) M3_M2 
+  NEW metal2 ( 10560 200 ) ( * 400 ) M2_M1 ;
+- spi_data<18>
+  ( PIN spi_data<18> ) 
+  ( BUFX2_25 Y ) 
++ ROUTED metal2 ( 12160 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 12160 18200 ) ( 12320 * ) M4_M3 
+  NEW metal4 ( 12320 18200 ) ( * 16400 ) M4_M3 
+  NEW metal3 ( 12320 16400 ) ( 12160 * ) M3_M2 
+  NEW metal2 ( 12160 16400 ) ( * 15800 ) M2_M1 ;
+- spi_data<19>
+  ( PIN spi_data<19> ) 
+  ( BUFX2_26 Y ) 
++ ROUTED metal2 ( 8480 -199 ) ( * 200 ) M3_M2 
+  NEW metal3 ( 8480 200 ) ( 8960 * ) M3_M2 
+  NEW metal2 ( 8960 200 ) ( * 400 ) M2_M1 ;
+- spi_data<20>
+  ( PIN spi_data<20> ) 
+  ( BUFX2_27 Y ) 
++ ROUTED metal2 ( 14880 18400 ) ( * 17800 ) M2_M1 ;
+- spi_data<21>
+  ( PIN spi_data<21> ) 
+  ( BUFX2_28 Y ) 
++ ROUTED metal2 ( 16480 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<22>
+  ( PIN spi_data<22> ) 
+  ( BUFX2_29 Y ) 
++ ROUTED metal2 ( 10880 18400 ) ( 11040 * ) ( * 15000 ) M3_M2 
+  NEW metal3 ( 11040 15000 ) ( 11360 * ) M3_M2 
+  NEW metal2 ( 11360 15000 ) ( * 13800 ) M2_M1 ;
+- spi_data<23>
+  ( PIN spi_data<23> ) 
+  ( BUFX2_30 Y ) 
++ ROUTED metal2 ( 8960 -199 ) ( 9120 * ) ( * 200 ) M3_M2 
+  NEW metal3 ( 9120 200 ) ( 9440 * ) M3_M2 
+  NEW metal2 ( 9440 200 ) ( * 400 ) M2_M1 ;
+- spi_data<24>
+  ( PIN spi_data<24> ) 
+  ( BUFX2_31 Y ) 
++ ROUTED metal2 ( 10400 18400 ) ( * 18200 ) M3_M2 
+  NEW metal3 ( 10400 18200 ) ( 10880 * ) M3_M2 
+  NEW metal2 ( 10880 18200 ) ( * 17800 ) M2_M1 ;
+- spi_data<25>
+  ( PIN spi_data<25> ) 
+  ( BUFX2_32 Y ) 
++ ROUTED metal3 ( -159 11200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 11200 ) ( * 11400 ) M2_M1 ;
+- spi_data<26>
+  ( PIN spi_data<26> ) 
+  ( BUFX2_33 Y ) 
++ ROUTED metal3 ( 28320 9200 ) ( 28160 * ) M3_M2 
+  NEW metal2 ( 28160 9200 ) ( * 9600 ) M3_M2 
+  NEW metal3 ( 28160 9600 ) ( 23040 * ) M3_M2 
+  NEW metal1 ( 23040 9600 ) M2_M1 ;
+- spi_data<27>
+  ( PIN spi_data<27> ) 
+  ( BUFX2_34 Y ) 
++ ROUTED metal3 ( -159 7600 ) ( 160 * ) M3_M2 
+  NEW metal1 ( 160 7600 ) M2_M1 ;
+- spi_data<28>
+  ( PIN spi_data<28> ) 
+  ( BUFX2_35 Y ) 
++ ROUTED metal2 ( 6400 18400 ) ( * 17800 ) M2_M1 ;
+- spi_data<29>
+  ( PIN spi_data<29> ) 
+  ( BUFX2_36 Y ) 
++ ROUTED metal3 ( -159 17200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 17200 ) ( * 17400 ) M2_M1 ;
+- spi_data<30>
+  ( PIN spi_data<30> ) 
+  ( BUFX2_37 Y ) 
++ ROUTED metal2 ( 27680 -199 ) ( * 400 ) M2_M1 ;
+- spi_data<31>
+  ( PIN spi_data<31> ) 
+  ( BUFX2_38 Y ) 
++ ROUTED metal3 ( -159 9200 ) ( 160 * ) M3_M2 
+  NEW metal2 ( 160 9200 ) ( * 9400 ) M2_M1 ;
+- spi_obuf_en
+  ( PIN spi_obuf_en ) 
+  ( BUFX2_39 Y ) 
++ ROUTED metal3 ( 28320 11200 ) ( 28000 * ) M4_M3 
+  NEW metal4 ( 28000 11200 ) ( * 9000 ) M4_M3 
+  NEW metal3 ( 28000 9000 ) ( 27360 * ) M3_M2 
+  NEW metal2 ( 27360 9000 ) ( * 7800 ) M2_M1 ;
+- vdd
+  ( DFFSR_33 R ) 
+  ( DFFSR_32 S ) 
+  ( DFFSR_31 S ) 
+  ( DFFSR_30 S ) 
+  ( DFFSR_29 S ) 
+  ( DFFSR_28 S ) 
+  ( DFFSR_27 S ) 
+  ( DFFSR_26 S ) 
+  ( DFFSR_25 S ) 
+  ( DFFSR_24 S ) 
+  ( DFFSR_23 S ) 
+  ( DFFSR_22 S ) 
+  ( DFFSR_21 S ) 
+  ( DFFSR_20 S ) 
+  ( DFFSR_19 S ) 
+  ( DFFSR_18 S ) 
+  ( DFFSR_17 S ) 
+  ( DFFSR_16 S ) 
+  ( DFFSR_15 S ) 
+  ( DFFSR_14 S ) 
+  ( DFFSR_13 S ) 
+  ( DFFSR_12 S ) 
+  ( DFFSR_11 S ) 
+  ( DFFSR_10 S ) 
+  ( DFFSR_9 S ) 
+  ( DFFSR_8 S ) 
+  ( DFFSR_7 S ) 
+  ( DFFSR_6 S ) 
+  ( DFFSR_5 S ) 
+  ( DFFSR_4 S ) 
+  ( DFFSR_3 S ) 
+  ( DFFSR_2 S ) 
+  ( DFFSR_1 S ) 
++ ROUTED metal1 ( 5440 11800 ) M2_M1 
+  NEW metal2 ( 5440 11800 ) ( * 11200 ) M2_M1 
+  NEW metal1 ( 3680 400 ) M2_M1 
+  NEW metal2 ( 3680 400 ) ( * 1000 ) M2_M1 
+  NEW metal1 ( 21120 3620 ) M2_M1 
+  NEW metal2 ( 21120 3600 ) ( * 3200 ) ( * 3160 ) M2_M1 
+  NEW metal1 ( 23680 4400 ) M2_M1 
+  NEW metal2 ( 23680 4400 ) ( * 5000 ) M2_M1 
+  NEW metal1 ( 3200 15800 ) M2_M1 
+  NEW metal2 ( 3200 15800 ) ( * 15200 ) M2_M1 
+  NEW metal1 ( 3360 4400 ) M2_M1 
+  NEW metal2 ( 3360 4400 ) ( * 5000 ) ( * 5040 ) M2_M1 
+  NEW metal1 ( 19840 8580 ) M2_M1 
+  NEW metal2 ( 19840 8600 ) ( * 9000 ) ( * 9040 ) M2_M1 
+  NEW metal1 ( 23040 580 ) M2_M1 
+  NEW metal2 ( 23040 600 ) ( * 1000 ) ( * 1040 ) M2_M1 
+  NEW metal1 ( 7840 8400 ) M2_M1 
+  NEW metal2 ( 7840 8400 ) ( * 9000 ) M2_M1 
+  NEW metal1 ( 7360 580 ) M2_M1 
+  NEW metal2 ( 7360 600 ) ( * 1000 ) ( * 1040 ) M2_M1 
+  NEW metal1 ( 11360 16400 ) M2_M1 
+  NEW metal2 ( 11360 16400 ) ( * 17000 ) M2_M1 
+  NEW metal1 ( 14720 3800 ) M2_M1 
+  NEW metal2 ( 14720 3800 ) ( * 3200 ) M2_M1 
+  NEW metal1 ( 13760 7620 ) M2_M1 
+  NEW metal2 ( 13760 7600 ) ( * 7200 ) ( * 7160 ) M2_M1 
+  NEW metal1 ( 3360 3800 ) M2_M1 
+  NEW metal2 ( 3360 3800 ) ( * 3200 ) ( * 3160 ) M2_M1 
+  NEW metal1 ( 18400 15800 ) M2_M1 
+  NEW metal2 ( 18400 15800 ) ( * 15200 ) M2_M1 
+  NEW metal1 ( 12480 400 ) M2_M1 
+  NEW metal2 ( 12480 400 ) ( * 1000 ) ( * 1040 ) M2_M1 
+  NEW metal1 ( 9760 16580 ) M2_M1 
+  NEW metal2 ( 9760 16600 ) ( * 17000 ) ( * 17040 ) M2_M1 
+  NEW metal1 ( 14560 4400 ) M2_M1 
+  NEW metal2 ( 14560 4400 ) ( * 5000 ) M2_M1 
+  NEW metal1 ( 8960 11620 ) M2_M1 
+  NEW metal2 ( 8960 11600 ) ( * 11200 ) ( * 11160 ) M2_M1 
+  NEW metal1 ( 12960 3620 ) M2_M1 
+  NEW metal2 ( 12960 3600 ) ( * 3200 ) ( * 3160 ) M2_M1 
+  NEW metal1 ( 12160 12400 ) M2_M1 
+  NEW metal2 ( 12160 12400 ) ( * 13000 ) M2_M1 
+  NEW metal1 ( 19680 7800 ) M2_M1 
+  NEW metal2 ( 19680 7800 ) ( * 7200 ) M2_M1 
+  NEW metal1 ( 16480 11800 ) M2_M1 
+  NEW metal2 ( 16480 11800 ) ( * 11200 ) M2_M1 
+  NEW metal1 ( 6240 4580 ) M2_M1 
+  NEW metal2 ( 6240 4600 ) ( * 5000 ) ( * 5040 ) M2_M1 
+  NEW metal1 ( 7520 12400 ) M2_M1 
+  NEW metal2 ( 7520 12400 ) ( * 13000 ) M2_M1 
+  NEW metal1 ( 5280 12400 ) M2_M1 
+  NEW metal2 ( 5280 12400 ) ( * 13000 ) ( * 13040 ) M2_M1 
+  NEW metal1 ( 25120 3620 ) M2_M1 
+  NEW metal2 ( 25120 3600 ) ( * 3200 ) ( * 3160 ) M2_M1 
+  NEW metal1 ( 4640 7620 ) M2_M1 
+  NEW metal2 ( 4640 7600 ) ( * 7200 ) ( * 7160 ) M2_M1 
+  NEW metal1 ( 3680 16400 ) M2_M1 
+  NEW metal2 ( 3680 16400 ) ( * 17000 ) M2_M1 
+  NEW metal1 ( 7360 15620 ) M2_M1 
+  NEW metal2 ( 7360 15600 ) ( * 15200 ) ( * 15160 ) M2_M1 
+  NEW metal1 ( 24480 580 ) M2_M1 
+  NEW metal2 ( 24480 600 ) ( * 1000 ) ( * 1040 ) M2_M1 
+  NEW metal1 ( 3680 8400 ) M2_M1 
+  NEW metal2 ( 3680 8400 ) ( * 9000 ) M2_M1 
+  NEW metal1 ( 27040 4580 ) M2_M1 
+  NEW metal2 ( 27040 4600 ) ( * 5200 ) M2_M1 ;
+- ahb_addr<24>
+  ( PIN ahb_addr<24> ) 
+;
+- ahb_addr<25>
+  ( PIN ahb_addr<25> ) 
+;
+- ahb_addr<26>
+  ( PIN ahb_addr<26> ) 
+;
+- ahb_addr<27>
+  ( PIN ahb_addr<27> ) 
+;
+- ahb_addr<28>
+  ( PIN ahb_addr<28> ) 
+;
+- ahb_addr<29>
+  ( PIN ahb_addr<29> ) 
+;
+- ahb_addr<30>
+  ( PIN ahb_addr<30> ) 
+;
+- ahb_addr<31>
+  ( PIN ahb_addr<31> ) 
+;
+- ctrl_addr_wr
+  ( PIN ctrl_addr_wr ) 
+;
+END NETS
+
+SPECIALNETS 29 ;
+- reset_bF$buf2
++ ROUTED metal1 80 ( 8510 11000 ) ( 8440 * ) ;
+- reset_bF$buf0
++ ROUTED metal1 80 ( 11200 17230 ) ( * 17160 ) ;
+- spi_cntr<1>
++ ROUTED metal1 80 ( 18880 13370 ) ( * 13480 ) ;
+- spi_cntr<3>
++ ROUTED metal1 80 ( 23680 10970 ) ( * 11080 ) ;
+- _22_
++ ROUTED metal1 80 ( 23330 15800 ) ( 23420 * ) ;
+- _25_
++ ROUTED metal1 80 ( 22370 15800 ) ( 22460 * ) ;
+- _26_
++ ROUTED metal1 80 ( 22850 15800 ) ( 22940 * ) ;
+- _10_
++ ROUTED metal1 80 ( 19520 10970 ) ( * 11080 ) ;
+- _16_
++ ROUTED metal1 80 ( 20510 14800 ) ( 20440 * ) ;
+- _20_
++ ROUTED metal1 80 ( 20510 13800 ) ( 20420 * ) ;
+- _105_<27>
++ ROUTED metal1 80 ( 7170 7200 ) ( 7240 * ) ;
+- _12_
++ ROUTED metal1 80 ( 20290 11800 ) ( 20380 * ) ;
+- _24_
++ ROUTED metal1 80 ( 21150 13600 ) ( 21000 * ) ;
+- _105_<0>
++ ROUTED metal1 80 ( 1730 11400 ) ( 1800 * ) ;
+- _105_<2>
++ ROUTED metal1 80 ( 17470 4800 ) ( 17400 * ) ;
+- _9_
+;
+- _18_
+;
+- _27_
++ ROUTED metal1 80 ( 21310 17600 ) ( 21160 * ) ;
+- _36_
++ ROUTED metal1 80 ( 18850 17600 ) ( 19000 * ) ;
+- _37_
++ ROUTED metal1 80 ( 18050 17800 ) ( 18140 * ) ;
+- _2_<2>
++ ROUTED metal1 80 ( 17730 4400 ) ( 17820 * ) ;
+- _52_
++ ROUTED metal1 80 ( 16990 12400 ) ( 16900 * ) ;
+- _55_
++ ROUTED metal1 80 ( 9150 9000 ) ( 9000 * ) ;
+- _2_<16>
++ ROUTED metal1 80 ( 11870 15800 ) ( 11780 * ) ;
+- _71_
++ ROUTED metal1 80 ( 10850 12400 ) ( 10940 * ) ;
+- _83_
++ ROUTED metal1 80 ( 19010 4400 ) ( 19100 * ) ;
+- _94_
++ ROUTED metal1 80 ( 23870 8400 ) ( 23780 * ) ;
+- _1_<2>
++ ROUTED metal1 80 ( 26690 11800 ) ( 26780 * ) ;
+- _1_<3>
++ ROUTED metal1 80 ( 24670 11600 ) ( 24580 * ) ;
+END SPECIALNETS
+
+SPECIALNETS 2 ;
+- vdd
++ ROUTED metal1 80 ( 8240 100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 4100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 4100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 4100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 4100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 4100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 4100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 4100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 4100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 4100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 4100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 4100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 4100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 4100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 4100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 4100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 4100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 4100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 4100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 4100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 4100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 4100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 4100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 4100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 4100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 4100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 4100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 4100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 4100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 4100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 4100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 8100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 8100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 8100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 8100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 8100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 8100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 8100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 8100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 8100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 8100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 8100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 8100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 8100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 8100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 8100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 8100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 8100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 8100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 8100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 8100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 8100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 8100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 8100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 8100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 8100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 8100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 8100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 8100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 8100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 8100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 12100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 12100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 12100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 12100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 12100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 12100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 12100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 12100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 12100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 12100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 12100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 12100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 12100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 12100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 12100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 12100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 12100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 12100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 12100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 12100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 12100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 12100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 12100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 12100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 12100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 12100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 12100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 12100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 12100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 12100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 16100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 16100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 16100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 16100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 16100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 16100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 16100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 16100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 16100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 16100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 16100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 16100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 16100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 16100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 16100 ) ( 8180 * ) M4_M3
+  NEW metal1 80 ( 8240 16100 ) ( 7760 * )
+  NEW metal1 80 ( 7760 16100 ) ( 7810 * ) M2_M1
+  NEW metal1 80 ( 7810 16100 ) ( 7910 * ) M2_M1
+  NEW metal1 80 ( 7910 16100 ) ( 8010 * ) M2_M1
+  NEW metal1 80 ( 8010 16100 ) ( 8110 * ) M2_M1
+  NEW metal2 80 ( 8240 16100 ) ( 7760 * )
+  NEW metal2 80 ( 7760 16100 ) ( 7810 * ) M3_M2
+  NEW metal2 80 ( 7810 16100 ) ( 7910 * ) M3_M2
+  NEW metal2 80 ( 7910 16100 ) ( 8010 * ) M3_M2
+  NEW metal2 80 ( 8010 16100 ) ( 8110 * ) M3_M2
+  NEW metal3 120 ( 8240 16100 ) ( 7760 * )
+  NEW metal3 120 ( 7760 16100 ) ( 7820 * ) M4_M3
+  NEW metal3 120 ( 7820 16100 ) ( 7940 * ) M4_M3
+  NEW metal3 120 ( 7940 16100 ) ( 8060 * ) M4_M3
+  NEW metal3 120 ( 8060 16100 ) ( 8180 * ) M4_M3
+  NEW metal4 480 ( 8000 -400 ) ( * 18400 )
+ ;
+- gnd
++ ROUTED metal1 80 ( 19920 2100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 2100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 2100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 2100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 2100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 2100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 2100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 2100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 2100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 2100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 2100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 2100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 2100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 2100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 2100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 2100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 2100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 2100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 2100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 2100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 2100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 2100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 2100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 2100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 2100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 2100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 2100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 2100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 2100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 2100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 6100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 6100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 6100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 6100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 6100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 6100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 6100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 6100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 6100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 6100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 6100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 6100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 6100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 6100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 6100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 6100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 6100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 6100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 6100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 6100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 6100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 6100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 6100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 6100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 6100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 6100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 6100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 6100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 6100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 6100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 10100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 10100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 10100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 10100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 10100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 10100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 10100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 10100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 10100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 10100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 10100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 10100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 10100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 10100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 10100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 10100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 10100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 10100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 10100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 10100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 10100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 10100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 10100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 10100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 10100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 10100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 10100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 10100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 10100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 10100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 14100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 14100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 14100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 14100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 14100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 14100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 14100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 14100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 14100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 14100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 14100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 14100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 14100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 14100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 14100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 14100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 14100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 14100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 14100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 14100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 14100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 14100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 14100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 14100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 14100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 14100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 14100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 14100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 14100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 14100 ) ( 19860 * ) M4_M3
+  NEW metal1 80 ( 19920 18100 ) ( 19440 * )
+  NEW metal1 80 ( 19440 18100 ) ( 19490 * ) M2_M1
+  NEW metal1 80 ( 19490 18100 ) ( 19590 * ) M2_M1
+  NEW metal1 80 ( 19590 18100 ) ( 19690 * ) M2_M1
+  NEW metal1 80 ( 19690 18100 ) ( 19790 * ) M2_M1
+  NEW metal2 80 ( 19920 18100 ) ( 19440 * )
+  NEW metal2 80 ( 19440 18100 ) ( 19490 * ) M3_M2
+  NEW metal2 80 ( 19490 18100 ) ( 19590 * ) M3_M2
+  NEW metal2 80 ( 19590 18100 ) ( 19690 * ) M3_M2
+  NEW metal2 80 ( 19690 18100 ) ( 19790 * ) M3_M2
+  NEW metal3 120 ( 19920 18100 ) ( 19440 * )
+  NEW metal3 120 ( 19440 18100 ) ( 19500 * ) M4_M3
+  NEW metal3 120 ( 19500 18100 ) ( 19620 * ) M4_M3
+  NEW metal3 120 ( 19620 18100 ) ( 19740 * ) M4_M3
+  NEW metal3 120 ( 19740 18100 ) ( 19860 * ) M4_M3
+  NEW metal4 480 ( 19680 -400 ) ( * 18400 )
+ ;
+END SPECIALNETS
+END DESIGN
